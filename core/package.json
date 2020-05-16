@@ -7,8 +7,7 @@
     "process-styles": "npm run compile-styles && npm run css-minify",
     "complie-script": "uglify-merge -s assets/js/core -o ../../js/main.min.js",
     "compress": "npx gzipper --verbose ./ ../",
-    "convert": "babel src -d build",
-    "build": "cross-env AUTOPREFIXER_GRID=autoplace && npm run process-styles && npm run convert && npm run complie-script && npm run compress"
+    "build": "cross-env AUTOPREFIXER_GRID=autoplace && npm run process-styles && npm run complie-script && npm run compress"
   },
   "browserslist": {
     "production": [
@@ -24,10 +23,6 @@
     ]
   },
   "devDependencies": {
-    "@babel/cli": "^7.8.4",
-    "@babel/core": "^7.9.6",
-    "@babel/node": "^7.8.7",
-    "@babel/preset-env": "^7.9.6",
     "autoprefixer": "^9.7.6",
     "clean-css-cli": "^4.3.0",
     "cross-env": "^7.0.2",
