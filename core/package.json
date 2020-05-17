@@ -7,7 +7,7 @@
     "process-styles": "npm run compile-styles && npm run css-minify",
     "complie-script": "uglify-merge -s assets/js/core -o ../../js/main.min.js",
     "compress": "npx gzipper --verbose ./ ../",
-    "build": "cross-env AUTOPREFIXER_GRID=autoplace && npm run process-styles && npm run complie-script && npm run compress"
+    "build": "cross-env AUTOPREFIXER_GRID=autoplace && npm run process-styles && npm run complie-script"
   },
   "browserslist": {
     "production": [
