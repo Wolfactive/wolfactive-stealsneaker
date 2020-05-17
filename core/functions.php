@@ -12,6 +12,8 @@ define('THEME_URL', get_stylesheet_directory_uri());
 $file_includes = [
     'includes/theme-setup.php',                // General theme setting
     'includes/acf-options.php',               // ACF Option page
+    'includes/customizer.php',               // Customizer
+    'includes/resize.php',               // Customizer
 ];
 
 foreach ($file_includes as $file) {
@@ -23,10 +25,16 @@ foreach ($file_includes as $file) {
 }
 
 unset($file, $filePath);
+add_filter('show_admin_bar', '__return_false');
 
  // Import feauture images
  function theme_features() {
-  register_nav_menu('headerMenuLocation','Header Menu Location');
+   register_nav_menus(
+ 		array(
+ 			'main_nav' => 'Menu Main',
+ 			'top_nav' => 'Menu Top',
+ 			'footer_nav' => 'Menu Footer',
+ 		));
   add_theme_support('title-tag');
 }
 add_action('after_setup_theme', 'theme_features');
@@ -246,231 +254,6 @@ function rd_duplicate_post_link( $actions, $post ) {
 
 add_filter( 'post_row_actions', 'rd_duplicate_post_link', 10, 2 );
 
-function theme_slug_customizer( $wp_customize ) {
-            $wp_customize->add_panel(
-            // $id
-            'theme_option',
-            // $args
-            array(
-              'priority' 			=> 11,
-              'capability' 		=> 'edit_theme_options',
-              'theme_supports'	=> '',
-              'title' 			=> __( 'Theme Opitons', 'theme-option' ),
-              'description' 		=> __( 'Theme option', 'theme-option' ),
-            )
-          );
-    //sidebae ads
-        $wp_customize->add_section(
-            'theme_slug_customizer_your_section',
-            array(
-                'title' => esc_html__( 'Sidebar', 'sidebar-image' ),
-                'panel'   =>  'theme_option',
-                'priority' => 150
-            )
-        );
-    // Thông tin công ty
-    $wp_customize->add_section(
-        'company_information',
-        array(
-            'title' => esc_html__( 'Thông tin công ty', 'com-info' ),
-            'panel'   =>  'theme_option',
-            'priority' => 150
-        )
-    );
-
-    //file input sanitization function
-        function theme_slug_sanitize_file( $file, $setting ) {
-
-            //allowed file types
-            $mimes = array(
-                'jpg|jpeg|jpe' => 'image/jpeg',
-                'gif'          => 'image/gif',
-                'png'          => 'image/png',
-                'webp'          => 'image/webp'
-            );
-
-            //check file type from file name
-            $file_ext = wp_check_filetype( $file, $mimes );
-
-            //if file has a valid mime type return it, otherwise return default
-            return ( $file_ext['ext'] ? $file : $setting->default );
-        }
-
-
-
-    //add select setting to your section
-    /*--------------------------------------------------------------------*/
-    // image field
-        $wp_customize->add_setting(
-            'sidebar_img_ads',
-            array(
-                'sanitize_callback' => 'theme_slug_sanitize_file'
-            )
-        );
-
-
-        $wp_customize->add_control(
-            new WP_Customize_Upload_Control(
-                $wp_customize,
-                'sidebar_img_ads',
-                array(
-                    'label'      => __( 'Chọn ảnh quảng cáo', 'theme_slug' ),
-                    'section'    => 'theme_slug_customizer_your_section'
-                )
-            )
-        );
-    /*----------------------------------------------------------------------*/
-    // text field
-    $wp_customize->add_setting(
-           'sidebar_img_url_ads',
-           array(
-               'sanitize_callback' => 'esc_url_raw' //cleans URL from all invalid characters
-           )
-       );
-
-       $wp_customize->add_control(
-               'sidebar_img_url_ads',
-               array(
-                   'label' => esc_html__( 'Điền url ảnh sidebar', 'theme_slug' ),
-                   'section' => 'theme_slug_customizer_your_section',
-                   'type' => 'url'
-               )
-           );
-    /*----------------------------------------------------------------------*/
-    // social text field
-    $wp_customize->add_setting(
-           'sidebar_facebook_url',
-           array(
-               'sanitize_callback' => 'esc_url_raw' //cleans URL from all invalid characters
-           )
-       );
-
-       $wp_customize->add_control(
-               'sidebar_facebook_url',
-               array(
-                   'label' => esc_html__( 'Điền link facebook', 'theme_slug' ),
-                   'section' => 'theme_slug_customizer_your_section',
-                   'type' => 'url'
-               )
-      );
-
-      $wp_customize->add_setting(
-      		// $id
-      		'zalo_phone_number',
-      		// $args
-      		array(
-      			'sanitize_callback'	=> 'absint'
-      		)
-      	);
-
-
-      $wp_customize->add_control(
-              'zalo_phone_number',
-              array(
-                  'label' => esc_html__( 'Điền số điện thoại zalo', 'theme_slug' ),
-                  'section' => 'theme_slug_customizer_your_section',
-                  'type' => 'number'
-              )
-     );
-     $wp_customize->add_setting(
-         // $id
-         'number_post_sidebar',
-         // $args
-         array(
-           'sanitize_callback'	=> 'absint'
-         )
-       );
-
-
-     $wp_customize->add_control(
-             'number_post_sidebar',
-             array(
-                 'label' => esc_html__( 'Điền số post hiện ở sidebar', 'theme_slug' ),
-                 'section' => 'theme_slug_customizer_your_section',
-                 'type' => 'number'
-             )
-    );
-    /*----------------------------------------------------------------------*/
-  // Company Name
-    $wp_customize->add_setting(
-        // $id
-        'company_name',
-        // $args
-        array(
-          'sanitize_callback'	=> 'sanitize_text_field'
-        )
-      );
-
-
-    $wp_customize->add_control(
-            'company_name',
-            array(
-                'label' => esc_html__( 'Điền tên công ty', 'theme_slug' ),
-                'section' => 'company_information',
-                'type' => 'text'
-            )
-   );
-   /*----------------------------------------------------------------------*/
-   // Company Address
-     $wp_customize->add_setting(
-         // $id
-         'company_address',
-         // $args
-         array(
-           'sanitize_callback'	=> 'sanitize_text_field'
-         )
-       );
-
-
-     $wp_customize->add_control(
-             'company_address',
-             array(
-                 'label' => esc_html__( 'Điền địa chỉ công ty', 'theme_slug' ),
-                 'section' => 'company_information',
-                 'type' => 'text'
-             )
-    );
-    /*----------------------------------------------------------------------*/
-    //Company_phone
-    $wp_customize->add_setting(
-        // $id
-        'company_phone',
-        // $args
-        array(
-          'sanitize_callback'	=> 'absint'
-        )
-      );
-
-
-    $wp_customize->add_control(
-            'company_phone',
-            array(
-                'label' => esc_html__( 'Điền số diện thoại', 'theme_slug' ),
-                'section' => 'company_information',
-                'type' => 'number'
-            )
-   );
-   /*----------------------------------------------------------------------*/
-   //Company_email
-   $wp_customize->add_setting(
-           'company_email',
-           array(
-               'sanitize_callback' => 'sanitize_email' //removes all invalid characters
-           )
-       );
-
-       $wp_customize->add_control(
-           'company_email',
-           array(
-               'label' => esc_html__( 'Điền email công ty', 'theme_slug' ),
-               'section' => 'company_information',
-               'type' => 'email'
-           )
-       );
-      /*----------------------------------------------------------------------*/
-
-}
-add_action( 'customize_register', 'theme_slug_customizer' );
 function check_homepage(){
   if(is_front_page()) : echo 'homepage'; endif;
 }
@@ -515,13 +298,6 @@ function atulhost_optimize_scripts() {
  wp_dequeue_style( 'wp-block-library-theme' );
 }
 add_action('wp_enqueue_scripts', 'atulhost_optimize_scripts');
-add_filter('acf/prepare_field', 'my_translatable_acf_fields');
-function my_translatable_acf_fields($field){
-    if (strpos($field['wrapper']['class'], 'translatable') !== false){
-        $field['class'] = 'translatable';
-    }
-    return $field;
-}
 // config language
 function get_lang(){
   global $wp;
@@ -538,74 +314,147 @@ function redirect_404(){
         exit;
     }
 }
-add_action( 'phpmailer_init', function( $phpmailer ) {
-    if ( !is_object( $phpmailer ) )
-    $phpmailer = (object) $phpmailer;
-    $phpmailer->Mailer     = 'smtp';
-    $phpmailer->Host       = 'smtp.gmail.com';
-    $phpmailer->SMTPAuth   = 1;
-    $phpmailer->Port       = 587;
-    $phpmailer->Username   = 'info.bapblockchain@gmail.com';
-    $phpmailer->Password   = 'qxwntgixyffgnpze';
-    $phpmailer->SMTPSecure = 'TLS';
-    $phpmailer->From       = 'bap-ventures.com';
-    $phpmailer->FromName   = 'Bap Ventures';
-});
-
-add_action('wp_ajax_Action_Sendmail', 'Action_Sendmail');
-add_action('wp_ajax_nopriv_Action_Sendmail', 'Action_Sendmail');
-function Action_Sendmail() {
-    if(isset($_POST['email']) && $_POST['email']){
-        $firstName  = $_POST['firstName'];
-        $lastName  = $_POST['lastName'];
-    	  $email      = sanitize_email($_POST["email"]);
-        $phone      = $_POST['phone'];
-        $company   = $_POST['company'];
-        $comment  = $_POST['comment'];
-        $headers[]  = 'From: BAP Ventures <bap-ventures.com>';
-        $headers[]  = 'Content-Type: text/html; charset=UTF-8';
-        $message    =  "<p>Name: '.$firstName .' '.$lastName.'</p>
-                       <p>Email: '.$email.'</p>
-                       <p>Phone: '.$phone.'</p>
-                       <p>Company: '.$company.'</p>
-                       <p>Comment: '.$comment'</p>";
-        wp_mail( 'info.bapblockchain@gmail.com', 'BAP Ventures', $message, $headers);
-        echo json_encode(array('status' => 1));
-    }
-die(); }
-
-function itsme_disable_feed() {
-  $homepage = home_url();
-  wp_redirect($homepage);
+function disable_emojis_tinymce($plugins) {
+	if(is_array($plugins)){
+	    return array_diff( $plugins, array( 'wpemoji' ) );
+	} else {
+	   	return array();
+	}
 }
-add_action('do_feed', 'itsme_disable_feed', 1);
-add_action('do_feed_rdf', 'itsme_disable_feed', 1);
-add_action('do_feed_rss', 'itsme_disable_feed', 1);
-add_action('do_feed_rss2', 'itsme_disable_feed', 1);
-add_action('do_feed_atom', 'itsme_disable_feed', 1);
-add_action('do_feed_rss2_comments', 'itsme_disable_feed', 1);
-add_action('do_feed_atom_comments', 'itsme_disable_feed', 1);
-remove_action( 'wp_head', 'feed_links_extra', 3 );
-remove_action( 'wp_head', 'feed_links', 2 );
+function disable_emojis() {
+    remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+    remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+    remove_action( 'wp_print_styles', 'print_emoji_styles' );
+    remove_action( 'admin_print_styles', 'print_emoji_styles' );
+    remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
+    remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
+    remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
+    add_filter( 'tiny_mce_plugins', 'disable_emojis_tinymce' );
+}
+add_action( 'init', 'disable_emojis' );
+// add_action( 'phpmailer_init', function( $phpmailer ) {
+//     if ( !is_object( $phpmailer ) )
+//     $phpmailer = (object) $phpmailer;
+//     $phpmailer->Mailer     = 'smtp';
+//     $phpmailer->Host       = 'smtp.gmail.com';
+//     $phpmailer->SMTPAuth   = 1;
+//     $phpmailer->Port       = 587;
+//     $phpmailer->Username   = 'info.bapblockchain@gmail.com';
+//     $phpmailer->Password   = 'qxwntgixyffgnpze';
+//     $phpmailer->SMTPSecure = 'TLS';
+//     $phpmailer->From       = 'bap-ventures.com';
+//     $phpmailer->FromName   = 'Bap Ventures';
+// });
+
+// add_action('wp_ajax_Action_Sendmail', 'Action_Sendmail');
+// add_action('wp_ajax_nopriv_Action_Sendmail', 'Action_Sendmail');
+// function Action_Sendmail() {
+//     if(isset($_POST['email']) && $_POST['email']){
+//         $firstName  = $_POST['firstName'];
+//         $lastName  = $_POST['lastName'];
+//     	  $email      = sanitize_email($_POST["email"]);
+//         $phone      = $_POST['phone'];
+//         $company   = $_POST['company'];
+//         $comment  = $_POST['comment'];
+//         $headers[]  = 'From: BAP Ventures <bap-ventures.com>';
+//         $headers[]  = 'Content-Type: text/html; charset=UTF-8';
+//         $message    =  "<p>Name: '.$firstName .' '.$lastName.'</p>
+//                        <p>Email: '.$email.'</p>
+//                        <p>Phone: '.$phone.'</p>
+//                        <p>Company: '.$company.'</p>
+//                        <p>Comment: '.$comment'</p>";
+//         wp_mail( 'info.bapblockchain@gmail.com', 'BAP Ventures', $message, $headers);
+//         echo json_encode(array('status' => 1));
+//     }
+// die(); }
+
+// function itsme_disable_feed() {
+//   $homepage = home_url();
+//   wp_redirect($homepage);
+// }
+// add_action('do_feed', 'itsme_disable_feed', 1);
+// add_action('do_feed_rdf', 'itsme_disable_feed', 1);
+// add_action('do_feed_rss', 'itsme_disable_feed', 1);
+// add_action('do_feed_rss2', 'itsme_disable_feed', 1);
+// add_action('do_feed_atom', 'itsme_disable_feed', 1);
+// add_action('do_feed_rss2_comments', 'itsme_disable_feed', 1);
+// add_action('do_feed_atom_comments', 'itsme_disable_feed', 1);
+// remove_action( 'wp_head', 'feed_links_extra', 3 );
+// remove_action( 'wp_head', 'feed_links', 2 );
 // add link video preload head tag
-function add_link_video_preload(){
-    if(is_front_page()):
-      $aboutVideo = the_field('about_video_background','option');
-      $carouselVideo = the_field('carousel_video_background','option');
-      if($aboutVideo):
-       echo '<link rel="preload" href="'.$aboutVideo.'" as="video" type="video/mp4">';
-      elseif ($carouselVideo):
-       echo '<link rel="preload" href="'.$carouselVideo.'" as="video" type="video/mp4">';
-      endif;
-     elseif(is_page('about-us')) :
-       $aboutPageVideo= the_field('carousel_video_background');
-       if($aboutPageVideo):
-       echo'<link rel="preload" href="'.$aboutPageVideo.'" as="video" type="video/mp4">';
-      endif;
-     endif;
-}
+// function add_link_video_preload(){
+//     if(is_front_page()):
+//       $aboutVideo = the_field('about_video_background','option');
+//       $carouselVideo = the_field('carousel_video_background','option');
+//       if($aboutVideo):
+//        echo '<link rel="preload" href="'.$aboutVideo.'" as="video" type="video/mp4">';
+//       elseif ($carouselVideo):
+//        echo '<link rel="preload" href="'.$carouselVideo.'" as="video" type="video/mp4">';
+//       endif;
+//      elseif(is_page('about-us')) :
+//        $aboutPageVideo= the_field('carousel_video_background');
+//        if($aboutPageVideo):
+//        echo'<link rel="preload" href="'.$aboutPageVideo.'" as="video" type="video/mp4">';
+//       endif;
+//      endif;
+// }
 // chèn code vào header
+
 // add_action( 'wp_head', 'hk_addcode_header' );
 // function hk_addcode_header(){
 // 	the_field('google_analytic','option');
 // }
+add_action('admin_init', 'rw_remove_dashboard_widgets');
+  function rw_remove_dashboard_widgets() {
+      remove_meta_box('dashboard_recent_comments', 'dashboard', 'normal'); // recent comments
+      remove_meta_box('dashboard_incoming_links', 'dashboard', 'normal'); // incoming links
+      remove_meta_box('dashboard_plugins', 'dashboard', 'normal'); // plugins
+      remove_meta_box('dashboard_quick_press', 'dashboard', 'normal'); // quick press
+      remove_meta_box('dashboard_recent_drafts', 'dashboard', 'normal'); // recent drafts
+      remove_meta_box('dashboard_primary', 'dashboard', 'normal'); // wordpress blog
+      remove_meta_box('dashboard_secondary', 'dashboard', 'normal'); // other wordpress news
+}
+function remove_admin_bar_links() {
+  global $wp_admin_bar;
+    $wp_admin_bar->remove_menu('wp-logo');          /** Remove the WordPress logo **/
+    $wp_admin_bar->remove_menu('wporg');            /** Remove the WordPress.org link **/
+    $wp_admin_bar->remove_menu('documentation');    /** Remove the WordPress documentation link **/
+    $wp_admin_bar->remove_menu('support-forums');   /** Remove the support forums link **/
+    $wp_admin_bar->remove_menu('feedback');         /** Remove the feedback link **/
+    //$wp_admin_bar->remove_menu('view-site');        /** Remove the view site link **/
+    //$wp_admin_bar->remove_menu('wpseo-menu');        /** Remove the view site link **/
+    $wp_admin_bar->remove_menu('updates');          /** Remove the updates link **/
+    $wp_admin_bar->remove_menu('comments');         /** Remove the comments link **/
+    //$wp_admin_bar->remove_menu('new-content');      /** Remove the content link **/
+}
+add_action( 'wp_before_admin_bar_render', 'remove_admin_bar_links' );
+add_action( 'admin_menu', 'my_remove_menus', 999 );
+function my_remove_menus() {
+   //remove_menu_page( 'upload.php');
+  // remove_menu_page( 'edit-comments.php' );
+  // remove_menu_page( 'wpcf7');
+  // remove_menu_page( 'themes.php');
+  // remove_menu_page( 'plugins.php');
+  // remove_menu_page( 'users.php');
+   remove_menu_page( 'tools.php');
+  // remove_menu_page( 'options-general.php');
+  // remove_menu_page( 'wpseo_dashboard');
+  // remove_menu_page( 'wpcf-cpt');
+   remove_submenu_page( 'themes.php', 'theme-editor.php');
+  // remove_submenu_page( 'plugins.php', 'plugin-editor.php');
+}
+add_action( 'widgets_init', 'my_unregister_widgets' );
+function my_unregister_widgets() {
+    unregister_widget('WP_Widget_Pages');
+    unregister_widget('WP_Widget_Calendar');
+    unregister_widget('WP_Widget_Archives');
+    unregister_widget('WP_Widget_Links');
+    unregister_widget('WP_Widget_Meta');
+    unregister_widget('WP_Widget_Search');
+    unregister_widget('WP_Widget_Categories');
+    unregister_widget('WP_Widget_Recent_Posts');
+    unregister_widget('WP_Widget_Recent_Comments');
+    unregister_widget('WP_Widget_RSS');
+    unregister_widget('WP_Widget_Tag_Cloud');
+    unregister_widget('WP_Nav_Menu_Widget');
+}

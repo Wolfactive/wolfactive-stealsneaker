@@ -7,9 +7,9 @@ Design by Canvilled.
 */
 /*-----======Setup Color And Text======------*/
 :root{
-	--primary-bg-color: #0b54ba;
+	--primary-bg-color: #141414;
 	--secondary-bg-color:#fff;
-  --primary-color: #0b54ba;
+  --primary-color: #141414;
 	--secondary-color:#000;
 	--title-section-size:36px;
 	--title-item-size:20px;
@@ -20,13 +20,8 @@ Design by Canvilled.
 
 /*-----=======Setup Font and main CSS======-----*/
 @font-face {
-    font-family: UTM-FACEBOOK;
-	font-weight:400;
-    src: url("../fonts/UTM-FACEBOOKR-K&T_0.TTF");
-}
-@font-face {
-    font-family: Lora;
-    src: url("../fonts/Lora-VariableFont_wght.ttf");
+    font-family: Exo;
+    src: url("../fonts/Exo.ttf");
 }
 * {
     margin: 0;
@@ -37,8 +32,8 @@ body{
 	font-size:15px;
 	font-weight:500;
 	line-height:1.5;
-	color:#333;
-	font-family: Lora;
+	color:#141414;
+	font-family: Exo;
 }
 #main{
 	margin:0px;
@@ -75,7 +70,7 @@ img{
 	height:auto;
 }
 .container{
-    max-width: 1140px;
+    max-width: 90%;
     margin: 0 auto;
 }
 .clear{
@@ -111,14 +106,11 @@ img{
   background: #333 !important;
 }
 .logo{
-	width:90px;
+	width:190px;
 }
 .icon{
 	font-size:30px;
 	padding-right:8px;
-}
-.logo--contact{
-	width: 285px;
 }
 .icon--text{
 	 font-size:30px;

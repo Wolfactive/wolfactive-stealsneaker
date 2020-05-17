@@ -1,0 +1,36 @@
+.topmenu{
+  background: var(--primary-bg-color);
+  .topmenu__contain{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .topmenu__item{
+      .topmenu__content{
+        font-size: 14px;
+      }
+      .menu-menu-top-container{
+        #menu-menu-top{
+          li.menu-item{
+            display: inline-block;
+            border-right: 1px solid #b2b2b2;
+            a{
+              padding: 10px 20px;
+              display: block;
+              color: #b2b2b2;
+              opacity: 0.9;
+              transition: all 0.25s linear;
+              font-size: 14px;
+              &:hover{
+                opacity: 1;
+                color: #fff;
+              }
+            }
+            &:last-child{
+              border-right: unset;
+            }
+          }
+        }
+      }
+    }
+  }
+}

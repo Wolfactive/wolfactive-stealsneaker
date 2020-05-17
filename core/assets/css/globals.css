@@ -7,9 +7,9 @@ Design by Canvilled.
 */
 /*-----======Setup Color And Text======------*/
 :root {
-  --primary-bg-color: #0b54ba;
+  --primary-bg-color: #141414;
   --secondary-bg-color:#fff;
-  --primary-color: #0b54ba;
+  --primary-color: #141414;
   --secondary-color:#000;
   --title-section-size:36px;
   --title-item-size:20px;
@@ -20,14 +20,8 @@ Design by Canvilled.
 /*-----======Setup Color And Text======------*/
 /*-----=======Setup Font and main CSS======-----*/
 @font-face {
-  font-family: UTM-FACEBOOK;
-  font-weight: 400;
-  src: url("../fonts/UTM-FACEBOOKR-K&T_0.TTF");
-}
-
-@font-face {
-  font-family: Lora;
-  src: url("../fonts/Lora-VariableFont_wght.ttf");
+  font-family: Exo;
+  src: url("../fonts/Exo.ttf");
 }
 
 * {
@@ -40,8 +34,8 @@ body {
   font-size: 15px;
   font-weight: 500;
   line-height: 1.5;
-  color: #333;
-  font-family: Lora;
+  color: #141414;
+  font-family: Exo;
 }
 
 #main {
@@ -83,7 +77,7 @@ img {
 }
 
 .container {
-  max-width: 1140px;
+  max-width: 90%;
   margin: 0 auto;
 }
 
@@ -123,16 +117,12 @@ img {
 }
 
 .logo {
-  width: 90px;
+  width: 190px;
 }
 
 .icon {
   font-size: 30px;
   padding-right: 8px;
-}
-
-.logo--contact {
-  width: 285px;
 }
 
 .icon--text {
@@ -716,6 +706,43 @@ a:hover {
     font-size: 25px;
   }
   /*Setup*/
+}
+
+.topmenu {
+  background: var(--primary-bg-color);
+}
+
+.topmenu .topmenu__contain {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topmenu .topmenu__contain .topmenu__item .topmenu__content {
+  font-size: 14px;
+}
+
+.topmenu .topmenu__contain .topmenu__item .menu-menu-top-container #menu-menu-top li.menu-item {
+  display: inline-block;
+  border-right: 1px solid #b2b2b2;
+}
+
+.topmenu .topmenu__contain .topmenu__item .menu-menu-top-container #menu-menu-top li.menu-item a {
+  padding: 10px 20px;
+  display: block;
+  color: #b2b2b2;
+  opacity: 0.9;
+  transition: all 0.25s linear;
+  font-size: 14px;
+}
+
+.topmenu .topmenu__contain .topmenu__item .menu-menu-top-container #menu-menu-top li.menu-item a:hover {
+  opacity: 1;
+  color: #fff;
+}
+
+.topmenu .topmenu__contain .topmenu__item .menu-menu-top-container #menu-menu-top li.menu-item:last-child {
+  border-right: unset;
 }
 
 /*# sourceMappingURL=globals.css.map */

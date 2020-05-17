@@ -7,12 +7,7 @@
     	<div class="footer__container container">
     		<div class="footer__list row-divide">
     			<div class="footer__item divide--5-col">
-    					<a class="footer__brand d--block" href="<?php echo home_url() ?>">
-                <?php
-                 $custom_logo_id = get_theme_mod( 'custom_logo' );
-                 $image = wp_get_attachment_image_src( $custom_logo_id , 'full' ); ?>
-    						<img src="<?php echo $image[0];  ?>" class="logo" alt="logo-nha-pho-sai-gon">
-    					</a>
+
     			</div>
     			<p class="footer__item divide--5-col">
     				<?php echo get_theme_mod('company_name'); ?>
@@ -36,7 +31,7 @@
 	    <div class="container"><p class="text--center">All Right Reserved.</p></div>
 	  </div>
 	    <!----------=========Sub==========-------->
- </section> 
+ </section>
  <?php wp_footer(); ?>
  </body>
 </html>
