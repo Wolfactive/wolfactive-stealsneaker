@@ -605,7 +605,7 @@ function add_link_video_preload(){
      endif;
 }
 // chèn code vào header
-add_action( 'wp_head', 'hk_addcode_header' );
-function hk_addcode_header(){
-	the_field('google_analytic','option');
-}
+// add_action( 'wp_head', 'hk_addcode_header' );
+// function hk_addcode_header(){
+// 	the_field('google_analytic','option');
+// }
