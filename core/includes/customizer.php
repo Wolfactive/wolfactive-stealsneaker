@@ -53,6 +53,26 @@ function theme_slug_customizer( $wp_customize ) {
                   'type' => 'text'
               )
      );
+
+     $wp_customize->add_setting(
+          // $id
+          'title_top_menu',
+          // $args
+          array(
+            'sanitize_callback'	=> 'sanitize_text_field',
+            'default'           => 'Chào mừng bạn đến với STEALSNEAKER.COM - shop giày chính hãng uy tín nhất TP.HCM!!! Cam kết chỉ bán hàng chính hãng!!!'
+          )
+        );
+
+
+      $wp_customize->add_control(
+              'title_top_menu',
+              array(
+                  'label' => esc_html__( 'Tiêu đề top menu', 'theme_slug' ),
+                  'section' => 'title_sub_footer_top_menu',
+                  'type' => 'text'
+              )
+     );
   /*----------------------------------------------------------------------*/
   $wp_customize->add_setting(
       // $id
