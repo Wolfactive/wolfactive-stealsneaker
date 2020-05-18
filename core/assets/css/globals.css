@@ -30,6 +30,10 @@ Design by Canvilled.
   box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   font-size: 15px;
   font-weight: 500;
@@ -38,12 +42,8 @@ body {
   font-family: Exo;
 }
 
-#main {
-  margin: 0px;
-}
-
-#mySidenav {
-  display: none;
+.wrapper.active {
+  overflow: hidden;
 }
 
 ::selection {
