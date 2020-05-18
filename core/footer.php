@@ -28,7 +28,7 @@
 
 		<!----------=========Sub==========-------->
 	  <div class="footer__sub">
-	    <div class="container"><p class="text--center">All Right Reserved.</p></div>
+	    <div class="container"><p class="text--center"><?php echo get_theme_mod( 'title_sub_footer'); ?></p></div>
 	  </div>
 	    <!----------=========Sub==========-------->
  </section>

@@ -895,4 +895,13 @@ a:hover {
   left: 0;
 }
 
+.footer .footer__sub {
+  background: #000000de;
+  padding: 10px 0px;
+}
+
+.footer .footer__sub p {
+  color: #808080;
+}
+
 /*# sourceMappingURL=globals.css.map */

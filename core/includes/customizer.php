@@ -54,6 +54,26 @@ function theme_slug_customizer( $wp_customize ) {
               )
      );
   /*----------------------------------------------------------------------*/
+  $wp_customize->add_setting(
+      // $id
+      'title_sub_footer',
+      // $args
+      array(
+        'sanitize_callback'	=> 'sanitize_text_field',
+        'default'           => 'All Right Reserved.'
+      )
+    );
+
+
+  $wp_customize->add_control(
+          'title_sub_footer',
+          array(
+              'label' => esc_html__( 'Tiêu đề sub footer', 'theme_slug' ),
+              'section' => 'title_sub_footer_top_menu',
+              'type' => 'text'
+          )
+ );
+/*----------------------------------------------------------------------*/
   // Company Name
     $wp_customize->add_setting(
         // $id
