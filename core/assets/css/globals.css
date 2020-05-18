@@ -729,8 +729,8 @@ a:hover {
 
 @media screen and (max-width: 576px) {
   .topmenu .topmenu__contain .topmenu__item .menu-menu-top-container #menu-menu-top li.menu-item a {
-    font-size: 14px;
-    padding: 8px;
+    font-size: 13px;
+    padding: 8px 4px;
   }
 }
 
