@@ -90,5 +90,3 @@
      <?php endif; ?>
   	</div>
 </section>
-
-<section>Nam test Commit</section>
