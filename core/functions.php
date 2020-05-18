@@ -10,10 +10,10 @@ define('THEME_URL', get_stylesheet_directory_uri());
  */
 
 $file_includes = [
-    'includes/theme-setup.php',                // General theme setting
-    'includes/acf-options.php',               // ACF Option page
-    'includes/customizer.php',               // Customizer
-    'includes/resize.php',               // Customizer
+    'includes/theme-setup.php',                         // General theme setting
+    'includes/acf-options.php',                         // ACF Option page
+    'includes/customizer.php',                          // Customizer
+    'includes/resize.php',
 ];
 
 foreach ($file_includes as $file) {
@@ -34,6 +34,7 @@ add_filter('show_admin_bar', '__return_false');
  			'main_nav' => 'Menu Main',
  			'top_nav' => 'Menu Top',
  			'footer_nav' => 'Menu Footer',
+      'mobile_nav' => 'Menu Mobile',
  		));
   add_theme_support('title-tag');
 }
@@ -47,24 +48,24 @@ add_theme_support( 'custom-logo', array(
   	'flex-width'  => true,
   	'header-text' => array( 'site-title', 'site-description' ),
   ) );
-  function house_product(){
+  function stealsneaker_product(){
       $label = array(
-          'name' => 'Dự Án',
-          'singular_name' => 'Dự Án' ,
-  		    'add_new'               => __( 'Thêm dự án', 'textdomain' ),
-          'add_new_item'          => __( 'Tên dự án', 'textdomain' ),
-          'new_item'              => __( 'Dự án mới', 'textdomain' ),
-          'edit_item'             => __( 'Chỉnh sửa dự án', 'textdomain' ),
-          'view_item'             => __( 'Xem dự án', 'textdomain' ),
-          'all_items'             => __( 'Tất cả dự án', 'textdomain' ),
-          'search_items'          => __( 'Tìm kiếm dự án', 'textdomain' ),
-  		    'featured_image'        => _x( 'Hình ảnh dự án', 'textdomain' ),
-          'set_featured_image'    => _x( 'Chọn hình ảnh dự án', 'textdomain' ),
-          'remove_featured_image' => _x( 'Xóa hình ảnh dự án', 'textdomain' ),
+          'name' => 'Sản phẩm',
+          'singular_name' => 'Sản phẩm' ,
+  		    'add_new'               => __( 'Thêm Sản phẩm', 'textdomain' ),
+          'add_new_item'          => __( 'Tên Sản phẩm', 'textdomain' ),
+          'new_item'              => __( 'Sản phẩm mới', 'textdomain' ),
+          'edit_item'             => __( 'Chỉnh sửa Sản phẩm', 'textdomain' ),
+          'view_item'             => __( 'Xem Sản phẩm', 'textdomain' ),
+          'all_items'             => __( 'Tất cả Sản phẩm', 'textdomain' ),
+          'search_items'          => __( 'Tìm kiếm Sản phẩm', 'textdomain' ),
+  		    'featured_image'        => _x( 'Hình ảnh Sản phẩm', 'textdomain' ),
+          'set_featured_image'    => _x( 'Chọn hình ảnh Sản phẩm', 'textdomain' ),
+          'remove_featured_image' => _x( 'Xóa hình ảnh Sản phẩm', 'textdomain' ),
       );
       $args = array(
           'labels' => $label,
-          'description' => 'Phần dự án',
+          'description' => 'Phần Sản phẩm',
           'supports' => array(
               'title',
               'thumbnail',
@@ -83,26 +84,24 @@ add_theme_support( 'custom-logo', array(
           'show_in_rest' => true,
           'show_in_graphql' => true,
           'rest_base'          => 'blogs',
-          'menu_position' => 5,
-          'menu_icon'           => 'dashicons-book-alt',
+          'menu_position' => 3,
+          'menu_icon'           => 'dashicons-products',
           'can_export' => true,
           'has_archive' => true,
           'publicly_queryable' => true,
           'capability_type' => 'post',
-          'graphql_single_name' => 'House_product',
-          'graphql_plural_name' => 'House_products',
       );
 
-      register_post_type('house_product', $args);
+      register_post_type('san-pham', $args);
 
   }
-  add_action('init', 'house_product');
+  add_action('init', 'stealsneaker_product');
 
 function make_taxonomy_theme() {
   $labels = array(
-      'name' => 'Phân loại',
-      'singular' => 'Phân loại',
-      'menu_name' => 'Phân loại'
+      'name' => 'Hãng',
+      'singular' => 'Hãng',
+      'menu_name' => 'Hãng'
       );
       $args = array(
         'labels'                     => $labels,
@@ -111,16 +110,93 @@ function make_taxonomy_theme() {
         'show_ui'                    => true,
         'show_admin_column'          => true,
         'show_in_rest'               => true,
-        'rest_base'                  => 'productCat',
         'show_in_nav_menus'          => true,
         'show_tagcloud'              => true,
         'show_in_graphql'            => true,
-        'graphql_single_name'        => 'Theloai',
-        'graphql_plural_name'        => 'Theloais',
         );
-    register_taxonomy('the-loai', 'house_product', $args);
+    register_taxonomy('hang', 'san-pham', $args);
   }
   add_action( 'init', 'make_taxonomy_theme', 0 );
+  function make_taxonomy_kind_theme() {
+    $labels = array(
+        'name' => 'Loại sản phẩm',
+        'singular' => 'Loại sản phẩm',
+        'menu_name' => 'Loại sản phẩm'
+        );
+        $args = array(
+          'labels'                     => $labels,
+          'hierarchical'               => true,
+          'public'                     => true,
+          'show_ui'                    => true,
+          'show_admin_column'          => true,
+          'show_in_rest'               => true,
+          'show_in_nav_menus'          => true,
+          'show_tagcloud'              => true,
+          'show_in_graphql'            => true,
+          );
+      register_taxonomy('loai-san-pham', 'san-pham', $args);
+    }
+    add_action( 'init', 'make_taxonomy_kind_theme', 0 );
+    function make_taxonomy_male_theme() {
+      $labels = array(
+          'name' => 'Giới tính',
+          'singular' => 'Giới tính',
+          'menu_name' => 'Giới tính'
+          );
+          $args = array(
+            'labels'                     => $labels,
+            'hierarchical'               => true,
+            'public'                     => true,
+            'show_ui'                    => true,
+            'show_admin_column'          => true,
+            'show_in_rest'               => true,
+            'show_in_nav_menus'          => true,
+            'show_tagcloud'              => true,
+            'show_in_graphql'            => true,
+            );
+        register_taxonomy('gioi-tinh', 'san-pham', $args);
+      }
+      add_action( 'init', 'make_taxonomy_male_theme', 0 );
+      function make_taxonomy_size_theme() {
+        $labels = array(
+            'name' => 'Size',
+            'singular' => 'Size',
+            'menu_name' => 'Size'
+            );
+            $args = array(
+              'labels'                     => $labels,
+              'hierarchical'               => true,
+              'public'                     => true,
+              'show_ui'                    => true,
+              'show_admin_column'          => true,
+              'show_in_rest'               => true,
+              'show_in_nav_menus'          => true,
+              'show_tagcloud'              => true,
+              'show_in_graphql'            => true,
+              );
+          register_taxonomy('size', 'san-pham', $args);
+        }
+        add_action( 'init', 'make_taxonomy_size_theme', 0 );
+        function make_taxonomy_status_theme() {
+          $labels = array(
+              'name' => 'Trạng thái sản phẩm',
+              'singular' => 'Trạng thái sản phẩm',
+              'menu_name' => 'Trạng thái sản phẩm'
+              );
+              $args = array(
+                'labels'                     => $labels,
+                'hierarchical'               => true,
+                'public'                     => true,
+                'show_ui'                    => true,
+                'show_admin_column'          => true,
+                'show_in_rest'               => true,
+                'show_in_nav_menus'          => true,
+                'show_tagcloud'              => true,
+                'show_in_graphql'            => true,
+                );
+            register_taxonomy('khuyen-mai', 'san-pham', $args);
+          }
+          add_action( 'init', 'make_taxonomy_status_theme', 0 );
   //marcus post views
   function gt_get_post_view() {
       $count = get_post_meta( get_the_ID(), 'post_views_count', true );

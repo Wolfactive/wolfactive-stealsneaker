@@ -16,13 +16,39 @@
      <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+<?php if(wp_is_mobile()): ?>
+  <section class="navbar">
+  <div class="navbar__contain">
+    <div class="navbar__item">
+      <div class="navbar__item-brand">
+        <a class="d--block logo" href="<?php echo home_url()?>">
+          <img src="<?php echo get_theme_file_uri('assets\images\logo-white.png') ?>" alt="stealsneaker-logo-moble">
+        </a>
+      </div>
+      <div class="navbar__item-btn">
+        <button class="btn" id="navbarClose">
+          <i class="fas fa-times text--light icon--text"></i>
+        </button>
+      </div>
+    </div>
+    <div class="navbar__item">
+      <?php
+       wp_nav_menu(array(
+      'theme_location' => 'mobile_nav' ));
+      ?>
+    </div>
+  </div>
+  </section>
+<?php endif; ?>
 <section class="topmenu">
   <div class="topmenu__contain container">
+    <?php if(!wp_is_mobile()): ?>
     <div class="topmenu__item">
       <div class="topmenu__content text--light">
         <?php echo get_theme_mod( 'title_top_menu'); ?>
       </div>
     </div>
+    <?php endif; ?>
     <div class="topmenu__item">
       <?php
        wp_nav_menu(array(
@@ -42,24 +68,25 @@
   	        <img src="<?php echo $image[0]; ?>" alt="logo-stealsneaker">
   	      </a>
   	   </div>
-  	   <div class="header__item dp--none">
-  	      <?php
-  	       wp_nav_menu(array(
-  		    'theme_location' => 'main_nav' ));
-  	      ?>
-  	   </div>
-  	   <div class="header__item d--none dp--block">
-  	      <button class="btn text--light" id="navBtn" aria-label="btn-navbar">
-  	          <i class="fas fa-bars icon--text"></i>
-  	      </button>
-  	   </div>
+       <?php if(wp_is_mobile()):?>
+         <div class="header__item">
+    	      <button class="btn" id="navBtn" aria-label="btn-navbar">
+    	          <i class="fas fa-bars icon--text"></i>
+    	      </button>
+    	   </div>
+     <?php else: ?>
+       <div class="header__item dp--none">
+          <?php
+           wp_nav_menu(array(
+          'theme_location' => 'main_nav' ));
+          ?>
+       </div>
+        <div class="header__item dp--none">
+           <div class="header__search">
+               <label for="inputHeaderSearch"><i class="fas fa-search" class="icon--text"></i></label>
+               <input class="input" type="text" id="inputHeaderSearch" name="s" value="" placeholder="Tìm kiếm">
+           </div>
+        </div>
+     <?php endif; ?>
   	</div>
-    <div class="main--background" id="headerNavBar">
-     <div class="container navbar__mb">
-       <?php
-       wp_nav_menu(array(
-      'theme_location' => 'headerMenuLocation' ));
-      ?>
-    </div>
-  </div>
 </section>

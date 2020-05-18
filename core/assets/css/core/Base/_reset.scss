@@ -247,16 +247,6 @@ img{
 .font--weight--600{
 	font-weight:600;
 }
-.post__category{
-	font-size: 13px;
-	text-transform: uppercase;
-	padding: 3px 10px;
-	font-weight: 600;
-	border-radius: 2px;
-	margin-right: 15px;
-	color: #fff !important;
-	background: var(--primary-bg-color);
-}
 /*---Background---*/
 /*---Position---*/
  .position--relative{
@@ -301,9 +291,6 @@ img{
 	font-style: italic;
 }
 /*border radius*/
-.border--solid-2{
-	border: 2px solid #e0d717;
-}
 .border--1{
 	border-radius:8px;
 }
