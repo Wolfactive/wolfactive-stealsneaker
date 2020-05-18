@@ -197,6 +197,50 @@ function make_taxonomy_theme() {
             register_taxonomy('khuyen-mai', 'san-pham', $args);
           }
           add_action( 'init', 'make_taxonomy_status_theme', 0 );
+//Slider Carousel
+function stealsneaker_carousel(){
+    $label = array(
+        'name' => 'Slider',
+        'singular_name' => 'Slider' ,
+        'add_new'               => __( 'Thêm Slider', 'textdomain' ),
+        'add_new_item'          => __( 'Tên Slider', 'textdomain' ),
+        'new_item'              => __( 'Slider mới', 'textdomain' ),
+        'edit_item'             => __( 'Chỉnh sửa Slider', 'textdomain' ),
+        'view_item'             => __( 'Xem Slider', 'textdomain' ),
+        'all_items'             => __( 'Tất cả Slider', 'textdomain' ),
+        'search_items'          => __( 'Tìm kiếm Slider', 'textdomain' ),
+        'featured_image'        => _x( 'Hình ảnh Slider', 'textdomain' ),
+        'set_featured_image'    => _x( 'Chọn hình ảnh Slider', 'textdomain' ),
+        'remove_featured_image' => _x( 'Xóa hình ảnh Slider', 'textdomain' ),
+    );
+    $args = array(
+        'labels' => $label,
+        'description' => 'Phần Slider',
+        'supports' => array(
+            'title',
+            'custom-fields',
+        ),
+        'hierarchical' => false,
+        'order' => 'DESC',
+        'orderby' => 'date',
+        'posts_per_page' => 3,
+        'public' => false,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'show_in_nav_menus' => true,
+        'show_in_admin_bar' => true,
+        'menu_position' => 3,
+        'menu_icon'           => 'dashicons-images-alt2',
+        'can_export' => true,
+        'has_archive' => false,
+        'publicly_queryable' => true,
+        'capability_type' => 'post',
+    );
+
+    register_post_type('slider', $args);
+
+}
+add_action('init', 'stealsneaker_carousel');
   //marcus post views
   function gt_get_post_view() {
       $count = get_post_meta( get_the_ID(), 'post_views_count', true );

@@ -34,3 +34,4 @@ closeNavBtn ? closeNavBtn.onclick = function(){
     navbar.classList.remove('active');
     htmlWrapper.classList.remove('active');
 }:{};
+$('.carousel__list').slick();
