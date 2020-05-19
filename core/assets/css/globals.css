@@ -935,7 +935,7 @@ a:hover {
 
 .lastest .lastest__contain .lastest__list .lastest__item .lastest__item-img {
   position: relative;
-  height: 390px;
+  max-height: 390px;
   overflow: hidden;
 }
 

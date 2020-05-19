@@ -27,7 +27,7 @@
       $lastest_list = new WP_Query( $args );
       while( $lastest_list->have_posts() ) :
       $lastest_list->the_post();   ?>
-      <a href="<?php the_permalink(); ?>" class="lastest__item d--block col-divide-4 col-divide-md-6">
+      <a href="<?php the_permalink(); ?>" class="lastest__item d--block col-divide-3 col-divide-md-6">
         <div class="lastest__item-img">
          <?php the_post_thumbnail('medium'); ?>
          <div class="lastest__item-tag tag">
