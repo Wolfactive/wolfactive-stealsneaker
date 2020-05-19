@@ -1,7 +1,7 @@
 <section class="lastest my-40">
   <div class="lastest__contain container">
     <h3 class="lastest__title title--section text--upcase">
-      sản phẩm mới
+      sản phẩm bán chạy
     </h3>
     <div class="lastest__list row-divide">
       <?php
@@ -13,7 +13,7 @@
           array(
             'taxonomy' => 'khuyen-mai',
             'field' => 'slug',
-            'terms' => 'san-pham-moi',
+            'terms' => 'san-pham-ban-chay',
             'include_children' => true,
           )
         ),
@@ -57,12 +57,10 @@
           <?php endif; ?>
         </div>
       </a>
-      <?php endwhile;wp_reset_postdata();
-      ?>
-
+      <?php endwhile;wp_reset_postdata();?>
     </div>
     <div class="lastest__btn">
-      <a href="<?php echo site_url('san-pham-moi') ?>" class="btn">
+      <a href="<?php echo site_url('san-pham-ban-chay') ?>" class="btn">
         Xem thêm >>
       </a>
     </div>

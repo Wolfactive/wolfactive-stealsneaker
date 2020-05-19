@@ -1,7 +1,7 @@
 <section class="lastest my-40">
   <div class="lastest__contain container">
     <h3 class="lastest__title title--section text--upcase">
-      sản phẩm mới
+      sản phẩm khuyến mãi
     </h3>
     <div class="lastest__list row-divide">
       <?php
@@ -13,7 +13,7 @@
           array(
             'taxonomy' => 'khuyen-mai',
             'field' => 'slug',
-            'terms' => 'san-pham-moi',
+            'terms' => 'san-pham-khuyen-mai',
             'include_children' => true,
           )
         ),

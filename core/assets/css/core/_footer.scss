@@ -46,6 +46,9 @@
               margin-top: 10px;
               background: #fff;
             }
+            @include MediaQuery($xs){
+              margin-top: 15px;
+            };
           }
           .footer__pivacy-list{
             a{

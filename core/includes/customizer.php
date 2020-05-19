@@ -31,6 +31,15 @@ function theme_slug_customizer( $wp_customize ) {
             'priority' => 150
         )
     );
+    // Thông tin công ty
+    $wp_customize->add_section(
+        'home_page',
+        array(
+            'title' => esc_html__( 'Cấu hình trang chủ', 'stealsneaker' ),
+            'panel'   =>  'theme_option',
+            'priority' => 150
+        )
+    );
     //add select setting to your section
     /*----------------------------------------------------------------------*/
     // Company Name
@@ -175,6 +184,61 @@ function theme_slug_customizer( $wp_customize ) {
            )
        );
       /*----------------------------------------------------------------------*/
+      //file input sanitization function
+          function theme_slug_sanitize_file( $file, $setting ) {
 
+              //allowed file types
+              $mimes = array(
+                  'jpg|jpeg|jpe' => 'image/jpeg',
+                  'gif'          => 'image/gif',
+                  'png'          => 'image/png',
+                  'webp'          => 'image/webp'
+              );
+
+              //check file type from file name
+              $file_ext = wp_check_filetype( $file, $mimes );
+
+              //if file has a valid mime type return it, otherwise return default
+              return ( $file_ext['ext'] ? $file : $setting->default );
+          }
+      // image field
+          $wp_customize->add_setting(
+              'home_img_banner',
+              array(
+                  'sanitize_callback' => 'theme_slug_sanitize_file'
+              )
+          );
+
+
+          $wp_customize->add_control(
+              new WP_Customize_Upload_Control(
+                  $wp_customize,
+                  'home_img_banner',
+                  array(
+                      'label'      => __( 'Chọn ảnh quảng cáo trên desktop', 'stealsneaker' ),
+                      'section'    => 'home_page'
+                  )
+              )
+          );
+          // image field
+              $wp_customize->add_setting(
+                  'home_img_banner_mb',
+                  array(
+                      'sanitize_callback' => 'theme_slug_sanitize_file'
+                  )
+              );
+
+
+              $wp_customize->add_control(
+                  new WP_Customize_Upload_Control(
+                      $wp_customize,
+                      'home_img_banner_mb',
+                      array(
+                          'label'      => __( 'Chọn ảnh quảng cáo trên mobile', 'stealsneaker' ),
+                          'section'    => 'home_page'
+                      )
+                  )
+              );
+  /*--------------------------------------------------------------------*/
 }
 add_action( 'customize_register', 'theme_slug_customizer' );

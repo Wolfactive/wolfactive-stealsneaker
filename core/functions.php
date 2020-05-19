@@ -584,3 +584,19 @@ function is_sold_out(){
   $sould_out_check = get_field('product_sold_out');
   return $sould_out_check;
 }
+function is_sale_off(){
+  $sale_off_check = get_field('product_price_sale');
+  if($sale_off_check) :
+    return true;
+  else :
+    return false;
+  endif;
+}
+function percent_sale(){
+  if(is_sale_off()):
+    $price_sale = get_field('product_price_sale');
+    $price_product = get_field('product_price');
+    $percent = ceil(($price_sale / $price_product)*100);
+    echo $percent;
+  endif;
+}
