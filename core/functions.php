@@ -576,7 +576,10 @@ function my_unregister_widgets() {
     unregister_widget('WP_Widget_Tag_Cloud');
     unregister_widget('WP_Nav_Menu_Widget');
 }
-
+function my_deregister_scripts(){
+ wp_dequeue_script( 'wp-embed' );
+}
+add_action( 'wp_footer', 'my_deregister_scripts' );
 function is_sold_out(){
   $sould_out_check = get_field('product_sold_out');
   return $sould_out_check;
