@@ -152,6 +152,7 @@
   left: -100%;
   justify-content: flex-end;
   transition: all 0.25s linear;
+  z-index: 1000;
   .navbar__contain{
     width: 90%;
     .navbar__item{

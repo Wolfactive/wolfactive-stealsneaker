@@ -7,6 +7,7 @@
      <meta name="author" content="Wolfactive - HuyNguyen - PhuongNam">
   	 <link rel="profile" href="https://wolfactive.net/">
      <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
+     <link rel="preload" href="<?php echo get_theme_file_uri('assets\css\lib\slick\fonts\slick.woff') ?>" as="font" type="font/woff" crossorigin>
      <link rel="preload" href="<?php echo get_theme_file_uri('assets\css\lib\fontawsome\webfonts\fa-brands-400.woff2') ?>" as="font" type="font/woff2" crossorigin>
      <link rel="preload" href="<?php echo get_theme_file_uri('assets\css\lib\fontawsome\webfonts\fa-regular-400.woff2') ?>" as="font" type="font/woff2" crossorigin>
      <link rel="preload" href="<?php echo get_theme_file_uri('assets\css\lib\fontawsome\webfonts\fa-solid-900.woff2') ?>" as="font" type="font/woff2" crossorigin>
