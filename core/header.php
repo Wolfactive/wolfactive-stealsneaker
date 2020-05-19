@@ -12,7 +12,7 @@
      <link rel="preload" href="<?php echo get_theme_file_uri('assets\css\lib\fontawsome\webfonts\fa-regular-400.woff2') ?>" as="font" type="font/woff2" crossorigin>
      <link rel="preload" href="<?php echo get_theme_file_uri('assets\css\lib\fontawsome\webfonts\fa-solid-900.woff2') ?>" as="font" type="font/woff2" crossorigin>
      <link rel="preload" href="<?php echo get_theme_file_uri('assets\fonts\Exo.ttf') ?>" as="font" type="font/ttf" crossorigin>
-     <link rel="preconnect" href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.635015753784!2d106.65623431533444!3d10.839218260994189!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529a14af56771%3A0x1053c6f69b60391!2zOTgyLzc1LzExIFF1YW5nIFRydW5nLCBQaMaw4budbmcgMTEsIEfDsiBW4bqlcCwgSOG7kyBDaMOtIE1pbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1589863213110!5m2!1svi!2s">
+     <link rel="dns-prefetch" href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.635015753784!2d106.65623431533444!3d10.839218260994189!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529a14af56771%3A0x1053c6f69b60391!2zOTgyLzc1LzExIFF1YW5nIFRydW5nLCBQaMaw4budbmcgMTEsIEfDsiBW4bqlcCwgSOG7kyBDaMOtIE1pbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1589863213110!5m2!1svi!2s">
      <link rel="stylesheet" href="<?php echo get_theme_file_uri('assets/css/globals.min.css') ?>">
      <script defer type='text/javascript' src="<?php echo get_theme_file_uri('assets/js/main.min.js') ?>"></script>
      <?php wp_head(); ?>
