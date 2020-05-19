@@ -1112,6 +1112,40 @@ a:hover {
   }
 }
 
+.title--background {
+  position: relative;
+}
+
+.title--background .title--background__contain {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 39px;
+}
+
+@media screen and (max-width: 768px) {
+  .title--background .title--background__contain {
+    font-size: 25px;
+  }
+}
+
+.title--background .title--background__img img {
+  object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+  .title--background .title--background__img {
+    height: 200px;
+  }
+  .title--background .title--background__img img {
+    height: 200px;
+  }
+}
+
 .footer .footer__main {
   padding: 60px 0px;
 }

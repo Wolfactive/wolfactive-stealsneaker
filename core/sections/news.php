@@ -1,10 +1,11 @@
 <section class="newspaper my-40" id="newSpaperHome">
     <div class="container">
         <h3 class="mc--hometitle title--section text--upcase">tin tức mới</h3>
-        <?php 
+        <?php
             $args = array(
                 'post_type' => 'post',
                 'post_status' => 'publish',
+                'showposts'   =>  10,      
             );
             $list_newspaper = new WP_Query( $args );
             if($list_newspaper->have_posts()) :
@@ -34,5 +35,5 @@
                 esc_html_e( 'No testimonials in the diving taxonomy!', 'text-domain' );
             endif;?>
     </div>
-    
+
 </section>

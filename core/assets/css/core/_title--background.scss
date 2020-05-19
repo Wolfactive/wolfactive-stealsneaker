@@ -1,0 +1,27 @@
+.title--background{
+  position: relative;
+  .title--background__contain{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 39px;
+    @include  MediaQuery($sm){
+      font-size: 25px;
+   }
+  }
+  .title--background__img{
+    img{
+      object-fit: cover;
+    }
+    @include  MediaQuery($sm){
+      height: 200px;
+      img{
+        height: 200px;
+      }
+     }
+    }
+}
