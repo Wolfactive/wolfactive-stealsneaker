@@ -3,7 +3,11 @@
     <h3 class="lastest__title title--section text--upcase">
       sản phẩm khuyến mãi
     </h3>
-    <div class="lastest__list row-divide">
+    <?php if(check_slider_home_page('home_section_2_slider')) : ?>
+      <div class="lastest__list slick__slider">
+    <?php else:?>
+     <div class="lastest__list row-divide">
+    <?php endif; ?>
       <?php
       $args = array(
         'post_type'   => 'san-pham',
@@ -28,7 +32,11 @@
       $lastest_list = new WP_Query( $args );
       while( $lastest_list->have_posts() ) :
       $lastest_list->the_post();   ?>
+      <?php if(check_slider_home_page('home_section_2_slider')) : ?>
+      <a href="<?php the_permalink(); ?>" class="lastest__item d--block">
+        <?php else: ?>
       <a href="<?php the_permalink(); ?>" class="lastest__item d--block col-divide-3 col-divide-md-6 col-divide-sm-12">
+      <?php endif; ?>
         <div class="lastest__item-img">
          <?php the_post_thumbnail('medium'); ?>
          <div class="lastest__item-tag tag">

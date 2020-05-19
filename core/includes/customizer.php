@@ -220,6 +220,20 @@ function theme_slug_customizer( $wp_customize ) {
                       )
                   )
               );
+              //radio box sanitization function
+       function theme_slug_sanitize_radio( $input, $setting ){
+
+           //input must be a slug: lowercase alphanumeric characters, dashes and underscores are allowed only
+           $input = sanitize_key($input);
+
+           //get the list of possible radio box options
+           $choices = $setting->manager->get_control( $setting->id )->choices;
+
+           //return input if valid or return default option
+           return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
+
+       }
+
       /*----------------------------------------------------------------------*/
           //add setting to your section
               $wp_customize->add_setting(
@@ -266,6 +280,67 @@ function theme_slug_customizer( $wp_customize ) {
                   )
               )
           );
+      /*----------------------------------------------------------------------*/
+         //add setting to your section
+             $wp_customize->add_setting(
+                 'home_section_1_slider',
+                 array(
+                     'sanitize_callback' => 'theme_slug_sanitize_radio'
+                 )
+             );
+
+             $wp_customize->add_control(
+                 'home_section_1_slider',
+                 array(
+                     'label' => esc_html__( 'Bật slider cho sản phẩm mới', 'stealsneaker' ),
+                     'section' => 'home_page',
+                     'type' => 'radio',
+                     'choices' => array(
+                          false => esc_html__('Off','stealsneaker'),
+                          true => esc_html__('On','stealsneaker'),
+                     )
+                 )
+             );
+      //add setting to your section
+          $wp_customize->add_setting(
+              'home_section_2_slider',
+              array(
+                  'sanitize_callback' => 'theme_slug_sanitize_radio'
+              )
+          );
+
+          $wp_customize->add_control(
+              'home_section_2_slider',
+              array(
+                  'label' => esc_html__( 'Bật slider cho sản phẩm khuyến mãi', 'stealsneaker' ),
+                  'section' => 'home_page',
+                  'type' => 'radio',
+                  'choices' => array(
+                       false => esc_html__('Off','stealsneaker'),
+                       true => esc_html__('On','stealsneaker'),
+                  )
+              )
+          );
+          //add setting to your section
+              $wp_customize->add_setting(
+                  'home_section_3_slider',
+                  array(
+                      'sanitize_callback' => 'theme_slug_sanitize_radio'
+                  )
+              );
+
+              $wp_customize->add_control(
+                  'home_section_3_slider',
+                  array(
+                      'label' => esc_html__( 'Bật slider cho sản phẩm bán chạy', 'stealsneaker' ),
+                      'section' => 'home_page',
+                      'type' => 'radio',
+                      'choices' => array(
+                           false => esc_html__('Off','stealsneaker'),
+                           true => esc_html__('On','stealsneaker'),
+                      )
+                  )
+              );
   /*----------------------------------------------------------------------*/
       //file input sanitization function
           function theme_slug_sanitize_file( $file, $setting ) {

@@ -5,6 +5,8 @@ var openNavBtn = document.querySelector("#navBtn");
 var navbar = document.querySelector('.navbar');
 var closeNavBtn = document.querySelector('#navbarClose');
 var htmlWrapper = document.querySelector('.wrapper');
+var carouselList = document.querySelector('.carousel__list');
+var sliderHome = document.querySelector('.slick__slider');
 // auto LazyLoad img and video
 function iframeResposive(){
   for (i = 0; i < iframe.length; i++) {
@@ -34,4 +36,40 @@ closeNavBtn ? closeNavBtn.onclick = function(){
     navbar.classList.remove('active');
     htmlWrapper.classList.remove('active');
 }:{};
-$('.carousel__list').slick();
+carouselList ?
+$('.carousel__list').slick() :{};
+sliderHome ?
+$('.slick__slider').slick({
+  dots: false,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 4,
+  slidesToScroll: 4,
+  autoplay: true,
+  autoplaySpeed: 5000,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+}) :{};

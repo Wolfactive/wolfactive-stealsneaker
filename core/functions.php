@@ -604,3 +604,11 @@ function get_section_homepage($field_mode){
   $section = 'sections/'.get_theme_mod($field_mode).'';
   return get_template_part($section);
 }
+function check_slider_home_page($field_mode){
+  $check_slider = get_theme_mod($field_mode);
+  if($check_slider) :
+    return true;
+  else:
+    return false;
+  endif;
+}
