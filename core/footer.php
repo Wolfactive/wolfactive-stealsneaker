@@ -50,10 +50,10 @@
               </p>
             </div>
             <div class="footer__socical col-divide-9 col-divide-md-12">
-              <a href="" class="footer__socical-item mxr-5">
+              <a href="" class="footer__socical-item mx-15">
                 <i class="fab fa-facebook icon--text"></i>
               </a>
-              <a href="" class="footer__socical-item">
+              <a href="" class="footer__socical-item ">
                 <i class="fab fa-instagram icon--text"></i>
               </a>
             </div>
@@ -95,7 +95,7 @@
           </div>
         </div>
         <div class="footer__item col-divide-4 col-divide-md-12">
-          <div class="fb-page fb_iframe_widget" data-href="https://www.facebook.com/StealSneakerAuthentic/" data-tabs="timeline" data-width="500" data-height="214" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" fb-xfbml-state="rendered" fb-iframe-plugin-query="adapt_container_width=true&amp;app_id=&amp;container_width=425&amp;height=214&amp;hide_cover=false&amp;href=https%3A%2F%2Fwww.facebook.com%2FStealSneakerAuthentic%2F&amp;locale=vi_VN&amp;sdk=joey&amp;show_facepile=true&amp;small_header=false&amp;tabs=timeline&amp;width=500"><span style="vertical-align: bottom; width: 425px; height: 214px;"><iframe name="fb5aaaf5e4a34" width="500px" height="214px" data-testid="fb:page Facebook Social Plugin" title="fb:page Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="https://www.facebook.com/v2.8/plugins/page.php?adapt_container_width=true&amp;app_id=&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D46%23cb%3Df3b5600be45502c%26domain%3Dstealsneaker.com%26origin%3Dhttps%253A%252F%252Fstealsneaker.com%252Ff5a47bfbb41e5c%26relation%3Dparent.parent&amp;container_width=425&amp;height=214&amp;hide_cover=false&amp;href=https%3A%2F%2Fwww.facebook.com%2FStealSneakerAuthentic%2F&amp;locale=vi_VN&amp;sdk=joey&amp;show_facepile=true&amp;small_header=false&amp;tabs=timeline&amp;width=500" style="border: none; visibility: visible; width: 425px; height: 214px;" class=""></iframe></span></div>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.635015753784!2d106.65623431533444!3d10.839218260994189!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529a14af56771%3A0x1053c6f69b60391!2zOTgyLzc1LzExIFF1YW5nIFRydW5nLCBQaMaw4budbmcgMTEsIEfDsiBW4bqlcCwgSOG7kyBDaMOtIE1pbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1589863213110!5m2!1svi!2s" frameborder="0" style="border:0; width:100%; height:300px" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         </div>
     		</div>
     	</div>

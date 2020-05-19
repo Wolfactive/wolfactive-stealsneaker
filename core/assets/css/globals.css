@@ -142,7 +142,7 @@ img {
 /*---Row---*/
 .row-divide {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
 }
 
@@ -277,6 +277,18 @@ img {
 }
 
 /*---Background---*/
+.tag {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 100;
+}
+
+.tag.sold {
+  top: -10px;
+  right: 10px;
+}
+
 /*---Position---*/
 .position--relative {
   position: relative;
@@ -791,6 +803,7 @@ a:hover {
   width: 200px;
   box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
   transition: all 0.25s linear;
+  z-index: 10000;
 }
 
 .header .header__contain .header__item .menu-main-menu-container .menu .menu-item > .sub-menu .menu-item {
@@ -896,6 +909,117 @@ a:hover {
   left: 0;
 }
 
+.lastest .lastest__contain {
+  position: relative;
+}
+
+.lastest .lastest__contain .lastest__title {
+  font-weight: 900;
+  display: block;
+  width: max-content;
+  margin: 30px auto;
+}
+
+.lastest .lastest__contain .lastest__title::after {
+  content: "";
+  display: block;
+  margin-top: 5px;
+  width: 100%;
+  height: 3px;
+  background: var(--primary-bg-color);
+}
+
+.lastest .lastest__contain .lastest__list .lastest__item {
+  box-shadow: 0px 1px 1px 1px #1414144a;
+}
+
+.lastest .lastest__contain .lastest__list .lastest__item .lastest__item-img {
+  position: relative;
+  height: 390px;
+  overflow: hidden;
+}
+
+.lastest .lastest__contain .lastest__list .lastest__item .lastest__item-img::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #1414140d;
+  top: 0;
+  right: 0;
+  transition: all 0.15s linear;
+  z-index: 10;
+}
+
+.lastest .lastest__contain .lastest__list .lastest__item .lastest__item-img img {
+  opacity: 1;
+  transform: scale(1);
+  transition: all 0.25s linear;
+}
+
+.lastest .lastest__contain .lastest__list .lastest__item .lastest__item-title {
+  padding: 20px 20px 5px 20px;
+  text-align: center;
+}
+
+.lastest .lastest__contain .lastest__list .lastest__item .lastes__item-price {
+  text-align: center;
+  font-weight: 500;
+  padding: 5px 20px 20px 20px;
+  font-size: 18px;
+}
+
+.lastest .lastest__contain .lastest__list .lastest__item:hover {
+  box-shadow: 0px 1px 11px 1px #14141459;
+}
+
+.lastest .lastest__contain .lastest__list .lastest__item:hover .lastest__item-img img {
+  opacity: 0.85;
+  transform: scale(1.1);
+}
+
+.lastest .lastest__contain .lastest__list .lastest__item:hover .lastest__item-img::after {
+  right: -100%;
+}
+
+.lastest .lastest__contain .lastest__btn {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  z-index: 10;
+  transition: all 0.25s linear;
+}
+
+.lastest .lastest__contain .lastest__btn .btn {
+  padding: 10px 15px;
+  text-transform: uppercase;
+  transform: scale(1);
+  transition: all 0.25s linear;
+  font-weight: 700;
+}
+
+.lastest .lastest__contain .lastest__btn .btn::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: var(--primary-bg-color);
+  transition: all 0.25s linear;
+}
+
+.lastest .lastest__contain .lastest__btn .btn:hover {
+  transform: scale(1.1);
+}
+
+.lastest .lastest__contain .lastest__btn .btn:hover::after {
+  width: 100%;
+}
+
+.lastest .lastest__contain .lastest__btn:hover {
+  right: 0;
+}
+
 .footer .footer__main {
   padding: 60px 0px;
 }
@@ -945,6 +1069,7 @@ a:hover {
 
 .footer .footer__main .footer__container .footer__list .footer__item h2.title--item {
   margin-bottom: 10px;
+  font-size: 15.5px;
 }
 
 .footer .footer__main .footer__container .footer__list .footer__item h2.title--item:after {
@@ -960,6 +1085,7 @@ a:hover {
   margin-bottom: 5px;
   transform: scale(1);
   transition: all 0.25s linear;
+  font-size: 13px;
 }
 
 .footer .footer__main .footer__container .footer__list .footer__item .footer__pivacy-list a:hover {

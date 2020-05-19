@@ -84,6 +84,7 @@
               width: 200px;
               box-shadow: 0 5px 12px rgba(0,0,0,.15);
               transition: all 0.25s linear;
+              z-index: 10000;
               .menu-item{
                 display: block;
                 >.sub-menu{

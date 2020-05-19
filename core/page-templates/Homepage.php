@@ -4,5 +4,6 @@
  */
  get_header();
  get_template_part('sections/carousel');
+ get_template_part('sections/lastest-products');
  get_footer();
 ?>

@@ -72,7 +72,7 @@ add_theme_support( 'custom-logo', array(
               'custom-fields',
               'editor',
           ),
-          'hierarchical' => false,
+          'hierarchical' => true,
           'order' => 'DESC',
           'orderby' => 'date',
           'posts_per_page' => 30,
@@ -82,8 +82,6 @@ add_theme_support( 'custom-logo', array(
           'show_in_nav_menus' => true,
           'show_in_admin_bar' => true,
           'show_in_rest' => true,
-          'show_in_graphql' => true,
-          'rest_base'          => 'blogs',
           'menu_position' => 3,
           'menu_icon'           => 'dashicons-products',
           'can_export' => true,
@@ -577,4 +575,9 @@ function my_unregister_widgets() {
     unregister_widget('WP_Widget_RSS');
     unregister_widget('WP_Widget_Tag_Cloud');
     unregister_widget('WP_Nav_Menu_Widget');
+}
+
+function is_sold_out(){
+  $sould_out_check = get_field('product_sold_out');
+  return $sould_out_check;
 }
