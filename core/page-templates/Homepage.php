@@ -9,5 +9,6 @@
  get_template_part('sections/banner');
  get_section_homepage('home_section_3');
  get_template_part('sections/banner-privacy');
+ get_template_part('sections/news');
  get_footer();
 ?>
