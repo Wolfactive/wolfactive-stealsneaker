@@ -308,6 +308,10 @@ img {
   text-decoration: line-through;
 }
 
+.home .slick-list.draggable {
+  padding-bottom: 5px;
+}
+
 /*---Position---*/
 .position--relative {
   position: relative;
