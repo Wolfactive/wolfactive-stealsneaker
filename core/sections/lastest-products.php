@@ -1,8 +1,8 @@
 <section class="lastest my-40">
   <div class="lastest__contain container">
-    <h3 class="lastest__title title--section text--upcase">
+    <h1 class="lastest__title title--section text--upcase">
       sản phẩm mới
-    </h3>
+    </h1>
     <div class="lastest__list row-divide">
       <?php
       $args = array(

@@ -10,9 +10,9 @@
           <h3 class="footer__item-des text--light text--upcase">
             THÔNG TIN STEAL SNEAKER AUTHENTIC
           </h3>
-          <h1 class="footer__item-title text--light text--upcase">
+          <h2 class="footer__item-title text--light text--upcase">
             <?php echo get_theme_mod('company_name') ?>
-          </h1>
+          </h2>
           <div class="footer__item-contact row-divide">
             <div class="col-divide-2 col-divide-md-12">
               <p class="text--light font--weight--600">

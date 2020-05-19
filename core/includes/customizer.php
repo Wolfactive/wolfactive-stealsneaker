@@ -184,6 +184,89 @@ function theme_slug_customizer( $wp_customize ) {
            )
        );
       /*----------------------------------------------------------------------*/
+      function theme_slug_sanitize_select( $input, $setting ){
+
+                  //input must be a slug: lowercase alphanumeric characters, dashes and underscores are allowed only
+                  $input = sanitize_key($input);
+
+                  //get the list of possible select options
+                  $choices = $setting->manager->get_control( $setting->id )->choices;
+
+                  //return input if valid or return default option
+                  return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
+
+              }
+
+
+          //add setting to your section
+              $wp_customize->add_setting(
+                  'home_section_1',
+                  array(
+                      'sanitize_callback' => 'theme_slug_sanitize_select'
+                  )
+              );
+
+              $wp_customize->add_control(
+                  'home_section_1',
+                  array(
+                      'label' => esc_html__( 'Chọn mục hiển thị cho section 1 ', 'stealsneaker' ),
+                      'section' => 'home_page',
+                      'type' => 'select',
+                      'choices' => array(
+                          '' => esc_html__('Chọn mục hiện thị','stealsneaker'),
+                          'lastest-products' => esc_html__('Sản phẩm mới','stealsneaker'),
+                          'sale-product' => esc_html__('Sản phẩm khuyến mãi','stealsneaker'),
+                          'hot-product' => esc_html__('Sản phẩm bán chạy','stealsneaker')
+                      )
+                  )
+              );
+      /*----------------------------------------------------------------------*/
+          //add setting to your section
+              $wp_customize->add_setting(
+                  'home_section_2',
+                  array(
+                      'sanitize_callback' => 'theme_slug_sanitize_select'
+                  )
+              );
+
+              $wp_customize->add_control(
+                  'home_section_2',
+                  array(
+                      'label' => esc_html__( 'Chọn mục hiển thị cho section 2 ', 'stealsneaker' ),
+                      'section' => 'home_page',
+                      'type' => 'select',
+                      'choices' => array(
+                          '' => esc_html__('Chọn mục hiện thị','stealsneaker'),
+                          'lastest-products' => esc_html__('Sản phẩm mới','stealsneaker'),
+                          'sale-product' => esc_html__('Sản phẩm khuyến mãi','stealsneaker'),
+                          'hot-product' => esc_html__('Sản phẩm bán chạy','stealsneaker')
+                      )
+                  )
+              );
+      /*----------------------------------------------------------------------*/
+      //add setting to your section
+          $wp_customize->add_setting(
+              'home_section_3',
+              array(
+                  'sanitize_callback' => 'theme_slug_sanitize_select'
+              )
+          );
+
+          $wp_customize->add_control(
+              'home_section_3',
+              array(
+                  'label' => esc_html__( 'Chọn mục hiển thị cho section 3 ', 'stealsneaker' ),
+                  'section' => 'home_page',
+                  'type' => 'select',
+                  'choices' => array(
+                      '' => esc_html__('Chọn mục hiện thị','stealsneaker'),
+                      'lastest-products' => esc_html__('Sản phẩm mới','stealsneaker'),
+                      'sale-product' => esc_html__('Sản phẩm khuyến mãi','stealsneaker'),
+                      'hot-product' => esc_html__('Sản phẩm bán chạy','stealsneaker')
+                  )
+              )
+          );
+  /*----------------------------------------------------------------------*/
       //file input sanitization function
           function theme_slug_sanitize_file( $file, $setting ) {
 
@@ -240,5 +323,25 @@ function theme_slug_customizer( $wp_customize ) {
                   )
               );
   /*--------------------------------------------------------------------*/
+  // image field
+      $wp_customize->add_setting(
+          'home_img_banner_privacy',
+          array(
+              'sanitize_callback' => 'theme_slug_sanitize_file'
+          )
+      );
+
+
+      $wp_customize->add_control(
+          new WP_Customize_Upload_Control(
+              $wp_customize,
+              'home_img_banner_privacy',
+              array(
+                  'label'      => __( 'Chọn ảnh quảng cáo cho chính sách', 'stealsneaker' ),
+                  'section'    => 'home_page'
+              )
+          )
+      );
+/*--------------------------------------------------------------------*/
 }
 add_action( 'customize_register', 'theme_slug_customizer' );

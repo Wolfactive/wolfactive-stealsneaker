@@ -243,6 +243,10 @@ img {
   transform: rotate(90deg);
 }
 
+.w--90 {
+  width: 80%;
+}
+
 /*---Background---*/
 .main--background {
   background: var(--primary-bg-color);
@@ -1037,6 +1041,16 @@ a:hover {
   .lastest .lastest__contain .lastest__btn {
     position: unset;
     text-align: right;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .privacy {
+    height: 450px;
+  }
+  .privacy > img {
+    object-fit: cover;
+    height: 450px;
   }
 }
 

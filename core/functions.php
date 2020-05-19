@@ -600,3 +600,7 @@ function percent_sale(){
     echo $percent;
   endif;
 }
+function get_section_homepage($field_mode){
+  $section = 'sections/'.get_theme_mod($field_mode).'';
+  return get_template_part($section);
+}

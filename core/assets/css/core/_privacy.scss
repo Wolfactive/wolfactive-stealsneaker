@@ -1,0 +1,9 @@
+.privacy{
+  @include MediaQuery($md){
+    height: 450px;
+    &>img{
+      object-fit: cover;
+      height: 450px;
+    }
+  };
+}

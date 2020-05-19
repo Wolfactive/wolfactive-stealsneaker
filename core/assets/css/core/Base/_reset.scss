@@ -218,7 +218,9 @@ img{
 .rotate--90{
 	transform: rotate(90deg);
 }
-
+.w--90{
+  width: 80%;
+}
 /*---Background---*/
 .main--background{
 	background: var(--primary-bg-color);
