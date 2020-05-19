@@ -1,4 +1,89 @@
 .footer{
+  .footer__main{
+    padding: 60px 0px;
+    .footer__container{
+      .footer__list{
+        .footer__item{
+          .footer__logo{
+            margin-bottom: 20px;
+          }
+          .footer__item-des{
+            margin-bottom: 10px;
+            &:after{
+              content:"";
+              display: block;
+              width: 40px;
+              height: 3px;
+              margin-top: 10px;
+              background: #fff;
+            }
+            @include MediaQuery($xs){
+              font-size: 15px;
+            };
+          }
+          .footer__item-title {
+            margin-bottom: 5px;
+            @include MediaQuery($xs){
+              font-size: 22px;
+            };
+          }
+          .footer__item-contact{
+            div{
+              margin-bottom: 5px;
+              @include MediaQuery($xs){
+                font-weight: 400;
+              };
+            }
+          }
+          h2.title--item{
+            margin-bottom: 10px;
+            &:after{
+              content:"";
+              display: block;
+              width: 40px  ;
+              height: 3px;
+              margin-top: 10px;
+              background: #fff;
+            }
+          }
+          .footer__pivacy-list{
+            a{
+              margin-bottom: 5px;
+              transform: scale(1);
+              transition: all 0.25s linear;
+              &:hover{
+                transform: scale(1.1);
+              }
+            }
+          }
+          frame{
+            width: 100%;
+          }
+          .footer__socical{
+            .footer__socical-item{
+              i{
+                transform: scale(1);
+                transition: all 0.25s linear;
+              }
+              .fa-facebook{
+                color:#4267b2;
+                font-size: 45px;
+              }
+              .fa-instagram{
+                color:#ba1674;
+                font-size: 45px;
+              }
+              &:hover{
+                i{
+                  transform: scale(1.1);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
   .footer__sub{
     background: #000000de;
     padding: 10px 0px;

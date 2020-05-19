@@ -100,7 +100,8 @@ function theme_slug_customizer( $wp_customize ) {
         'company_name',
         // $args
         array(
-          'sanitize_callback'	=> 'sanitize_text_field'
+          'sanitize_callback'	=> 'sanitize_text_field',
+          'default'           =>  'STEAL SNEAKER AUTHENTIC'
         )
       );
 
@@ -120,7 +121,8 @@ function theme_slug_customizer( $wp_customize ) {
          'company_address',
          // $args
          array(
-           'sanitize_callback'	=> 'sanitize_text_field'
+           'sanitize_callback'	=> 'sanitize_text_field',
+           'default'            =>  '982/11 Quang Trung, P8, Q. Gò Vấp'
          )
        );
 
@@ -140,7 +142,8 @@ function theme_slug_customizer( $wp_customize ) {
         'company_phone',
         // $args
         array(
-          'sanitize_callback'	=> 'absint'
+          'sanitize_callback'	=> 'sanitize_text_field',
+          'default'            =>  '0978 97 55 56  - 0394 391 999'
         )
       );
 
@@ -150,7 +153,7 @@ function theme_slug_customizer( $wp_customize ) {
             array(
                 'label' => esc_html__( 'Điền số diện thoại', 'theme_slug' ),
                 'section' => 'company_information',
-                'type' => 'number'
+                'type' => 'text'
             )
    );
    /*----------------------------------------------------------------------*/
@@ -158,7 +161,8 @@ function theme_slug_customizer( $wp_customize ) {
    $wp_customize->add_setting(
            'company_email',
            array(
-               'sanitize_callback' => 'sanitize_email' //removes all invalid characters
+               'sanitize_callback' => 'sanitize_email', //removes all invalid characters
+               'default'           => 'cskh.stealsneaker.com@gmail.com'
            )
        );
 
