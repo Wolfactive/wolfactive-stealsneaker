@@ -44,7 +44,7 @@
           padding: 20px 20px 5px 20px;
           text-align: center;
         }
-        .lastes__item-price{
+        .lastest__item-price{
           text-align: center;
           font-weight: 500;
           padding: 5px 20px 20px 20px;
@@ -94,6 +94,10 @@
       &:hover{
         right: 0;
       }
+      @include MediaQuery($xs){
+        position: unset;
+        text-align: right;
+      };
     }
   }
 }
