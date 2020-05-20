@@ -1140,6 +1140,72 @@ a:hover {
   color: #ff4545;
 }
 
+.mg-bt-10 {
+  margin-bottom: 10px;
+}
+
+.page__contact .ss-authentic {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.page__contact .contact_information .mc-dot-style {
+  margin-left: 4px;
+}
+
+.page__contact .contact_information .mc-dot-style-two {
+  margin-left: 11px;
+}
+
+.page__contact .contact_information span {
+  font-size: 18px;
+}
+
+.page__contact .form_infor_contact {
+  margin-top: 20px;
+}
+
+.page__contact .form_infor_contact p {
+  font-size: 13px;
+  padding: 0 0 0 3px;
+}
+
+.page__contact .form_infor_contact input {
+  width: 90%;
+  padding: 12px 10px;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+}
+
+.page__contact .form_infor_contact textarea {
+  width: 91.5%;
+  padding: 10px;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+}
+
+.page__contact .btn_formcontact {
+  margin-top: 10px;
+}
+
+.page__contact .btn_formcontact .mc-style-btn-contact {
+  border: none;
+  background: #000;
+  padding: 12px 30px;
+  color: #fff;
+  font-weight: 700;
+  border: 1px solid black;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.page__contact .btn_formcontact .mc-style-btn-contact:hover {
+  background: #fff;
+  color: #000;
+  border: 1px solid black;
+}
+
 .footer .footer__main {
   padding: 60px 0px;
 }

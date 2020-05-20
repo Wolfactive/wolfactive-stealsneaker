@@ -1,0 +1,59 @@
+.mg-bt-10{
+    margin-bottom: 10px;
+}
+.page__contact{
+    .ss-authentic{
+        font-size: 26px;
+        font-weight: 700;
+        margin-bottom: 15px;
+    }
+    .contact_information{
+        .mc-dot-style{
+            margin-left: 4px;
+        }
+        .mc-dot-style-two{
+            margin-left:11px;
+        }
+        span{
+            font-size: 18px;
+        }
+    }
+    .form_infor_contact{
+        margin-top: 20px;
+        p{
+            font-size: 13px;
+            padding: 0 0 0 3px;
+        }
+        input{
+            width: 90%;
+            padding: 12px 10px;
+            border: 1px solid #e5e5e5;
+            border-radius: 4px;
+        }
+        textarea{
+            width: 91.5%;
+            padding:10px;
+            border: 1px solid #e5e5e5;
+            border-radius: 4px;
+        }
+    }
+    .btn_formcontact{
+        margin-top: 10px;
+        .mc-style-btn-contact{
+            border: none;
+            background: #000;
+            padding: 12px 30px;
+            color: #fff;
+            font-weight: 700;
+            border: 1px solid black;
+            cursor: pointer;
+            transition: all 0.5s;
+        }
+        .mc-style-btn-contact:hover{
+            background: #fff;
+            color: #000;
+            border: 1px solid black;
+        }
+    }
+    
+}
