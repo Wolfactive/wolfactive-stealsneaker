@@ -5,6 +5,7 @@
             $args = array(
                 'post_type' => 'post',
                 'post_status' => 'publish',
+                'category_name' => 'tin-noi-bat',
                 'showposts'   =>  10,      
             );
             $list_newspaper = new WP_Query( $args );
