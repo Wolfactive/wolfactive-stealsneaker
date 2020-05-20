@@ -94,7 +94,7 @@
       &:hover{
         right: 0;
       }
-      @include MediaQuery($xs){
+      @include MediaQuery($md){
         position: unset;
         text-align: right;
       };

@@ -1057,7 +1057,7 @@ a:hover {
   right: 0;
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 992px) {
   .lastest .lastest__contain .lastest__btn {
     position: unset;
     text-align: right;
