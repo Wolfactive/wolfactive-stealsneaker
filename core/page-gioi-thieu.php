@@ -1,11 +1,19 @@
 <?php
 get_header();
-get_template_part('sections/breadcums');
 ?>
+<section class="breadcrumbs">
+  <div class="breadcrumbs__contain container">
+      <div class="breadcumbs__title text--center text--upcase title--section">
+        giới thiệu
+      </div>
+      <?php if ( function_exists('yoast_breadcrumb') ) {yoast_breadcrumb('<p id="breadcrumbs" class="f-breadcrumbs text--center">','</p>');} ?>
+  </div>
+</section>
+
 <div class="page__contain my-60">
   <div class="container--read">
     <h1 class="title--section text--upcase text--center">
-      giới thiệu
+      <?php the_title() ?>
     </h1>
     <div class="page__content my-40">
       <p>Sẽ không còn nỗi sợ mua nhầm hàng FAKE, hàng kém chất lượng vì đã có <b>STEALSNEAKER.COM. STEALSNEAKER.COM</b> luôn mang theo sứ mệnh giúp người mua "<span style="color: #f0506e; font-weight:600">Nhận được giá trị thật so với số tiền và niềm tin mà mình bỏ ra</span>"</p>
