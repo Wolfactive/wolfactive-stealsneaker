@@ -5,7 +5,7 @@ get_template_part('sections/breadcums');
 <div class="page__contain my-60">
   <div class="container--read">
     <h1 class="title--section text--upcase text--center">
-      <?php the_title() ?>
+      giới thiệu
     </h1>
     <div class="page__content my-40">
       <p>Sẽ không còn nỗi sợ mua nhầm hàng FAKE, hàng kém chất lượng vì đã có <b>STEALSNEAKER.COM. STEALSNEAKER.COM</b> luôn mang theo sứ mệnh giúp người mua "<span style="color: #f0506e; font-weight:600">Nhận được giá trị thật so với số tiền và niềm tin mà mình bỏ ra</span>"</p>
