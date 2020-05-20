@@ -7,6 +7,7 @@ var closeNavBtn = document.querySelector('#navbarClose');
 var htmlWrapper = document.querySelector('.wrapper');
 var carouselList = document.querySelector('.carousel__list');
 var sliderHome = document.querySelector('.slick__slider');
+var carouselAboutUs = document.querySelector('.page__carousel');
 // auto LazyLoad img and video
 function iframeResposive(){
   for (i = 0; i < iframe.length; i++) {
@@ -37,7 +38,48 @@ closeNavBtn ? closeNavBtn.onclick = function(){
     htmlWrapper.classList.remove('active');
 }:{};
 carouselList ?
-$('.carousel__list').slick() :{};
+$('.carousel__list').slick({
+  dots: true,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 5000,
+}) :{};
+carouselAboutUs ? $('.page__carousel').slick({
+  infinite: true,
+  speed: 300,
+  slidesToShow: 2,
+  slidesToScroll: 2,
+  autoplay: true,
+  autoplaySpeed: 3000,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+}) :{};
 sliderHome ?
 $('.slick__slider').slick({
   dots: false,

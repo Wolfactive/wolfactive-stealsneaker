@@ -35,7 +35,7 @@ html {
 }
 
 body {
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 500;
   line-height: 1.5;
   color: #141414;
@@ -77,8 +77,17 @@ img {
   height: auto;
 }
 
+.page__content img {
+  margin: 20px 0px;
+}
+
 .container {
   max-width: 90%;
+  margin: 0 auto;
+}
+
+.container--read {
+  max-width: 1300px;
   margin: 0 auto;
 }
 
@@ -580,6 +589,10 @@ a:hover {
 
 .my-40 {
   margin: 40px 0px;
+}
+
+.my-60 {
+  margin: 60px 0px;
 }
 
 .myt-20 {
@@ -1112,38 +1125,16 @@ a:hover {
   }
 }
 
-.title--background {
-  position: relative;
+.breadcrumbs {
+  padding: 35px 0;
+  background: #efefef;
+  margin-bottom: 80px;
 }
 
-.title--background .title--background__contain {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 39px;
-}
-
-@media screen and (max-width: 768px) {
-  .title--background .title--background__contain {
-    font-size: 25px;
-  }
-}
-
-.title--background .title--background__img img {
-  object-fit: cover;
-}
-
-@media screen and (max-width: 768px) {
-  .title--background .title--background__img {
-    height: 200px;
-  }
-  .title--background .title--background__img img {
-    height: 200px;
-  }
+.breadcrumbs .breadcrumb_last {
+  margin-right: 3px;
+  padding-right: 13px;
+  color: #ff4545;
 }
 
 .footer .footer__main {

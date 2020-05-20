@@ -396,6 +396,8 @@ function title_check(){
   single_cat_title();
   elseif (is_singular('post')) :
   echo "News";
+  elseif (is_page('gioi-thieu')):
+  echo "Giới thiệu";
   endif;
 }
 function get_term_list($term_name){
