@@ -1090,6 +1090,11 @@ a:hover {
 
 .newspaper .newspaper_content .newspaper_content-image {
   overflow: hidden;
+  height: 403px;
+}
+
+.newspaper .newspaper_content .newspaper_content-image img {
+  height: 100%;
 }
 
 .newspaper .newspaper_content .newspaper_content-image img:hover {
@@ -1142,6 +1147,10 @@ a:hover {
 
 .mg-bt-10 {
   margin-bottom: 10px;
+}
+
+.mg-bt-20 {
+  margin-bottom: 20px;
 }
 
 .page__contact .ss-authentic {
@@ -1204,6 +1213,91 @@ a:hover {
   background: #fff;
   color: #000;
   border: 1px solid black;
+}
+
+.category_page .category_title a {
+  color: #0f6ecd;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.category_page .category_title a:hover {
+  color: #6dbdfd;
+}
+
+.category_page .category_excerpt {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.category_page .col-divide-3 {
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+
+.category_page .pl-20 {
+  padding-left: 20px;
+}
+
+.category_page .category_image {
+  overflow: hidden;
+}
+
+.category_page .category_image img:hover {
+  transform: scale(1.2);
+  transition: all 1s;
+}
+
+.category_page .category_date {
+  font-size: 14px;
+  margin: 5px 0;
+  color: #ef1100d1;
+}
+
+.category_page .category_date i {
+  margin-right: 5px;
+}
+
+.category_page .readmore_category {
+  padding: 5px 15px;
+  background: black;
+  color: #fff;
+  font-size: 14px;
+  border: 1px solid black;
+}
+
+.category_page .readmore_category:hover {
+  color: #000;
+  background: #fff;
+}
+
+.category_page .pagination_steal {
+  margin: 20px 0 40px 0;
+  text-align: center;
+}
+
+.category_page .pagination_steal .screen-reader-text {
+  display: none;
+}
+
+.category_page .pagination_steal .nav-links .page-numbers {
+  margin-right: 10px;
+  font-weight: 700;
+}
+
+.category_page .pagination_steal .nav-links .page-numbers:hover {
+  color: #0f6ecd;
+  transform: scale(1.4);
+  display: inline-block;
+  transition: all 1s;
+}
+
+.category_page .pagination_steal .nav-links .current {
+  color: #0f6ecd;
+}
+
+.category_page .pagination_steal .nav-links a {
+  color: #000;
 }
 
 .footer .footer__main {
