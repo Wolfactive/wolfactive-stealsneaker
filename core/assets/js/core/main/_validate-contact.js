@@ -110,6 +110,7 @@ function checkVaidate(){
   isName === true && isEmail === true && isPhone === true && isAddress === true && isComment === true ? isValidate = true : isValiate = false;
 };
 btnFormcontact ? btnFormcontact.onclick= function(){
+  checkVaidate();
   isValiate === true ? console.log(true) : console.log(false)
 }:{};
 
