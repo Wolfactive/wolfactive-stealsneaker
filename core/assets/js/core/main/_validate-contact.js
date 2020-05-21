@@ -105,7 +105,8 @@ function checkComment(){
 function checkVaidate(){
   hoVaTen.value ? checkRealName() : checkNameEmtpy();
   email.value ? checkRealEmail() : checkEmailEmpty();
-  dienThoai.value ? checkRealPhone() : checkPhoneEmtpy();
+  dienThoai.value ? checkRealPhone() : checkPhoneEmpty();
+  diaChi.value ? checkRealAddress() : checkAddressEmpty();
   checkComment();
   isName === true && isEmail === true && isPhone === true && isAddress === true && isComment === true ? isValidate = true : isValiate = false;
 };
