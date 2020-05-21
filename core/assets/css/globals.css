@@ -936,6 +936,7 @@ a:hover {
   padding: 15px 0px;
   display: block;
   border-bottom: 1px solid #fff;
+  font-size: 15px;
 }
 
 .navbar .navbar__contain .navbar__item .menu-mobile-menu-container .menu .menu-item .sub-menu {

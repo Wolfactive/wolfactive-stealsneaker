@@ -15,23 +15,28 @@ get_template_part('sections/breadcums');
             <div class="form_infor_contact row-divide">
                 <div class="col-divide-6 name--customer mg-bt-10">
                     <p>Họ và tên</p>
-                    <input type="text" name=""/>
+                    <input type="text" name="hoVaTen" id="hoVaTen"/>
+                    <p class="d--none" id="hoVaTenVal" style="font-size:14px;color:red;">Vui lòng nhập tên *</p>
                 </div>
                 <div class="col-divide-6 email--customer mg-bt-10">
                     <p>Email</p>
-                    <input type="text" name=""/>
+                    <input type="text" name="Email" id="Email"/>
+                    <p class="d--none" id="emailVal" style="font-size:14px;color:red;">Vui lòng nhập email *</p>
                 </div>
                 <div class="col-divide-6 sdt--customer mg-bt-10">
                     <p>Điện thoại</p>
-                    <input type="text" name=""/>
+                    <input type="text" name="dienThoai" id="dienThoai"/>
+                    <p class="d--none" id="dienThoaiVal" style="font-size:14px;color:red;">Vui lòng nhập điện thoại *</p>
                 </div>
                 <div class="col-divide-6 dc--customer mg-bt-10">
                     <p>Địa chỉ</p>
-                    <input type="text" name="" />
+                    <input type="text" name="diaChi"  id="diaChi"/>
+                    <p class="d--none" id="diaChiVal" style="font-size:14px;color:red;">Vui lòng nhập địa chỉ *</p>
                 </div>
                 <div class="col-divide-12 nd--customer">
                     <p>Nội dung</p>
-                    <textarea name="noidung" rows="8" id=""></textarea>
+                    <textarea name="noiDung" rows="8" id="noiDung"></textarea>
+                    <p class="d--none" id="noiDungVal" style="font-size:14px;color:red;">Vui lòng nhập đúng ký tự Việt Nam *</p>
                 </div>
             </div>
             <div class="btn_formcontact">

@@ -39,7 +39,7 @@ closeNavBtn ? closeNavBtn.onclick = function(){
 }:{};
 carouselList ?
 $('.carousel__list').slick({
-  dots: true,
+  dots: false,
   infinite: true,
   speed: 300,
   slidesToShow: 1,
