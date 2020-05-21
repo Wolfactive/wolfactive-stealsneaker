@@ -98,8 +98,6 @@ function checkComment(){
   if (!patternComment.test(noiDung.value)) {
       noiDungVal.classList.remove('d--none');
       isComment = false;
-  } else if (!noiDung.value) {
-    isComment = true;
   }
   else{
     isComment = true;
@@ -110,7 +108,7 @@ function checkVaidate(){
   email.value ? checkRealEmail() : checkEmailEmpty();
   dienThoai.value ? checkRealPhone() : checkPhoneEmpty();
   diaChi.value ? checkRealAddress() : checkAddressEmpty();
-  checkComment();
+  noiDung.value ? checkComment() : isComment = true;  
   isName === true && isEmail === true && isPhone === true && isAddress === true && isComment === true ? isValidate = true : isValiate = false;
 };
 btnFormcontact ? btnFormcontact.onclick= function(){
