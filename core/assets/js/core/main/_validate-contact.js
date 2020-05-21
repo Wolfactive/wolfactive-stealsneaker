@@ -98,7 +98,10 @@ function checkComment(){
   if (!patternComment.test(noiDung.value)) {
       noiDungVal.classList.remove('d--none');
       isComment = false;
-  }else{
+  } else if (!noiDung.value) {
+    isComment = true;
+  }
+  else{
     isComment = true;
   }
 }
