@@ -8,6 +8,8 @@ var htmlWrapper = document.querySelector('.wrapper');
 var carouselList = document.querySelector('.carousel__list');
 var sliderHome = document.querySelector('.slick__slider');
 var carouselAboutUs = document.querySelector('.page__carousel');
+var filterShowBtn = document.querySelector('.product__filter-title .btn');
+var filterShowBtnIcon = document.querySelector('.product__filter-title .btn .fas');
 // auto LazyLoad img and video
 function iframeResposive(){
   for (i = 0; i < iframe.length; i++) {
@@ -37,6 +39,13 @@ closeNavBtn ? closeNavBtn.onclick = function(){
     navbar.classList.remove('active');
     htmlWrapper.classList.remove('active');
 }:{};
+// Filter action
+filterShowBtn ? filterShowBtn.onclick= function(){
+  filterShowBtnIcon.classList.toggle('fa-angle-down');
+  filterShowBtnIcon.classList.toggle('fa-angle-up');
+  filterShowBtn.classList.toggle('main--background');
+}:{};
+//Carousel slick
 carouselList ?
 $('.carousel__list').slick({
   dots: false,

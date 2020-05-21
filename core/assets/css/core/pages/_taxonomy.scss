@@ -1,0 +1,24 @@
+.taxonomy_page{
+  .product__filter{
+    .product__filter-title{
+      background: #f6f6f6;
+      button{
+        background: #3f3f3f;
+        border-radius: 0px;
+        transition: all 0.25s linear;
+        padding: 15px 45px;
+        span{
+          font-size: 20px;
+        }
+      }
+      &::after{
+        content: "";
+        display: block;
+        background: #3f3f3f;
+        height: 3px;
+        width: 100%;
+      }
+      margin-bottom: 55px;
+    }
+  }
+}
