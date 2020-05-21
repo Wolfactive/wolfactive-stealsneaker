@@ -16,16 +16,16 @@ var isPhone = false;
 var isAddress = false;
 var isComment = false;
 var isValiate = false;
-hoVaTen ? hoVaTen.onkeyup= function(){
+hoVaTen ? hoVaTen.onfocus= function(){
   hoVaTenVal.classList.add('d---none');
 }:{};
-email ? email.onkeyup= function(){
+email ? email.onfocus= function(){
   emailVal.classList.add('d---none');
 }:{};
-dienThoai ? dienThoai.onkeyup= function(){
+dienThoai ? dienThoai.onfocus= function(){
   dienThoaiVal.classList.add('d---none');
 }:{};
-diaChi ? diaChi.onkeyup= function(){
+diaChi ? diaChi.onfocus= function(){
   diaChiVal.classList.add('d---none');
 }:{};
 function checkNameEmtpy(){
@@ -108,7 +108,7 @@ function checkVaidate(){
   email.value ? checkRealEmail() : checkEmailEmpty();
   dienThoai.value ? checkRealPhone() : checkPhoneEmpty();
   diaChi.value ? checkRealAddress() : checkAddressEmpty();
-  noiDung.value ? checkComment() : isComment = true;  
+  noiDung.value ? checkComment() : isComment = true;
   isName === true && isEmail === true && isPhone === true && isAddress === true && isComment === true ? isValidate = true : isValiate = false;
 };
 btnFormcontact ? btnFormcontact.onclick= function(){
