@@ -36,5 +36,4 @@
                 esc_html_e( 'No testimonials in the diving taxonomy!', 'text-domain' );
             endif;?>
     </div>
-
 </section>
