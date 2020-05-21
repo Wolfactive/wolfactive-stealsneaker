@@ -133,4 +133,59 @@
             }
         }
     }
+    .title-sidebar_style{
+        position: relative;
+        height: 29px;
+        margin-bottom: 20px;
+        .mc-title-sidebar{
+            z-index: 100;
+            width: max-content;
+            background: #fff;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .space-title-sidebar{
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: #000;
+            top: 49%;
+            transform: translate(0%, -49%);
+        }
+    }
+    
+    .infor_shop{
+        .image_shop{
+            text-align: center;
+            img{
+                width: 75%;
+            }
+        }
+        .steal-au{
+            text-align: center;
+            font-weight: 700;
+            font-size: 18px;
+        }
+        .sidebar-infor{
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        .embed-face{
+            text-align: center;
+        }
+    }
+    
+    .news_post{
+        margin-top: 20px;
+        .title-nb{
+            padding-left: 5px;
+            margin-bottom: 23px;
+            a{
+                font-size: 13px;
+                font-weight:700;
+            }
+        }
+    }
 }

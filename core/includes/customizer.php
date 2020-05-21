@@ -40,6 +40,15 @@ function theme_slug_customizer( $wp_customize ) {
             'priority' => 150
         )
     );
+    //sidebar
+    $wp_customize->add_section(
+        'sidebar_options',
+        array(
+            'title' => esc_html__( 'Cấu hình sidebar', 'stealsneaker' ),
+            'panel'   =>  'theme_option',
+            'priority' => 150
+        )
+    );
     //add select setting to your section
     /*----------------------------------------------------------------------*/
     // Company Name
@@ -183,6 +192,29 @@ function theme_slug_customizer( $wp_customize ) {
                'type' => 'email'
            )
        );
+      /*----------------------------------------------------------------------*/
+      /*----------------------------------------------------------------------*/
+      /* Config sidebar */
+
+        $wp_customize->add_setting(
+            'sidebar_image',
+            array(
+                'sanitize_callback' => 'theme_slug_sanitize_file'
+            )
+        );
+
+
+        $wp_customize->add_control(
+            new WP_Customize_Upload_Control(
+                $wp_customize,
+                'sidebar_image',
+                array(
+                    'label'      => __( 'Chọn ảnh logo', 'stealsneaker' ),
+                    'section'    => 'sidebar_options'
+                )
+            )
+        );
+
       /*----------------------------------------------------------------------*/
       function theme_slug_sanitize_select( $input, $setting ){
 
