@@ -598,7 +598,7 @@ function percent_sale(){
   if(is_sale_off()):
     $price_sale = get_field('product_price_sale');
     $price_product = get_field('product_price');
-    $percent = ceil(($price_sale / $price_product)*100);
+    $percent = 100 - ceil(($price_sale / $price_product)*100);
     echo $percent;
   endif;
 }
