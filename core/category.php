@@ -2,7 +2,6 @@
 get_header();
 get_template_part('sections/breadcums');
 ?>
-<?php  get_template_part('sections/carousel'); ?>
 <section class="category_page" id="categoryPage">
   <div class="container">
     <div class="row-divide">
