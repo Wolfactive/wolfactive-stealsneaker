@@ -104,7 +104,7 @@ function checkComment(){
 }
 function checkVaidate(){
   hoVaTen.value ? checkRealName() : checkNameEmtpy();
-  email.value ? checkRealEmail() : checkEmailEmtpy();
+  email.value ? checkRealEmail() : checkEmailEmpty();
   dienThoai.value ? checkRealPhone() : checkPhoneEmtpy();
   checkComment();
   isName === true && isEmail === true && isPhone === true && isAddress === true && isComment === true ? isValidate = true : isValiate = false;
