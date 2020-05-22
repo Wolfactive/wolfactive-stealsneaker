@@ -14,6 +14,7 @@ $file_includes = [
     'includes/acf-options.php',                         // ACF Option page
     'includes/customizer.php',                          // Customizer
     'includes/resize.php',
+    'includes/acf-fields.php',
 ];
 
 foreach ($file_includes as $file) {
