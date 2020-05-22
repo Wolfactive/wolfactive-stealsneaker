@@ -4,6 +4,9 @@
 */
 get_header();
 get_template_part('sections/breadcums');
+$productChoose = get_field('product_choose_tem');
+$productKind = get_field('choose_kind_product_temp');
+$productSex = get_field('product_choose_sex');
 ?>
 <section class="taxonomy_page py-40" id="taxonomyPage">
   <div class="container">
@@ -22,6 +25,30 @@ get_template_part('sections/breadcums');
         'post_status'=>'publish',
         'orderby' => 'menu_order',
         'order'=> 'DESC',
+        'tax_query' => array(
+        'relation' => 'AND',
+          array(
+            'taxonomy' => 'hang',
+            'field' => 'slug',
+            'terms' => $productChoose->slug,
+            'include_children' => true,
+            'operator' => 'IN'
+          ),
+          array(
+            'taxonomy' => 'loai-san-pham',
+            'field' => 'slug',
+            'terms' => $productKind->slug,
+            'include_children' => true,
+            'operator' => 'IN'
+          ),
+          array(
+            'taxonomy' => 'gioi-tinh',
+            'field' => 'slug',
+            'terms' => $productSex->slug,
+            'include_children' => true,
+            'operator' => 'IN'
+          )
+        ),
         'paged'=>$paged
         );
         $query = new WP_Query($args); ?>
@@ -64,7 +91,7 @@ get_template_part('sections/breadcums');
       'mid_size' => 3,
       'prev_text' => __( 'Về', 'welsh-womens-aid' ),
       'next_text' => __( 'Tiếp', 'welsh-womens-aid' ),
-      ) ); ?>    
+      ) ); ?>
     </div>
   </div>
 </section>
