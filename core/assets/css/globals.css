@@ -1358,31 +1358,6 @@ a:hover {
   color: #000;
 }
 
-.category_page .title-sidebar_style {
-  position: relative;
-  height: 29px;
-  margin-bottom: 20px;
-}
-
-.category_page .title-sidebar_style .mc-title-sidebar {
-  z-index: 100;
-  width: max-content;
-  background: #fff;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.category_page .title-sidebar_style .space-title-sidebar {
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background: #000;
-  top: 49%;
-  transform: translate(0%, -49%);
-}
-
 .category_page .infor_shop .image_shop {
   text-align: center;
 }
@@ -1418,6 +1393,41 @@ a:hover {
 .category_page .news_post .title-nb a {
   font-size: 13px;
   font-weight: 700;
+}
+
+.title-sidebar_style {
+  position: relative;
+  height: 29px;
+  margin-bottom: 20px;
+}
+
+.title-sidebar_style .mc-title-sidebar {
+  z-index: 100;
+  width: max-content;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.title-sidebar_style .space-title-sidebar {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #000;
+  top: 49%;
+  transform: translate(0%, -49%);
+}
+
+.single_page .single_title {
+  font-size: 26px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.single_page .row-divide {
+  justify-content: space-between;
 }
 
 .product__list .product__item {
