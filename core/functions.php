@@ -615,3 +615,17 @@ function check_slider_home_page($field_mode){
     return false;
   endif;
 }
+function get_term_list_check($taxonamy_slug,$name_tag){
+      $terms = get_terms( array(
+            'taxonomy' => $taxonamy_slug,
+            'hide_empty' => false,
+        ) );
+      $countTerm =1;
+      foreach ($terms as $term) {
+          echo '<div class="filter__form-item">
+            <input type="radio" id="'.$name_tag.''.$countTerm.'" name="'.$name_tag.'" value="'.$term->slug.'">
+            <label class="'.$name_tag.'" for="'.$name_tag.''.$countTerm.'">'.$term->name.'</label>
+          </div>';
+      $countTerm++;
+      }
+  }

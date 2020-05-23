@@ -116,14 +116,59 @@ img {
   transition: all 0.5s;
 }
 
+.range--slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 8px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.range--slider:hover {
+  opacity: 1;
+}
+
+.range--slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 25px;
+  background: var(--primary-bg-color);
+  cursor: pointer;
+}
+
+.range--slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: var(--primary-bg-color);
+  cursor: pointer;
+}
+
 .newspaper__more-btn:hover {
   color: #fff !important;
   background: var(--primary-bg-color);
 }
 
+.btn--submit {
+  background: #fff;
+  color: var(--primary-color);
+  border: 1.5px solid;
+  background: #fff;
+  color: var(--primary-color);
+  border: 1.5px solid;
+  padding: 5px 10px;
+  height: 40px;
+  align-self: center;
+}
+
 .btn--submit:hover {
   color: #fff !important;
-  background: #333 !important;
+  background: var(--primary-bg-color) !important;
 }
 
 .logo {
@@ -389,6 +434,10 @@ img {
   border-radius: 50%;
 }
 
+.border--right-15 {
+  border-right: 1.5px solid;
+}
+
 /*border radius*/
 .box-shadow {
   box-shadow: 4px 2px 7px 3px #80808045;
@@ -563,6 +612,10 @@ a:hover {
   margin-right: 15px;
 }
 
+.mxl-15 {
+  margin-left: 15px;
+}
+
 .py-65-px-30 {
   padding: 65px 30px;
 }
@@ -704,6 +757,9 @@ a:hover {
     display: block;
   }
   /*Setup*/
+  .border--right-p-0 {
+    border-right: 0px solid;
+  }
 }
 
 @media screen and (max-width: 438px) {
@@ -915,7 +971,7 @@ a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 30px 0px 40px 0px;
+  margin: 30px 0px 20px 0px;
 }
 
 .navbar .navbar__contain .navbar__item:nth-child(1) .navbar__item-btn {
@@ -1419,20 +1475,23 @@ a:hover {
   right: -100%;
 }
 
+.taxonomy_page .product__filter {
+  margin-bottom: 55px;
+}
+
 .taxonomy_page .product__filter .product__filter-title {
   background: #f6f6f6;
-  margin-bottom: 55px;
 }
 
 .taxonomy_page .product__filter .product__filter-title button {
   background: #3f3f3f;
   border-radius: 0px;
   transition: all 0.25s linear;
-  padding: 15px 45px;
+  padding: 8px 11px;
 }
 
 .taxonomy_page .product__filter .product__filter-title button span {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .taxonomy_page .product__filter .product__filter-title::after {
@@ -1441,6 +1500,85 @@ a:hover {
   background: #3f3f3f;
   height: 3px;
   width: 100%;
+}
+
+.taxonomy_page .product__filter-list {
+  padding: 0px 15px;
+  background: #f6f6f6;
+  height: 0px;
+  overflow: hidden;
+  transition: all 0.25s linear;
+}
+
+.taxonomy_page .product__filter-list .product__filter-item {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.taxonomy_page .product__filter-list .product__filter-item .title--item {
+  color: #ff4545;
+  font-size: 17px;
+}
+
+.taxonomy_page .product__filter-list .product__filter-item .filter__form-item input {
+  display: none;
+}
+
+.taxonomy_page .product__filter-list .product__filter-item .filter__form-item label {
+  display: block;
+  padding: 5px 10px;
+  background: #3f3f3f;
+  margin: 8px;
+  color: #fff;
+  border-radius: 20px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.25s linear;
+}
+
+.taxonomy_page .product__filter-list .product__filter-item .filter__form-item label.active {
+  background: var(--primary-bg-color);
+}
+
+.taxonomy_page .product__filter-list .product__filter-item .filter__form-item label:hover {
+  background: var(--primary-bg-color);
+}
+
+.taxonomy_page .product__filter-list .product__filter-item.form--slider {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.taxonomy_page .product__filter-list .product__filter-item.form--slider .slidecontainer {
+  width: 50%;
+  margin-right: 90px;
+  margin-bottom: 15px;
+}
+
+@media screen and (max-width: 992px) {
+  .taxonomy_page .product__filter-list .product__filter-item.form--slider .slidecontainer {
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .taxonomy_page .product__filter-list .product__filter-item {
+    padding: 10px;
+  }
+}
+
+.taxonomy_page .product__filter-list.active {
+  padding: 20px 15px;
+  height: 100%;
+}
+
+@media screen and (max-width: 992px) {
+  .taxonomy_page .product__filter-list.active {
+    padding: 0px;
+  }
 }
 
 .footer .footer__main {

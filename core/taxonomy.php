@@ -11,6 +11,60 @@ get_template_part('sections/breadcums');
           <span class="text--upcase">Filter <i class="fas fa-angle-down"></i></span>
         </button>
       </div>
+      <div class="product__filter-list">
+        <div class="row-divide">
+          <div class="product__filter-item col-divide-4 border--right-15 border--right-p-0 col-divide-md-6 col-divide-sm-12">
+            <h3 class="title--item col-divide-12 mxl-15"> Hãng</h3>
+            <div class="filter__form-item">
+              <input type="radio" id="productBand0" name="productBand" value="" checked>
+              <label class="productBand active" for="productBand0">Tất cả</label>
+            </div>
+            <?php get_term_list_check('hang','productBand') ?>
+          </div>
+          <div class="product__filter-item col-divide-4 border--right-15 border--right-p-0 col-divide-md-6 col-divide-sm-12">
+            <h3 class="title--item col-divide-12 mxl-15"> Loại giày</h3>
+            <div class="filter__form-item">
+              <input type="radio" id="productKind0" name="productKind" value="" checked>
+              <label class="productKind active" for="productKind0">Tất cả</label>
+            </div>
+            <?php get_term_list_check('loai-san-pham','productKind') ?>
+          </div>
+          <div class="product__filter-item col-divide-4 col-divide-md-6 col-divide-sm-12">
+            <h3 class="title--item col-divide-12 mxl-15"> Giới tính</h3>
+            <div class="filter__form-item">
+              <input type="radio" id="productSex0" name="productSex" value="" checked>
+              <label class="productSex active" for="productSex0">Tất cả</label>
+            </div>
+            <?php get_term_list_check('gioi-tinh','productSex') ?>
+          </div>
+          <div class="product__filter-item col-divide-4 border--right-15 border--right-p-0 col-divide-md-6 col-divide-sm-12">
+            <h3 class="title--item col-divide-12 mxl-15"> Size</h3>
+            <div class="filter__form-item">
+              <input type="radio" id="productSize0" name="productSize" value="" checked>
+              <label class="productSize active" for="productSize0">Tất cả</label>
+            </div>
+            <?php get_term_list_check('size','productSize') ?>
+          </div>
+          <div class="product__filter-item col-divide-4 col-divide-md-6 col-divide-sm-12">
+            <h3 class="title--item col-divide-12 mxl-15"> Thứ tự sắp xếp</h3>
+            <div class="filter__form-item">
+              <input type="radio" id="sortProduct1" name="sortProduct" value="DESC" checked>
+              <label class="sortProduct active" for="sortProduct1">Giá giảm dần</label>
+            </div>
+            <div class="filter__form-item">
+              <input type="radio" id="sortProduct2" name="sortProduct" value="ASC">
+              <label class="sortProduct" for="sortProduct2">Giá tăng dần</label>
+            </div>
+          </div>
+          <div class="product__filter-item form--slider col-divide-12">
+            <div class="slidecontainer">
+              <p class="title--item">Tầm giá: <span id="priceSliderValue" style="color:#333">6000000</span> <span style="color:#333">VNĐ</span></p>
+              <input type="range" min="1000000" max="6000000" value="6000000" class="range--slider" id="priceSliderValueRange">
+            </div>
+              <button class="btn btn--submit " id="filterBtn">Lọc sản phẩm</button>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="product__list row-divide">
       <?php while(have_posts()) : the_post(); ?>

@@ -10,6 +10,19 @@ var sliderHome = document.querySelector('.slick__slider');
 var carouselAboutUs = document.querySelector('.page__carousel');
 var filterShowBtn = document.querySelector('.product__filter-title .btn');
 var filterShowBtnIcon = document.querySelector('.product__filter-title .btn .fas');
+var priceSliderValue = document.querySelector('#priceSliderValue');
+var priceSliderValueRange = document.querySelector('#priceSliderValueRange');
+var filterListMenu = document.querySelector('.product__filter-list');
+var productBrandFilter = document.querySelectorAll('input[name="productBand"]');
+var productBrandFilterLabel = document.querySelectorAll('.productBand');
+var productKindFilter = document.querySelectorAll('input[name="productKind"]');
+var productKindFilterLabel = document.querySelectorAll('.productKind');
+var productSexFilter = document.querySelectorAll('input[name="productSex"]');
+var productSexFilterLabel = document.querySelectorAll('.productSex');
+var productSizeFilter = document.querySelectorAll('input[name="productSize"]');
+var productSizeFilterLabel = document.querySelectorAll('.productSize');
+var sortProductFilter = document.querySelectorAll('input[name="sortProduct"]');
+var sortProductFilterLabel = document.querySelectorAll('.sortProduct');
 // auto LazyLoad img and video
 function iframeResposive(){
   for (i = 0; i < iframe.length; i++) {
@@ -44,7 +57,36 @@ filterShowBtn ? filterShowBtn.onclick= function(){
   filterShowBtnIcon.classList.toggle('fa-angle-down');
   filterShowBtnIcon.classList.toggle('fa-angle-up');
   filterShowBtn.classList.toggle('main--background');
+  filterListMenu.classList.toggle('active');
 }:{};
+priceSliderValueRange ? priceSliderValueRange.oninput = function(){
+  priceSliderValue.innerHTML = this.value;
+}:{};
+// function actionFilter(arrayFilter,arrayLabel){
+//   for(var i = 0; i < arrayFilter.length ; i++){
+//     arrayFilter[i].onclick = function(){
+//       for(var t = 0; t < arrayLabel.length; t++){
+//         arrayLabel[t].classList.remove('active');
+//       }
+//       arrayLabel[i].classList.add('active');
+//     }
+//   }
+// }
+function actionFilter(arrayFilter,arrayLabel) {
+  arrayFilter.forEach(function (item, i) {
+    item.onclick = function () {
+      arrayLabel.forEach(function (item) {
+        item.classList.remove('active');
+      });
+      arrayLabel[i].classList.add('active');
+    };
+  });
+}
+productBrandFilter ? actionFilter(productBrandFilter,productBrandFilterLabel):{};
+productKindFilter ? actionFilter(productKindFilter,productKindFilterLabel):{};
+productSexFilter ? actionFilter(productSexFilter,productSexFilterLabel):{};
+productSizeFilter ? actionFilter(productSizeFilter,productSizeFilterLabel):{};
+sortProductFilter ? actionFilter(sortProductFilter,sortProductFilterLabel):{};
 //Carousel slick
 carouselList ?
 $('.carousel__list').slick({
