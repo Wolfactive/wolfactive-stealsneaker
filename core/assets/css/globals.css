@@ -1559,6 +1559,7 @@ a:hover {
 
 @media screen and (max-width: 992px) {
   .taxonomy_page .product__filter-list .product__filter-item.form--slider .slidecontainer {
+    width: 90%;
     margin-right: 20px;
     margin-bottom: 20px;
   }
