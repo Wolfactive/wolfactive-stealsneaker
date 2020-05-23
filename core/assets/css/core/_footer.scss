@@ -17,9 +17,9 @@
               margin-top: 10px;
               background: #fff;
             }
-            @include MediaQuery($xs){
+            @include MediaQuery($lg){
               font-size: 15px;
-            };
+            };            
           }
           .footer__item-title {
             margin-bottom: 5px;
@@ -30,6 +30,11 @@
           .footer__item-contact{
             div{
               margin-bottom: 5px;
+              @include MediaQuery($lg){
+                p{
+                  font-size: 14px;
+                }
+              };
               @include MediaQuery($xs){
                 font-weight: 400;
               };
@@ -46,6 +51,9 @@
               margin-top: 10px;
               background: #fff;
             }
+            @include MediaQuery($lg){
+              font-size: 14px;
+            };
             @include MediaQuery($xs){
               margin-top: 15px;
             };
@@ -59,6 +67,9 @@
               &:hover{
                 transform: scale(1.1);
               }
+              @include MediaQuery($lg){
+                margin-top: 12px;
+              };
             }
           }
           frame{

@@ -584,6 +584,11 @@ width: 80%;
 	 max-height:none;
 	 overflow:none;
  }
+ @media screen and (max-width: 1281px) {
+   .col-divide-3{
+         max-width: 22.5%;
+   }
+ }
 /*---expanded---*/
 @media screen and (max-width: 1024px) {
 	.main_menu.main_menu_hide_on_mobile{
