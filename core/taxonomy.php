@@ -45,6 +45,14 @@ get_template_part('sections/breadcums');
             </div>
             <?php get_term_list_check('size','productSize') ?>
           </div>
+          <div class="product__filter-item col-divide-4 border--right-15 border--right-p-0 col-divide-md-6 col-divide-sm-12">
+            <h3 class="title--item col-divide-12 mxl-15">Sản phẩm</h3>
+            <div class="filter__form-item">
+              <input type="radio" id="productSafe0" name="productSafe" value="" checked>
+              <label class="productSafe active" for="productSafe0">Tất cả</label>
+            </div>
+            <?php get_term_list_check('khuyen-mai','productSafe') ?>
+          </div>
           <div class="product__filter-item col-divide-4 col-divide-md-6 col-divide-sm-12">
             <h3 class="title--item col-divide-12 mxl-15"> Thứ tự sắp xếp</h3>
             <div class="filter__form-item">

@@ -23,6 +23,9 @@ var productSizeFilter = document.querySelectorAll('input[name="productSize"]');
 var productSizeFilterLabel = document.querySelectorAll('.productSize');
 var sortProductFilter = document.querySelectorAll('input[name="sortProduct"]');
 var sortProductFilterLabel = document.querySelectorAll('.sortProduct');
+var protocol = window.location.protocol;
+var hostname = window.location.hostname;
+var filterProductBtn = document.querySelector('#filterBtn');
 // auto LazyLoad img and video
 function iframeResposive(){
   for (i = 0; i < iframe.length; i++) {
@@ -62,16 +65,6 @@ filterShowBtn ? filterShowBtn.onclick= function(){
 priceSliderValueRange ? priceSliderValueRange.oninput = function(){
   priceSliderValue.innerHTML = this.value;
 }:{};
-// function actionFilter(arrayFilter,arrayLabel){
-//   for(var i = 0; i < arrayFilter.length ; i++){
-//     arrayFilter[i].onclick = function(){
-//       for(var t = 0; t < arrayLabel.length; t++){
-//         arrayLabel[t].classList.remove('active');
-//       }
-//       arrayLabel[i].classList.add('active');
-//     }
-//   }
-// }
 function actionFilter(arrayFilter,arrayLabel) {
   arrayFilter.forEach(function (item, i) {
     item.onclick = function () {
@@ -87,6 +80,9 @@ productKindFilter ? actionFilter(productKindFilter,productKindFilterLabel):{};
 productSexFilter ? actionFilter(productSexFilter,productSexFilterLabel):{};
 productSizeFilter ? actionFilter(productSizeFilter,productSizeFilterLabel):{};
 sortProductFilter ? actionFilter(sortProductFilter,sortProductFilterLabel):{};
+filterProductBtn ? filterProductBtn.onclick= function(){
+    window.location.href = protocol + "//" + hostname + "/stealsnaker/?s=&sentence=1&post_type=san-pham";
+}:{};
 //Carousel slick
 carouselList ?
 $('.carousel__list').slick({
