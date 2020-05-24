@@ -588,6 +588,24 @@ width: 80%;
    .col-divide-3{
          max-width: 22.5%;
    }
+   /*Row and divide*/
+ 	.col-divide-lg-12 {
+         flex: auto;
+         max-width: 100%;
+     }
+ 	.col-divide-lg-6 {
+         flex: auto;
+         max-width: 48%;
+     }
+ 	.col-divide-lg-4 {
+         flex: auto;
+         max-width: 32%;
+     }
+ 	.col-divide-lg-3 {
+         flex: auto;
+         max-width: 24%;
+     }
+ 	/*Row and divide*/
  }
 /*---expanded---*/
 @media screen and (max-width: 1024px) {
@@ -600,24 +618,6 @@ width: 80%;
   .container--read{
     max-width: 90%;
   }
-	/*Row and divide*/
-	.col-divide-lg-12 {
-        flex: auto;
-        max-width: 100%;
-    }
-	.col-divide-lg-6 {
-        flex: auto;
-        max-width: 48%;
-    }
-	.col-divide-lg-4 {
-        flex: auto;
-        max-width: 32%;
-    }
-	.col-divide-lg-3 {
-        flex: auto;
-        max-width: 24%;
-    }
-	/*Row and divide*/
 	figure{
 		max-width:100%!important;
 	}
