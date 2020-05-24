@@ -23,9 +23,18 @@ var productSizeFilter = document.querySelectorAll('input[name="productSize"]');
 var productSizeFilterLabel = document.querySelectorAll('.productSize');
 var sortProductFilter = document.querySelectorAll('input[name="sortProduct"]');
 var sortProductFilterLabel = document.querySelectorAll('.sortProduct');
+var productSafeFilter = document.querySelectorAll('input[name="productSafe"]');
+var productSafeFilterLabel = document.querySelectorAll('.productSafe');
 var protocol = window.location.protocol;
 var hostname = window.location.hostname;
 var filterProductBtn = document.querySelector('#filterBtn');
+var productBrandFilterValue = "";
+var productKindFilterValue = "";
+var productSexFilterValue = "";
+var productSizeFilterValue = "";
+var sortProductFilterValue = "";
+var productSafeFilterValue = "";
+var priceRangeFilterValue ;
 // auto LazyLoad img and video
 function iframeResposive(){
   for (i = 0; i < iframe.length; i++) {
@@ -64,6 +73,7 @@ filterShowBtn ? filterShowBtn.onclick= function(){
 }:{};
 priceSliderValueRange ? priceSliderValueRange.oninput = function(){
   priceSliderValue.innerHTML = this.value;
+  priceRangeFilterValue = this.value;
 }:{};
 function actionFilter(arrayFilter,arrayLabel) {
   arrayFilter.forEach(function (item, i) {
@@ -75,13 +85,48 @@ function actionFilter(arrayFilter,arrayLabel) {
     };
   });
 }
+/* create cookie to filter*/
+function setCookie(cname, cvalue, exdays) {
+  var d = new Date();
+  d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+  var expires = "expires="+d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires +";path=/stealsnaker/loc-san-pham/";
+}
+/* create cookie to filter*/
+/* get radio button value*/
+function getValueRadio(array,valueGet){
+  for (var i = 0, length = array.length; i < length; i++) {
+  if (array[i].checked) {
+    valueGet = array[i].value;
+    break;
+      }
+    }
+  }
+/* get radio button value*/
 productBrandFilter ? actionFilter(productBrandFilter,productBrandFilterLabel):{};
 productKindFilter ? actionFilter(productKindFilter,productKindFilterLabel):{};
 productSexFilter ? actionFilter(productSexFilter,productSexFilterLabel):{};
 productSizeFilter ? actionFilter(productSizeFilter,productSizeFilterLabel):{};
 sortProductFilter ? actionFilter(sortProductFilter,sortProductFilterLabel):{};
+productSafeFilter ? actionFilter(productSafeFilter,productSafeFilterLabel):{};
 filterProductBtn ? filterProductBtn.onclick= function(){
-    window.location.href = protocol + "//" + hostname + "/stealsnaker/?s=&sentence=1&post_type=san-pham";
+  // get value radio button
+    getValueRadio(productBrandFilter,productBrandFilterValue);
+    getValueRadio(productKindFilter,productKindFilterValue);
+    getValueRadio(productSexFilter,productSexFilterValue);
+    getValueRadio(productSizeFilter,productSizeFilterValue);
+    getValueRadio(sortProductFilter,sortProductFilterValue);
+    getValueRadio(productSafeFilter,productSafeFilterValue);
+    !priceRangeFilterValue ? priceRangeFilterValue = 6000000 :{};
+    console.log(priceRangeFilterValue);
+    setCookie('productBrand',productBrandFilterValue, 0.005);
+    setCookie('productKind',productKindFilterValue, 0.005);
+    setCookie('productSex',productSexFilterValue, 0.005);
+    setCookie('productSize',productSizeFilterValue, 0.005);
+    setCookie('productSort',sortProductFilterValue, 0.005);
+    setCookie('productSafe',productSafeFilterValue, 0.005);
+    setCookie('productPrice',priceRangeFilterValue, 0.005);
+    window.location.href = protocol + "//" + hostname + "/stealsnaker/loc-san-pham";
 }:{};
 //Carousel slick
 carouselList ?
