@@ -18,6 +18,12 @@
           box-sizing: border-box;
           vertical-align: middle;
         }
+        h3{
+          font-size: 16px;
+        }
+        p{
+          font-size: 15px;
+        }
       }
     }
     @include MediaQuery($lg){
