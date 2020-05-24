@@ -80,11 +80,11 @@ get_template_part('sections/breadcums');
         $args = array(
         'posts_per_page' => 16,
         'post_status'=>'publish',
-        'order'=> $_COOKIE['productSort'],
-        'orderby' => 'meta_value_num',
-        'meta_key' => 'product_price',
-        'meta_value_num' => $_COOKIE['productPrice'],
-        'meta_compare' => '<=',
+        // 'order'=> $_COOKIE['productSort'],
+        // 'orderby' => 'meta_value_num',
+        // 'meta_key' => 'product_price',
+        // 'meta_value_num' => $_COOKIE['productPrice'],
+        // 'meta_compare' => '<=',
         'tax_query' => array(
         'relation' => 'AND',
           array(
