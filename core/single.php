@@ -13,7 +13,7 @@ get_template_part('sections/breadcums');
                     </div>
                 <?php endwhile; ?>
             </div>
-            <div class="col-divide-4 col-divide-lg-12">
+            <div class="col-divide-4 col-divide-lg-12 dlg--none dp--block">
                 <div class="infor_shop">
                 <div class="title-sidebar_style">
                     <h3 class="mc-title-sidebar text--upcase">thông tin</h3>

@@ -682,10 +682,7 @@ a:hover {
   overflow: none;
 }
 
-@media screen and (max-width: 1281px) {
-  .col-divide-3 {
-    max-width: 22.5%;
-  }
+@media screen and (max-width: 1700px) {
   /*Row and divide*/
   .col-divide-lg-12 {
     flex: auto;
@@ -703,7 +700,16 @@ a:hover {
     flex: auto;
     max-width: 24%;
   }
+  .dlg--none {
+    display: none;
+  }
   /*Row and divide*/
+}
+
+@media screen and (max-width: 1281px) {
+  .col-divide-3 {
+    max-width: 22.5%;
+  }
 }
 
 /*---expanded---*/
