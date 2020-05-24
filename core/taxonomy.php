@@ -78,7 +78,7 @@ get_template_part('sections/breadcums');
       <?php while(have_posts()) : the_post(); ?>
       <a href="<?php the_permalink(); ?>" class="product__item d--block col-divide-3 col-divide-md-6 col-divide-sm-12">
         <div class="product__item-img">
-         <?php the_post_thumbnail('medium'); ?>
+         <?php the_post_thumbnail('product_thumb'); ?>
          <div class="product__item-tag tag">
            <img src="<?php echo get_theme_file_uri('assets/images/new-product-sticker.svg') ?>" alt="product-product-tag">
          </div>

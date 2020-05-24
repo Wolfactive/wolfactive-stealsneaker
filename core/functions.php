@@ -40,8 +40,9 @@ add_filter('show_admin_bar', '__return_false');
   add_theme_support('title-tag');
 }
 add_action('after_setup_theme', 'theme_features');
-
-
+add_filter('jpeg_quality', function($arg){return 70;});
+add_filter('png_quality', function($arg){return 70;});
+add_image_size( 'product_thumb', 400, 400, array( 'center', 'center' ) );
 add_theme_support( 'custom-logo', array(
   	'height'      => 100,
   	'width'       => 400,
