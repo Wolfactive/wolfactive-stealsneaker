@@ -6,7 +6,7 @@
           <img src="<?php echo get_theme_file_uri('assets\images\logo-white.png')?>" alt="logo-stealsneaker-footer">
         </div>
     		<div class="footer__list row-divide">
-    		<div class="footer__item col-divide-4 col-divide-md-12">
+    		<div class="footer__item col-divide-5 col-divide-md-12">
           <h3 class="footer__item-des text--light text--upcase">
             THÔNG TIN STEAL SNEAKER AUTHENTIC
           </h3>
@@ -65,7 +65,7 @@
               </a>
             </div>
         </div>
-        <div class="footer__item col-divide-2 col-divide-md-12">
+        <div class="footer__item col-divide-3 col-divide-md-12">
           <h2 class="title--item text--light text--upcase">
             Hỗ trợ khách hàng
           </h2>
@@ -81,13 +81,27 @@
             </a>
           </div>
         </div>
-        <div class="footer__item col-divide-4 col-divide-md-12">
-          <a href="" class="footer__socical-item mx-15">
-            <i class="fab fa-facebook icon--text"></i>
-          </a>
-          <a href="" class="footer__socical-item ">
-            <i class="fab fa-instagram icon--text"></i>
-          </a>
+        <div class="footer__item col-divide-2 col-divide-md-12">
+          <h2 class="title--item text--light text--upcase">
+            Theo dõi chúng tôi
+          </h2>
+          <div class="social__list myt-20">
+            <a href="" class="footer__socical-item mx-15">
+              <img src="<?php echo get_theme_file_uri("assets/images/facebook.svg") ?>" alt="facebook">
+            </a>
+            <a href="" class="footer__socical-item mx-15">
+              <img src="<?php echo get_theme_file_uri("assets\images\instagram.svg") ?>" alt="instagram">
+            </a>
+            <a href="" class="footer__socical-item mx-15">
+            <img src="  <?php echo get_theme_file_uri("assets\images\linkedin.svg") ?>" alt="linkedin">
+            </a>
+            <a href="" class="footer__socical-item mx-15">
+              <img src="<?php echo get_theme_file_uri("assets\images\pinterest.svg") ?>" alt="pinterest">
+            </a>
+            <a href="" class="footer__socical-item mx-15">
+            <img src="<?php echo get_theme_file_uri("assets\images\youtube.svg") ?>" alt="youtube">
+            </a>
+          </div>
         </div>
     		</div>
     	</div>

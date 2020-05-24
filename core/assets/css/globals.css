@@ -1757,27 +1757,10 @@ a:hover {
   }
 }
 
-.footer .footer__main .footer__container .footer__list .footer__item frame {
-  width: 100%;
-}
-
-.footer .footer__main .footer__container .footer__list .footer__item .footer__socical .footer__socical-item i {
-  transform: scale(1);
-  transition: all 0.25s linear;
-}
-
-.footer .footer__main .footer__container .footer__list .footer__item .footer__socical .footer__socical-item .fa-facebook {
-  color: #4267b2;
-  font-size: 45px;
-}
-
-.footer .footer__main .footer__container .footer__list .footer__item .footer__socical .footer__socical-item .fa-instagram {
-  color: #ba1674;
-  font-size: 45px;
-}
-
-.footer .footer__main .footer__container .footer__list .footer__item .footer__socical .footer__socical-item:hover i {
-  transform: scale(1.1);
+.footer .footer__main .social__list {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
 }
 
 .footer .footer__sub {
