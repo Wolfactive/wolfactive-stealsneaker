@@ -80,6 +80,7 @@ get_template_part('sections/breadcums');
         $args = array(
         'posts_per_page' => 16,
         'post_status'=>'publish',
+        'post_type'   => 'san-pham',
         // 'order'=> $_COOKIE['productSort'],
         // 'orderby' => 'meta_value_num',
         // 'meta_key' => 'product_price',
