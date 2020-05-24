@@ -90,7 +90,7 @@ function setCookie(cname, cvalue, exdays) {
   var d = new Date();
   d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
   var expires = "expires="+d.toUTCString();
-  document.cookie = cname + "=" + cvalue + ";" + expires +";path=/stealsnaker/loc-san-pham/";
+  document.cookie = cname + "=" + cvalue + ";" + expires +";path=/loc-san-pham/";
 }
 /* create cookie to filter*/
 /* get radio button value*/
@@ -126,7 +126,7 @@ filterProductBtn ? filterProductBtn.onclick= function(){
     setCookie('productSort',sortProductFilterValue, 0.005);
     setCookie('productSafe',productSafeFilterValue, 0.005);
     setCookie('productPrice',priceRangeFilterValue, 0.005);
-    window.location.href = protocol + "//" + hostname + "/stealsnaker/loc-san-pham";
+    window.location.href = protocol + "//" + hostname + "/loc-san-pham";
 }:{};
 //Carousel slick
 carouselList ?
