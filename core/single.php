@@ -2,7 +2,7 @@
 get_header();
 get_template_part('sections/breadcums');
 ?>
-<section class="single_page" id="singlePage">
+<section class="single_page my-40" id="singlePage">
     <div class="container">
         <div class="row-divide">
             <div class="col-divide-8 col-divide-lg-12">

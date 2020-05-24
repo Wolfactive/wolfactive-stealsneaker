@@ -1626,14 +1626,17 @@ a:hover {
   margin: 10px;
   display: inline;
   max-width: 800px;
+  height: auto;
 }
 
 @media screen and (max-width: 576px) {
   .single_page .container .col-divide-8 img {
-    width: 100%;
     margin: 10px;
     display: inline;
-    max-width: 800px;
+    max-width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    vertical-align: middle;
   }
 }
 
@@ -1642,10 +1645,12 @@ a:hover {
     max-width: 80%;
   }
   .single_page .container img {
-    width: 100%;
     margin: 10px;
     display: inline;
-    max-width: 800px;
+    max-width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    vertical-align: middle;
   }
 }
 
