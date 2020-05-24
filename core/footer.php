@@ -2,11 +2,11 @@
 	    <!----------=========Main==========-------->
 	  <div class="footer__main">
     	<div class="footer__container container">
+        <div class="footer__logo logo">
+          <img src="<?php echo get_theme_file_uri('assets\images\logo-white.png')?>" alt="logo-stealsneaker-footer">
+        </div>
     		<div class="footer__list row-divide">
     		<div class="footer__item col-divide-4 col-divide-md-12">
-          <div class="footer__logo logo">
-            <img src="<?php echo get_theme_file_uri('assets\images\logo-white.png')?>" alt="logo-stealsneaker-footer">
-          </div>
           <h3 class="footer__item-des text--light text--upcase">
             THÔNG TIN STEAL SNEAKER AUTHENTIC
           </h3>
@@ -43,19 +43,6 @@
               <p class="text--light">
                 <?php echo get_theme_mod('company_email') ?>
               </p>
-            </div>
-            <div class="col-divide-3 col-divide-md-12 align--self--center">
-              <p class="text--light font--weight--600">
-                Mạng xã hội:
-              </p>
-            </div>
-            <div class="footer__socical col-divide-9 col-divide-md-12">
-              <a href="" class="footer__socical-item mx-15">
-                <i class="fab fa-facebook icon--text"></i>
-              </a>
-              <a href="" class="footer__socical-item ">
-                <i class="fab fa-instagram icon--text"></i>
-              </a>
             </div>
           </div>
         </div>
@@ -95,7 +82,12 @@
           </div>
         </div>
         <div class="footer__item col-divide-4 col-divide-md-12">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.635015753784!2d106.65623431533444!3d10.839218260994189!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529a14af56771%3A0x1053c6f69b60391!2zOTgyLzc1LzExIFF1YW5nIFRydW5nLCBQaMaw4budbmcgMTEsIEfDsiBW4bqlcCwgSOG7kyBDaMOtIE1pbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1589863213110!5m2!1svi!2s" title="google-map-stealsneaker" frameborder="0" style="border:0; width:100%; height:300px" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          <a href="" class="footer__socical-item mx-15">
+            <i class="fab fa-facebook icon--text"></i>
+          </a>
+          <a href="" class="footer__socical-item ">
+            <i class="fab fa-instagram icon--text"></i>
+          </a>
         </div>
     		</div>
     	</div>
