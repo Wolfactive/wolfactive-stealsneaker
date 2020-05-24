@@ -1611,7 +1611,7 @@ a:hover {
   }
 }
 
-.single_page img {
+.single_page .col-divide-8 img {
   width: auto;
   margin: 10px;
   display: inline;

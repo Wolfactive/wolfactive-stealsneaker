@@ -5,7 +5,7 @@ get_template_part('sections/breadcums');
 <section class="single_page" id="singlePage">
     <div class="container">
         <div class="row-divide">
-            <div class="col-divide-9">
+            <div class="col-divide-8 col-divide-lg-12">
                 <?php while(have_posts()) : the_post() ; ?>
                     <h3 class="single_title"><?php the_title(); ?></h3>
                     <div class="single_page_content">
@@ -13,13 +13,13 @@ get_template_part('sections/breadcums');
                     </div>
                 <?php endwhile; ?>
             </div>
-            <div class="col-divide-3">
+            <div class="col-divide-4 col-divide-lg-12">
                 <div class="infor_shop">
                 <div class="title-sidebar_style">
                     <h3 class="mc-title-sidebar text--upcase">thông tin</h3>
                     <div class="space-title-sidebar"></div>
                 </div>
-                
+
                 <div class="image_shop">
                     <img src="<?php echo get_theme_mod('sidebar_image'); ?>" alt="logo-shop">
                 </div>
@@ -42,21 +42,21 @@ get_template_part('sections/breadcums');
                         'post_type' => 'post',
                         'post_status' => 'publish',
                         'category_name' => 'tin-noi-bat',
-                        'showposts'   =>  4,      
+                        'showposts'   =>  4,
                     );
                     $list_newspaper = new WP_Query( $args );
                     if($list_newspaper->have_posts()) :
                     ?>
                     <div class="row-divide">
                     <?php while($list_newspaper->have_posts()) : $list_newspaper->the_post(); ?>
-                        
+
                             <div class="col-divide-5">
                             <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail')  ?></a>
                             </div>
                             <div class="col-divide-7 title-nb">
                             <a href="<?php the_permalink(); ?>"><?php the_title();  ?></a>
                             </div>
-                        
+
                     <?php endwhile;
                         wp_reset_postdata();
                     ?>
@@ -67,7 +67,7 @@ get_template_part('sections/breadcums');
                     endif;?>
                 </div>
             </div>
-        </div>    
+        </div>
     </div>
 </section>
 <?php
