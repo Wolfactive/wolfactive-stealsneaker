@@ -20,15 +20,15 @@ get_template_part('sections/breadcums');
                     <div class="space-title-sidebar"></div>
                 </div>
 
-                <div class="image_shop logo">
-                    <img src="<?php echo get_theme_mod('sidebar_image'); ?>" alt="logo-shop">
+                <div class="image_shop">
+                    <img class="logo" src="<?php echo get_theme_mod('sidebar_image'); ?>" alt="logo-shop">
                 </div>
-                <p class="steal-au">STEAL SNEAKER AUTHENTIC</p>
+                <p class="steal-au text--center">STEAL SNEAKER AUTHENTIC</p>
                 <div class="sidebar-infor text--center">
                     <p><span><?php echo get_theme_mod('company_address'); ?></span> </p>
                     <p><span><?php echo get_theme_mod('company_phone'); ?></span> </p>
                 </div>
-                <div class="embed-face">
+                <div class="embed-face text--center">
                 <iframe name="f2f8aaab949a8d8" width="240px" height="400px" data-testid="fb:page Facebook Social Plugin" title="fb:page Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="https://www.facebook.com/v2.8/plugins/page.php?adapt_container_width=true&amp;app_id=&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D46%23cb%3Df3b02d2d54fc934%26domain%3Dstealsneaker.com%26origin%3Dhttps%253A%252F%252Fstealsneaker.com%252Ff9ed21364ba9%26relation%3Dparent.parent&amp;hide_cover=false&amp;href=https%3A%2F%2Fwww.facebook.com%2FStealSneakerAuthentic%2F&amp;locale=vi_VN&amp;sdk=joey&amp;show_facepile=true&amp;small_header=false&amp;tabs=timeline&amp;width=240px"></iframe>
                 </div>
                 </div>
