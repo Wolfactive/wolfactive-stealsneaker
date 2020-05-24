@@ -1628,6 +1628,15 @@ a:hover {
   max-width: 800px;
 }
 
+@media screen and (max-width: 576px) {
+  .single_page .container .col-divide-8 img {
+    width: 100%;
+    margin: 10px;
+    display: inline;
+    max-width: 800px;
+  }
+}
+
 @media screen and (max-width: 1281px) {
   .single_page .container {
     max-width: 80%;

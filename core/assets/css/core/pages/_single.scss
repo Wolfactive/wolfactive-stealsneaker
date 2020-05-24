@@ -8,6 +8,14 @@
         display: inline;
         max-width: 800px;
       }
+      @include MediaQuery($xs){
+        img{
+          width: 100%;
+          margin: 10px;
+          display: inline;
+          max-width: 800px;
+        }
+      }
     }
     @include MediaQuery($lg){
       max-width: 80%;

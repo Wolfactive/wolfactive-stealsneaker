@@ -51,7 +51,7 @@ get_template_part('sections/breadcums');
                     <?php while($list_newspaper->have_posts()) : $list_newspaper->the_post(); ?>
 
                             <div class="col-divide-5">
-                            <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail')  ?></a>
+                            <a class="d--block" href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail')  ?></a>
                             </div>
                             <div class="col-divide-7 title-nb">
                             <a href="<?php the_permalink(); ?>"><?php the_title();  ?></a>
