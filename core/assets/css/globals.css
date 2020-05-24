@@ -1626,6 +1626,12 @@ a:hover {
   .single_page .container {
     max-width: 80%;
   }
+  .single_page .container img {
+    width: 100%;
+    margin: 10px;
+    display: inline;
+    max-width: 800px;
+  }
 }
 
 .footer .footer__main {

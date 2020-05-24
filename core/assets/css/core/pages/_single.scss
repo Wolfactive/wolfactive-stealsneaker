@@ -11,6 +11,12 @@
     }
     @include MediaQuery($lg){
       max-width: 80%;
+      img{
+        width: 100%;
+        margin: 10px;
+        display: inline;
+        max-width: 800px;
+      }
     }
   }
 }

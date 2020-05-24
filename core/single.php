@@ -20,7 +20,7 @@ get_template_part('sections/breadcums');
                     <div class="space-title-sidebar"></div>
                 </div>
 
-                <div class="image_shop">
+                <div class="image_shop logo">
                     <img src="<?php echo get_theme_mod('sidebar_image'); ?>" alt="logo-shop">
                 </div>
                 <p class="steal-au">STEAL SNEAKER AUTHENTIC</p>
