@@ -82,7 +82,7 @@ get_template_part('sections/breadcums');
         'post_status'=>'publish',
         'post_type'   => 'san-pham',
         'order'=> $_COOKIE['productSort'],
-        'orderby' => 'meta_value_num',
+        'orderby' => 'meta_value',
         'meta_key' => 'product_price',
         'meta_value' => $_COOKIE['productPrice'],
         'meta_compare' => '<=',
