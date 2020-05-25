@@ -1237,6 +1237,10 @@ a:hover {
   display: none;
 }
 
+.pagination_steal .navigation.pagination .nav-links {
+  text-align: center;
+}
+
 .pagination_steal .navigation.pagination .nav-links .page-numbers {
   padding: 8px 15px;
   border: 1px solid var(--primary-bg-color);
