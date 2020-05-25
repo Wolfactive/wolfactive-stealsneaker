@@ -16,7 +16,7 @@ $file_includes = [
     'includes/resize.php',
     'includes/acf-fields.php',
     'includes/api.php',
-    'includes\Aqua-Resizer\aq_resizer.php'
+    'includes/Aqua-Resizer/aq_resizer.php'
 ];
 
 foreach ($file_includes as $file) {
