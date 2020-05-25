@@ -43,7 +43,7 @@ add_filter('show_admin_bar', '__return_false');
 add_action('after_setup_theme', 'theme_features');
 add_filter('jpeg_quality', function($arg){return 70;});
 add_filter('png_quality', function($arg){return 70;});
-add_image_size('new-img',250, 250,array('center','center'))
+add_image_size('new-img',250, 250,array('center','center'));
 add_theme_support( 'custom-logo', array(
   	'height'      => 100,
   	'width'       => 400,
