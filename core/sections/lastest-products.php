@@ -38,7 +38,8 @@
       <a href="<?php the_permalink(); ?>" class="lastest__item d--block col-divide-3 col-divide-md-6 col-divide-sm-12">
       <?php endif; ?>
         <div class="lastest__item-img">
-         <?php the_post_thumbnail('product_thumb'); ?>
+          <?php $img_url =get_the_post_thumbnail_url(get_the_ID()) ?>
+          <img class="d--none" src="<?php echo aq_resize($img_url,395,395,true);?>"
          <div class="lastest__item-tag tag">
            <img src="<?php echo get_theme_file_uri('assets/images/new-product-sticker.svg') ?>" alt="lastest-product-tag">
          </div>
