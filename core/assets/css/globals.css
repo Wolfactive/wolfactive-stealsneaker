@@ -1229,23 +1229,28 @@ a:hover {
   color: #ff4545;
 }
 
+.pagination_steal {
+  margin: 30px 0px;
+}
+
 .pagination_steal .navigation.pagination .screen-reader-text {
   display: none;
 }
 
-.pagination_steal .navigation.pagination .page-numbers {
+.pagination_steal .navigation.pagination .nav-links .page-numbers {
   padding: 8px 15px;
   border: 1px solid var(--primary-bg-color);
   background: #fff;
   color: var(--primary-color);
+  display: inline-block;
 }
 
-.pagination_steal .navigation.pagination .page-numbers.current {
+.pagination_steal .navigation.pagination .nav-links .page-numbers.current {
   background: var(--primary-bg-color);
   color: #fff;
 }
 
-.pagination_steal .navigation.pagination .page-numbers:hover {
+.pagination_steal .navigation.pagination .nav-links .page-numbers:hover {
   background: var(--primary-bg-color);
   color: #fff;
 }
