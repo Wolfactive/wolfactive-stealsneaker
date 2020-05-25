@@ -6,7 +6,7 @@
                 'post_type' => 'post',
                 'post_status' => 'publish',
                 'category_name' => 'tin-noi-bat',
-                'showposts'   =>  10,      
+                'showposts'   =>  10,
             );
             $list_newspaper = new WP_Query( $args );
             if($list_newspaper->have_posts()) :
@@ -15,7 +15,7 @@
         <?php while($list_newspaper->have_posts()) : $list_newspaper->the_post(); ?>
         <div class="newspaper_content">
             <div class="newspaper_content-image">
-                <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium')  ?></a>
+                <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('new-img')  ?></a>
             </div>
             <div class="newspaper_content-title">
                 <a href="<?php the_permalink(); ?>"><?php the_title();  ?></a>
