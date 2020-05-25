@@ -33,9 +33,9 @@
       while( $lastest_list->have_posts() ) :
       $lastest_list->the_post();   ?>
       <?php if(check_slider_home_page('home_section_2_slider')) : ?>
-      <a href="<?php the_permalink(); ?>" class="lastest__item d--block">
+      <div class="lastest__item d--block">
         <?php else: ?>
-      <a href="<?php the_permalink(); ?>" class="lastest__item d--block col-divide-3 col-divide-md-6 col-divide-sm-12">
+      <div class="lastest__item d--block col-divide-3 col-divide-md-6 col-divide-sm-12">
       <?php endif; ?>
         <div class="lastest__item-img">
          <img src="<?php echo hk_get_thumb(get_the_id(),395,395) ?>" alt="<?php the_title(); ?>" />
@@ -47,13 +47,8 @@
              <?php percent_sale(); ?>&nbsp;%
            </span>
          <?php endif;?>
-         <div class="lastest__config">
-           <div class="lastest__config-btn">
-             <button class="btn" type="button" name="viewQuick" id="viewQuick">Xem nhanh</button>
-           </div>
-           <div class="lastest__config-btn">
-             <button class="btn"type="button" name="viewDetail" id="viewDetail">Xem chi tiết</button>
-           </div>
+         <div class="lastest__config-btn">
+           <a href="<?php the_permalink(); ?>" class="btn" id="viewDetail">Xem chi tiết</a>
          </div>
         </div>
         <p class="lastest__item-title title--item">
@@ -72,7 +67,7 @@
           <img class="sale__item-tag tag sold" src="<?php echo get_theme_file_uri('assets/images/icon out stock-01.svg') ?>" style="width: 45px" alt="sale-product-tag">
           <?php endif; ?>
         </div>
-      </a>
+      </div>
       <?php endwhile;wp_reset_postdata();
       ?>
 

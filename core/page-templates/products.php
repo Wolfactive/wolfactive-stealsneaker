@@ -53,7 +53,7 @@ $productSex = get_field('product_choose_sex');
         );
         $query = new WP_Query($args); ?>
         <?php while ( $query->have_posts() ) : $query->the_post(); ?>
-      <a href="<?php the_permalink(); ?>" class="product__item d--block col-divide-3 col-divide-md-6 col-divide-sm-12">
+      <div class="product__item d--block col-divide-3 col-divide-md-6 col-divide-sm-12">
         <div class="product__item-img">
           <img src="<?php echo hk_get_thumb(get_the_id(),395,395) ?>" alt="<?php the_title(); ?>" />
          <div class="product__item-tag tag">
@@ -69,7 +69,7 @@ $productSex = get_field('product_choose_sex');
              <button class="btn" type="button" name="viewQuick" id="viewQuick">Xem nhanh</button>
            </div>
            <div class="lastest__config-btn">
-             <button class="btn"type="button" name="viewDetail" id="viewDetail">Xem chi tiết</button>
+             <a href="<?php the_permalink(); ?>" class="btn" id="viewDetail">Xem chi tiết</a>
            </div>
          </div>
         </div>
@@ -89,7 +89,7 @@ $productSex = get_field('product_choose_sex');
           <img class="sale__item-tag tag sold" src="<?php echo get_theme_file_uri('assets/images/icon out stock-01.svg') ?>" style="width: 45px" alt="sale-product-tag">
           <?php endif; ?>
         </div>
-      </a>
+      </div>
       <?php endwhile; ?>
     </div>
     <div class="pagination_steal">
