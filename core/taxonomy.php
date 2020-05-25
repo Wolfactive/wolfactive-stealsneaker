@@ -87,6 +87,14 @@ get_template_part('sections/breadcums');
              <?php percent_sale(); ?>&nbsp;%
            </span>
          <?php endif;?>
+         <div class="lastest__config">
+           <div class="lastest__config-btn">
+             <button class="btn" type="button" name="viewQuick" id="viewQuick">Xem nhanh</button>
+           </div>
+           <div class="lastest__config-btn">
+             <button class="btn"type="button" name="viewDetail" id="viewDetail">Xem chi tiết</button>
+           </div>
+         </div>
         </div>
         <p class="product__item-title title--item">
           <?php the_title(); ?>

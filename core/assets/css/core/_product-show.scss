@@ -11,6 +11,29 @@
         transform: scale(1);
         transition: all 0.25s linear;
       }
+      .lastest__config{
+          position: absolute;
+          bottom: 5px;
+          left: 50%;
+          transform: translateX(-50%);
+          display: none;
+          .btn{
+            padding: 10px 15px;
+            margin: 10px 5px;
+            box-shadow: 1px 2px 1px 0px #141414;
+            color: var(--primary-color);
+            background: #fff;
+            transition: all 0.25s linear;
+            &:hover,&:focus{
+              box-shadow: inset 1px 2px 1px 0px #141414;
+              background: var(--primary-bg-color);
+              color: #fff;
+            }
+            &#viewQuick:hover,&#viewQuick:focus{
+              background: #c40000;
+            }
+          }
+        }
     }
     .product__item-title{
       padding: 20px 20px 5px 20px;
