@@ -130,8 +130,7 @@ get_template_part('sections/breadcums');
         <?php if($query->have_posts()) : while ( $query->have_posts() ) : $query->the_post(); ?>
       <a href="<?php the_permalink(); ?>" class="product__item d--block col-divide-3 col-divide-md-6 col-divide-sm-12">
         <div class="product__item-img">
-          <?php $img_url =get_the_post_thumbnail_url(get_the_ID()) ?>
-          <img class="d--none" src="<?php echo aq_resize($img_url,395,395,true);?>"
+         <?php the_post_thumbnail('medium'); ?>
          <div class="product__item-tag tag">
            <img src="<?php echo get_theme_file_uri('assets/images/new-product-sticker.svg') ?>" alt="product-product-tag">
          </div>
