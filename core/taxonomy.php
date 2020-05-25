@@ -16,7 +16,7 @@ get_template_part('sections/breadcums');
           <div class="product__filter-item col-divide-4 border--right-15 border--right-p-0 col-divide-md-6 col-divide-sm-12">
             <h3 class="title--item col-divide-12 mxl-15"> Hãng</h3>
             <div class="filter__form-item">
-              <input type="radio" id="productBand0" name="productBand" value="" checked>
+              <input type="radio" id="productBand0" name="productBand" value="all-brand" checked>
               <label class="productBand active" for="productBand0">Tất cả</label>
             </div>
             <?php get_term_list_check('hang','productBand') ?>
@@ -24,7 +24,7 @@ get_template_part('sections/breadcums');
           <div class="product__filter-item col-divide-4 border--right-15 border--right-p-0 col-divide-md-6 col-divide-sm-12">
             <h3 class="title--item col-divide-12 mxl-15"> Loại giày</h3>
             <div class="filter__form-item">
-              <input type="radio" id="productKind0" name="productKind" value="" checked>
+              <input type="radio" id="productKind0" name="productKind" value="all-kind" checked>
               <label class="productKind active" for="productKind0">Tất cả</label>
             </div>
             <?php get_term_list_check('loai-san-pham','productKind') ?>
@@ -32,7 +32,7 @@ get_template_part('sections/breadcums');
           <div class="product__filter-item col-divide-4 col-divide-md-6 col-divide-sm-12">
             <h3 class="title--item col-divide-12 mxl-15"> Giới tính</h3>
             <div class="filter__form-item">
-              <input type="radio" id="productSex0" name="productSex" value="" checked>
+              <input type="radio" id="productSex0" name="productSex" value="all-sex" checked>
               <label class="productSex active" for="productSex0">Tất cả</label>
             </div>
             <?php get_term_list_check('gioi-tinh','productSex') ?>
@@ -40,7 +40,7 @@ get_template_part('sections/breadcums');
           <div class="product__filter-item col-divide-4 border--right-15 border--right-p-0 col-divide-md-6 col-divide-sm-12">
             <h3 class="title--item col-divide-12 mxl-15"> Size</h3>
             <div class="filter__form-item">
-              <input type="radio" id="productSize0" name="productSize" value="" checked>
+              <input type="radio" id="productSize0" name="productSize" value="all-size" checked>
               <label class="productSize active" for="productSize0">Tất cả</label>
             </div>
             <?php get_term_list_check('size','productSize') ?>
@@ -48,7 +48,7 @@ get_template_part('sections/breadcums');
           <div class="product__filter-item col-divide-4 border--right-15 border--right-p-0 col-divide-md-6 col-divide-sm-12">
             <h3 class="title--item col-divide-12 mxl-15">Sản phẩm</h3>
             <div class="filter__form-item">
-              <input type="radio" id="productSafe0" name="productSafe" value="" checked>
+              <input type="radio" id="productSafe0" name="productSafe" value="all-product" checked>
               <label class="productSafe active" for="productSafe0">Tất cả</label>
             </div>
             <?php get_term_list_check('khuyen-mai','productSafe') ?>
