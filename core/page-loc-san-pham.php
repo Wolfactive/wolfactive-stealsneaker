@@ -127,7 +127,7 @@ get_template_part('sections/breadcums');
         'paged'=>$paged
         );
         $query = new WP_Query($args); ?>
-        <?php while ( $query->have_posts() ) : $query->the_post(); ?>
+        <?php if($query->have_posts()) : while ( $query->have_posts() ) : $query->the_post(); ?>
       <a href="<?php the_permalink(); ?>" class="product__item d--block col-divide-3 col-divide-md-6 col-divide-sm-12">
         <div class="product__item-img">
          <?php the_post_thumbnail('medium'); ?>
@@ -168,6 +168,7 @@ get_template_part('sections/breadcums');
       'next_text' => __( 'Tiếp', 'welsh-womens-aid' ),
       ) ); ?>
     </div>
+  <?php else: echo "Không có sản phẩm cần tìm";endif;?>
   </div>
 </section>
 <?php

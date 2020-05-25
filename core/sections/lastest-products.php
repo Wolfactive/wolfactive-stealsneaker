@@ -12,7 +12,7 @@
       $args = array(
         'post_type'   => 'san-pham',
         'post_status' => 'publish',
-        'showposts'   =>  10,
+        'show_posts'   =>  12,
         'tax_query' => array(
           array(
             'taxonomy' => 'khuyen-mai',

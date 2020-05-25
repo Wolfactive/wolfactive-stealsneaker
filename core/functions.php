@@ -15,6 +15,7 @@ $file_includes = [
     'includes/customizer.php',                          // Customizer
     'includes/resize.php',
     'includes/acf-fields.php',
+    'includes/api.php',
 ];
 
 foreach ($file_includes as $file) {
