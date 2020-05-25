@@ -17,14 +17,12 @@
     .newspaper_content{
         padding:15px;
         .newspaper_content-image{
-            overflow: hidden;
-            height: 403px;
+            overflow: hidden;          
             img{
-                height: 100%;
                &:hover{
                 transform: scale(1.2);
-                transition: all 1s; 
-               } 
+                transition: all 1s;
+               }
             }
         }
         .newspaper_content-title{
