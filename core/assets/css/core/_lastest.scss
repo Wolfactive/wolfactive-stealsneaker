@@ -33,6 +33,7 @@
         .lastest__item-title{
           padding: 20px 20px 5px 20px;
           text-align: center;
+          min-height: 85px;
         }
         .lastest__item-price{
           text-align: center;
@@ -84,7 +85,6 @@
       @include MediaQuery($md){
         position: unset;
         text-align: right;
-      };
-    }
+      }
   }
 }
