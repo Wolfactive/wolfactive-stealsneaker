@@ -93,16 +93,6 @@ function setCookie(cname, cvalue, exdays) {
   document.cookie = cname + "=" + cvalue + ";" + expires +";path=/loc-san-pham/";
 }
 /* create cookie to filter*/
-/* get radio button value*/
-function getValueRadio(array,valueGet){
-  for (var i = 0, length = array.length; i < length; i++) {
-  if (array[i].checked) {
-    valueGet = array[i].value;
-    break;
-      }
-    }
-  }
-/* get radio button value*/
 productBrandFilter ? actionFilter(productBrandFilter,productBrandFilterLabel):{};
 productKindFilter ? actionFilter(productKindFilter,productKindFilterLabel):{};
 productSexFilter ? actionFilter(productSexFilter,productSexFilterLabel):{};
@@ -111,14 +101,42 @@ sortProductFilter ? actionFilter(sortProductFilter,sortProductFilterLabel):{};
 productSafeFilter ? actionFilter(productSafeFilter,productSafeFilterLabel):{};
 filterProductBtn ? filterProductBtn.onclick= function(){
   // get value radio button
-    getValueRadio(productBrandFilter,productBrandFilterValue);
-    getValueRadio(productKindFilter,productKindFilterValue);
-    getValueRadio(productSexFilter,productSexFilterValue);
-    getValueRadio(productSizeFilter,productSizeFilterValue);
-    getValueRadio(sortProductFilter,sortProductFilterValue);
-    getValueRadio(productSafeFilter,productSafeFilterValue);
-    !priceRangeFilterValue ? priceRangeFilterValue = 6000000 :{};
-    console.log(priceRangeFilterValue);
+    productBrandFilter.forEach(function(item){
+      if(item.checked){
+        productBrandFilterValue = item.value;
+      }
+    });
+    productKindFilter.forEach(function(item){
+      if(item.checked){
+        productKindFilterValue = item.value;
+      }
+    });
+    // getValueRadio(productSexFilter,productSexFilterValue);
+    productSexFilter.forEach(function(item){
+      if(item.checked){
+        productSexFilterValue = item.value;
+      }
+    });
+    // getValueRadio(productSizeFilter,productSizeFilterValue);
+    productSizeFilter.forEach(function(item){
+      if(item.checked){
+        productSizeFilterValue = item.value;
+      }
+    });
+    // getValueRadio(sortProductFilter,sortProductFilterValue);
+    sortProductFilter.forEach(function(item){
+      if(item.checked){
+        sortProductFilterValue = item.value;
+      }
+    });
+    // getValueRadio(productSafeFilter,productSafeFilterValue);
+    productSafeFilter.forEach(function(item){
+      if(item.checked){
+        productSafeFilterValue = item.value;
+      }
+    });
+     !priceRangeFilterValue ? priceRangeFilterValue = 6000000 :{};
+    //console.log(productBrandFilterValue);
     setCookie('productBrand',productBrandFilterValue, 0.005);
     setCookie('productKind',productKindFilterValue, 0.005);
     setCookie('productSex',productSexFilterValue, 0.005);
