@@ -1229,6 +1229,27 @@ a:hover {
   color: #ff4545;
 }
 
+.pagination_steal .navigation.pagination .screen-reader-text {
+  display: none;
+}
+
+.pagination_steal .navigation.pagination .page-numbers {
+  padding: 8px 15px;
+  border: 1px solid var(--primary-bg-color);
+  background: #fff;
+  color: var(--primary-color);
+}
+
+.pagination_steal .navigation.pagination .page-numbers.current {
+  background: var(--primary-bg-color);
+  color: #fff;
+}
+
+.pagination_steal .navigation.pagination .page-numbers:hover {
+  background: var(--primary-bg-color);
+  color: #fff;
+}
+
 .mg-bt-10 {
   margin-bottom: 10px;
 }
