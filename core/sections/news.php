@@ -16,8 +16,7 @@
         <div class="newspaper_content">
             <div class="newspaper_content-image">
                 <a href="<?php the_permalink(); ?>">
-                  <?php $img_url =get_the_post_thumbnail_url(get_the_ID()) ?>
-                  <img class="d--none" src="<?php echo aq_resize($img_url,300,300,true);?>" alt="<?php the_title() ?>">
+                  <?php the_post_thumbnail('new-img')  ?>
                 </a>
             </div>
             <div class="newspaper_content-title">
