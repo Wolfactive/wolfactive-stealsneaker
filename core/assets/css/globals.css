@@ -1603,6 +1603,10 @@ a:hover {
   transform: scale(1.1);
 }
 
+.product__list .product__item:hover .product__item-img .lastest__config {
+  display: flex;
+}
+
 .taxonomy_page .product__filter {
   margin-bottom: 55px;
 }
