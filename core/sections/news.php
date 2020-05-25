@@ -16,7 +16,7 @@
         <div class="newspaper_content">
             <div class="newspaper_content-image">
                 <a href="<?php the_permalink(); ?>">
-                  <?php the_post_thumbnail('new-img')  ?>
+                <img src="<?php echo hk_get_thumb(get_the_id(),300,300) ?>" alt="<?php the_title(); ?>" />
                 </a>
             </div>
             <div class="newspaper_content-title">
