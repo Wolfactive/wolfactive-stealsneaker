@@ -15,7 +15,10 @@
         <?php while($list_newspaper->have_posts()) : $list_newspaper->the_post(); ?>
         <div class="newspaper_content">
             <div class="newspaper_content-image">
-                <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('new-img')  ?></a>
+                <a href="<?php the_permalink(); ?>">
+                  <?php $img_url =get_the_post_thumbnail() ?>
+                  <img class="d--none" src="<?php aq_resize($img_url,300,300,true);?>" alt="<?php the_title() ?>">
+                </a>
             </div>
             <div class="newspaper_content-title">
                 <a href="<?php the_permalink(); ?>"><?php the_title();  ?></a>
