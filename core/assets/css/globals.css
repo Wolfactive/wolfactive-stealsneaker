@@ -1486,6 +1486,47 @@ a:hover {
   justify-content: space-between;
 }
 
+.single_page .image_shop .logo {
+  width: 250px;
+}
+
+.single_page .category_date {
+  font-size: 14px;
+  margin: 1px 0;
+  color: #ef1100d1;
+}
+
+.single_page .category_date i {
+  margin-right: 5px;
+}
+
+.single_page .readmore_category {
+  padding: 5px 15px;
+  background: black;
+  color: #fff;
+  font-size: 14px;
+  border: 1px solid black;
+}
+
+.single_page .readmore_category:hover {
+  color: #000;
+  background: #fff;
+}
+
+.single_page .tt-single-news a {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.single_page .category_excerpt {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.mc-mgb-20 {
+  margin-bottom: 20px;
+}
+
 .product__list .product__item {
   box-shadow: 0px 1px 1px 1px #1414144a;
   margin: 5px 10px;

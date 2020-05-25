@@ -198,4 +198,39 @@
     .row-divide{
         justify-content: space-between;
     }
+    .image_shop .logo{
+        width: 250px;
+    }
+    .category_date{
+        font-size: 14px;
+        margin:1px 0;
+        color:#ef1100d1;
+        i{
+            margin-right: 5px;
+        }
+    }
+    .readmore_category{
+        padding: 5px 15px;
+        background: black;
+        color: #fff;
+        font-size: 14px;
+        border:1px solid black;
+        &:hover{
+            color:#000;
+            background: #fff;
+        }
+    }
+    .tt-single-news{
+        a{
+            font-size: 17px;
+            font-weight: 600;
+        }
+    }
+    .category_excerpt{
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+}
+.mc-mgb-20{
+    margin-bottom: 20px;
 }
