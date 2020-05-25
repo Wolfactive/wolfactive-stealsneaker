@@ -1565,7 +1565,7 @@ a:hover {
 .taxonomy_page .product__filter-list .product__filter-item .filter__form-item label {
   display: block;
   padding: 5px 10px;
-  background: #3f3f3f;
+  background: var(--primary-bg-color);
   margin: 8px;
   color: #fff;
   border-radius: 20px;
@@ -1575,11 +1575,11 @@ a:hover {
 }
 
 .taxonomy_page .product__filter-list .product__filter-item .filter__form-item label.active {
-  background: var(--primary-bg-color);
+  background: #ff4545;
 }
 
 .taxonomy_page .product__filter-list .product__filter-item .filter__form-item label:hover {
-  background: var(--primary-bg-color);
+  background: #ff4545;
 }
 
 .taxonomy_page .product__filter-list .product__filter-item.form--slider {

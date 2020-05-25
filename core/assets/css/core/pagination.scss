@@ -1,0 +1,21 @@
+.pagination_steal{
+  .navigation.pagination{
+    .screen-reader-text{
+      display: none;
+    }
+    .page-numbers{
+      padding: 8px 15px;
+      border: 1px solid var(--primary-bg-color);
+      background: #fff;
+      color: var(--primary-color);
+      &.current{
+        background: var(--primary-bg-color);
+        color: #fff;
+      }
+      &:hover{
+        background: var(--primary-bg-color);
+        color: #fff;
+      }
+    }
+  }
+}

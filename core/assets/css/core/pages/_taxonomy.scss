@@ -43,7 +43,7 @@
         label{
           display: block;
           padding: 5px 10px;
-          background: #3f3f3f;
+          background: var(--primary-bg-color);
           margin: 8px;
           color: #fff;
           border-radius: 20px;
@@ -51,10 +51,10 @@
           cursor: pointer;
           transition: all 0.25s linear;
           &.active{
-            background: var(--primary-bg-color);
+            background: #ff4545;
           }
           &:hover{
-            background: var(--primary-bg-color);
+            background: #ff4545;
           }
         }
       }
