@@ -1,0 +1,74 @@
+.Form__modal{
+  .row-divide{
+    padding: 0px 30px;
+    padding-bottom: 30px;
+    .modal__contain{
+      padding: 0px 30px;
+      .title--item{
+        font-size: 28px;
+      }
+      .price{
+        font-size: 30px;
+        color: #af0000;
+        font-weight: 600;
+        &.line--through{
+          font-size: 22px;
+          color: #333;
+          font-weight: 500;
+        }
+      }
+      .price_sale{
+        font-size: 30px;
+        color: #af0000;
+        font-weight: 600;
+      }
+      .size{
+        .size__list{
+          display: flex;
+          justify-content: flex-start;
+          flex-wrap: wrap;
+          padding: 20px;
+          .filter__form-item{
+            input{
+              display: none;
+            }
+            label{
+              display: block;
+              padding: 5px 10px;
+              background: var(--primary-bg-color);
+              margin: 8px;
+              color: #fff;
+              border-radius: 20px;
+              font-size: 15px;
+              cursor: pointer;
+              transition: all 0.25s linear;
+              &.active{
+                background: #af0000;
+              }
+              &:hover{
+                background: #af0000;
+              }
+            }
+          }
+        }
+      }
+      .submit{
+        .btn{
+          background: #fff;
+          box-shadow: 0px 0px 4px 0px #1f1914;
+          padding: 10px 15px;
+          font-size: 18px;
+          color: var(--primary-bg-color);
+          transition: all 0.25s linear;
+          &:hover{
+            background: #141414;
+            box-shadow: inset 0px 0px 4px 0px #fefefe;
+            padding: 10px 15px;
+            font-size: 18px;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
