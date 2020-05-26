@@ -54,7 +54,7 @@ get_template_part('sections/breadcums');
                             <a class="d--block" href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail')  ?></a>
                             </div>
                             
-                            <div class="col-divide-7 title-nb">
+                            <div class="col-divide-7 title-nb mc-mgb-20">
                                 <div class="tt-single-news title-nb">
                                     <a href="<?php the_permalink(); ?>"><?php the_title();  ?></a>
                                 </div>
