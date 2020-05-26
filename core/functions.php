@@ -628,10 +628,12 @@ function get_term_list_check($taxonamy_slug,$name_tag){
         ) );
       $countTerm =1;
       foreach ($terms as $term) {
+        if($term->name != "Tất cả"){
           echo '<div class="filter__form-item">
             <input type="radio" id="'.$name_tag.''.$countTerm.'" name="'.$name_tag.'" value="'.$term->slug.'">
             <label class="'.$name_tag.'" for="'.$name_tag.''.$countTerm.'">'.$term->name.'</label>
           </div>';
+        }
       $countTerm++;
       }
   }
