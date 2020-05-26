@@ -51,9 +51,11 @@ get_template_part('sections/breadcums');
                     <?php while($list_newspaper->have_posts()) : $list_newspaper->the_post(); ?>
 
                             <div class="col-divide-5 mc-mgb-20">
-                            <a class="d--block" href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail')  ?></a>
+                              <a href="<?php the_permalink(); ?>">
+                              <img src="<?php echo hk_get_thumb(get_the_id(),300,300) ?>" alt="<?php the_title(); ?>" />
+                              </a>
                             </div>
-                            
+
                             <div class="col-divide-7 title-nb mc-mgb-20">
                                 <div class="tt-single-news title-nb">
                                     <a href="<?php the_permalink(); ?>"><?php the_title();  ?></a>

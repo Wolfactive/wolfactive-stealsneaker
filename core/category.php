@@ -11,7 +11,9 @@ get_template_part('sections/breadcums');
           <div class="col-divide-6 mg-bt-20 col-divide-md-12">
               <div class="row-divide">
                 <div class="category_image col-divide-4 col-divide-md-4">
-                <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
+                  <a href="<?php the_permalink(); ?>">
+                  <img src="<?php echo hk_get_thumb(get_the_id(),175,175) ?>" alt="<?php the_title(); ?>" />
+                  </a>
                 </div>
                 <div class="col-divide-8 pl-20 col-divide-md-8">
                     <div class="category_title">
@@ -39,7 +41,7 @@ get_template_part('sections/breadcums');
             <h3 class="mc-title-sidebar text--upcase">thông tin</h3>
             <div class="space-title-sidebar"></div>
           </div>
-          
+
           <div class="image_shop">
             <img src="<?php echo get_theme_mod('sidebar_image'); ?>" alt="logo-shop">
           </div>
@@ -62,21 +64,21 @@ get_template_part('sections/breadcums');
                 'post_type' => 'post',
                 'post_status' => 'publish',
                 'category_name' => 'tin-noi-bat',
-                'showposts'   =>  4,      
+                'showposts'   =>  4,
             );
             $list_newspaper = new WP_Query( $args );
             if($list_newspaper->have_posts()) :
             ?>
             <div class="row-divide">
             <?php while($list_newspaper->have_posts()) : $list_newspaper->the_post(); ?>
-                
+
                     <div class="col-divide-5">
                       <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail')  ?></a>
                     </div>
                     <div class="col-divide-7 title-nb">
                       <a href="<?php the_permalink(); ?>"><?php the_title();  ?></a>
                     </div>
-                
+
             <?php endwhile;
                   wp_reset_postdata();
             ?>

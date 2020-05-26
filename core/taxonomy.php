@@ -121,5 +121,6 @@ get_template_part('sections/breadcums');
   </div>
 </section>
 <?php
+get_template_part('sections/modal');
 get_footer();
 ?>

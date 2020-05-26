@@ -104,5 +104,6 @@ $productSex = get_field('product_choose_sex');
   </div>
 </section>
 <?php
+get_template_part('sections/modal');
 get_footer();
 ?>
