@@ -2,9 +2,11 @@ var viewQuickArray = document.querySelectorAll('button[name="viewQuick"]');
 var viewQuickCloseArray = document.querySelectorAll('.modal--content .close')
 var viewQuickModal = document.querySelector('#viewQuickModal');
 var viewQuickContent = document.querySelector('#modal__item');
+var protocol = window.location.protocol;
+var hostname = window.location.hostname;
 viewQuickArray ?
 viewQuickArray.forEach(function(item, i){
-    item.onclick= function(){ 
+    item.onclick= function(){
       var titleCheck = item.getAttribute("data-view");
       fetch(protocol + "//" + hostname +'/wp-json/product-api/v1/search?term=' + titleCheck)
       .then(function(result){
