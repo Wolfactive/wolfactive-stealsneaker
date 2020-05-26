@@ -47,8 +47,13 @@
              <?php percent_sale(); ?>&nbsp;%
            </span>
          <?php endif;?>
-         <div class="lastest__config-btn">
-           <a href="<?php the_permalink(); ?>" class="btn" id="viewDetail">Xem chi tiết</a>
+         <div class="lastest__config">
+           <div class="lastest__config-btn">
+             <button class="btn" type="button" name="viewQuick" id="viewQuick">Xem nhanh</button>
+           </div>
+           <div class="lastest__config-btn">
+             <a href="<?php the_permalink(); ?>" class="btn" id="viewDetail">Xem chi tiết</a>
+           </div>
          </div>
         </div>
         <p class="lastest__item-title title--item">
@@ -70,7 +75,6 @@
       </div>
       <?php endwhile;wp_reset_postdata();
       ?>
-
     </div>
     <div class="lastest__btn">
       <a href="<?php echo site_url('san-pham-moi') ?>" class="btn">
