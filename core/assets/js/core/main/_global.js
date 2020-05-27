@@ -137,20 +137,13 @@ filterProductBtn ? filterProductBtn.onclick= function(){
     });
      !priceRangeFilterValue ? priceRangeFilterValue = 6000000 :{};
     //console.log(productBrandFilterValue);
-    $.cookie('productBrand', productBrandFilterValue);
-    $.cookie('productKind', productKindFilterValue);
-    $.cookie('productSex', productSexFilterValue);
-    $.cookie('productSize', productSizeFilterValue);
-    $.cookie('productSort', sortProductFilterValue);
-    $.cookie('productSafe', productSafeFilterValue);
-    $.cookie('productPrice', priceRangeFilterValue);
-    // setCookie('productBrand',productBrandFilterValue, 0.005);
-    // setCookie('productKind',productKindFilterValue, 0.005);
-    // setCookie('productSex',productSexFilterValue, 0.005);
-    // setCookie('productSize',productSizeFilterValue, 0.005);
-    // setCookie('productSort',sortProductFilterValue, 0.005);
-    // setCookie('productSafe',productSafeFilterValue, 0.005);
-    // setCookie('productPrice',priceRangeFilterValue, 0.005);
+    setCookie('productBrand',productBrandFilterValue, 0.005);
+    setCookie('productKind',productKindFilterValue, 0.005);
+    setCookie('productSex',productSexFilterValue, 0.005);
+    setCookie('productSize',productSizeFilterValue, 0.005);
+    setCookie('productSort',sortProductFilterValue, 0.005);
+    setCookie('productSafe',productSafeFilterValue, 0.005);
+    setCookie('productPrice',priceRangeFilterValue, 0.005);
     window.location.href = protocol + "//" + hostname + "/loc-san-pham";
 }:{};
 //Carousel slick
