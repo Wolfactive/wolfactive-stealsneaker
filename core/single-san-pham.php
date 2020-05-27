@@ -5,7 +5,7 @@ get_template_part('sections/breadcums');
 <section class="single_product" id="singleProduct">
     <div class="container">
     <?php while(have_posts()) : the_post(); ?>
-        <div class="row-divide">
+        <div class="row-divide d--none">
             <div class="col-divide-6">
                 <div class="slider_product_big">
                     <div class="image_product">
@@ -46,7 +46,7 @@ get_template_part('sections/breadcums');
                 <h3 class="sg_product_title"><?php the_title(); ?></h3>
                 <?php if(get_field('product_price_sale') != ''){ ?>
                     <div class="product_price_sale mc-mgb-10">
-                        <?php echo get_field('product_price_sale'); ?> &nbsp;VNĐ 
+                        <?php echo get_field('product_price_sale'); ?> &nbsp;VNĐ
                     </div>
                     <div class="price_product remove-price mc-mgb-10">
                         <strike><?php echo get_field('product_price'); ?></strike> &nbsp;VNĐ
@@ -87,9 +87,9 @@ get_template_part('sections/breadcums');
                         </div>
                 <?php }else{ ?>
                     <div class="price_product mc-mgb-10">
-                        <?php echo get_field('product_price'); ?> &nbsp;VNĐ   
+                        <?php echo get_field('product_price'); ?> &nbsp;VNĐ
                     </div>
-                    <?php if(is_sold_out()): ?> 
+                    <?php if(is_sold_out()): ?>
                         <img class="product_sold mc-mgb-10" src="<?php echo get_theme_file_uri('assets/images/icon out stock-01.svg') ?>" style="width: 45px" alt="sale-product-tag">
                     <?php endif; ?>
                     <div class="product__filter-item mc-sale mc-mgb-10">
@@ -128,18 +128,18 @@ get_template_part('sections/breadcums');
             </div>
             <?php }elseif(get_field('use_content_new') == true){ ?>
                 <div class="content_news">
-                    <?php the_content(); ?> 
+                    <?php the_content(); ?>
                 </div>
             <?php }elseif(get_field('use_content_new_general') == true){ ?>
             <div class="content-ch">
                 <?php echo get_field('post_chung'); ?>
             </div>
             <div class="content_news">
-                    <?php the_content(); ?> 
+                    <?php the_content(); ?>
                 </div>
             <?php } ?>
         </div>
-        
+
     </div>
     <div class="product_ch">
         <h3 class="content_single_prodct-title">Sản phẩm cùng loại</h3>
