@@ -234,3 +234,111 @@
 .mc-mgb-20{
     margin-bottom: 20px;
 }
+.single_product{
+    .slider_product_big .image_product{
+        border: 1px solid #cecaca;
+    }
+    .slider_product_small{
+        margin-top: 15px;
+        .slick-slide{
+            opacity: 0.4;
+        }
+    }
+    .slider_product_small .slick-slide.slick-current{
+        opacity: 1;
+    }
+    
+    .sg_product_title{
+        font-size: 26px;
+        margin-bottom: 10px;
+    }
+    .product_price_sale{
+        font-size: 26px;
+        color: red;
+        font-weight: 600;
+    }
+    .price_product{
+        font-size: 26px;
+        font-weight: 600;
+    }
+    .mc-sale{
+        background: red;
+        padding: 3px 12px;
+        border-radius: 20px;
+        height: max-content;
+        margin-top: 15px;
+        margin-left: 11px;
+    }
+    .option_sale_price{
+        display: flex;
+    }
+    .mc_product_size{
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        .mc-title-size{
+            width: 100%;
+        }
+    }
+    .mc_product_size .filter__form-item input{
+        display: none;
+    }
+    .mc_product_size .filter__form-item label{
+        display: block;
+        padding: 5px 10px;
+        background: var(--primary-bg-color);
+        margin: 8px;
+        color: #fff;
+        border-radius: 20px;
+        font-size: 15px;
+        cursor: pointer;
+        transition: all .25s linear;
+    }
+    .mc_product_size .filter__form-item label.active{
+        background: #ff4545;   
+    }
+    .buy-btn button{
+        border:1px solid #000000;
+        color:#fff;
+        background: black;
+        &:hover{
+            color:#000;
+            background: #fff;
+        }
+    }
+    .buy-btn{
+        margin-top: 25px;
+    }
+    .content_single_prodct{
+        
+        margin-top: 90px;
+        .style-bd-content{
+            border:2px solid gray;
+            background: #d2dde836;
+            padding: 30px;
+        }
+        .content_single_prodct-title{
+            font-size: 26px;
+            margin-bottom: 10px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        .content-ch{
+            img{
+                width: auto;
+                margin: 0 auto;
+                display: block;
+            }
+        }
+    }
+    .product_ch{
+        margin-top: 90px;
+    }
+    
+}
+.mc-mgb-10{
+    margin-bottom: 10px;
+}
+.mc-pdl-50{
+    padding-left: 50px;
+}

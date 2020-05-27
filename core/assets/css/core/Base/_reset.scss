@@ -503,7 +503,7 @@ a:hover{
 #cart{
   position: fixed;
   z-index: 200;
-  color: #fff;
+  color: #333;
   font-size: 35px;
   padding: 20px;
   bottom: 50%;
@@ -511,13 +511,6 @@ a:hover{
   right: 10px;
   border: 0;
   outline: 0;
-  background: var(--primary-bg-color);
-  border-radius: 50%;
-  -webkit-border-radius: 60px;
-  -moz-border-radius: 60px;
-  -ms-border-radius: 60px;
-  -o-border-radius: 60px;
-  transition: all 0.2s ease-in-out;
 }
 .fb-livechat-mb{
   position: fixed;

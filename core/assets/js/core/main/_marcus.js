@@ -30,3 +30,19 @@ $('.newspaper_content_slick').slick({
       }
     ]
   });
+  
+$('.slider_product_big').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  fade: true,
+  asNavFor: '.slider_product_small'
+});
+$('.slider_product_small').slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  asNavFor: '.slider_product_big',
+  dots: true,
+  centerMode: true,
+  focusOnSelect: true
+});
