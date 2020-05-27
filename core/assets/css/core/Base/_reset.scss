@@ -171,12 +171,14 @@ input[type=number] {
 }
 .quality{
   display:flex;
+  margin: 20px 0px;
 }
 .quality .input{
   text-align: center;
   line-height: 18px;
-  width: 32px;
-  height: 32px;
+  font-size: 20px;
+  width: 49px;
+  height: 49px;
 }
 .quality .btn{
   background: var(--primary-bg-color);
@@ -185,8 +187,8 @@ input[type=number] {
   color: #fff;
   font-size: 25px;
   line-height:18px;
-  width: 32px;
-  height: 32px;
+  width: 49px;
+  height: 49px;
   border-radius: 0;
   margin: 0;
   outline-color: transparent;

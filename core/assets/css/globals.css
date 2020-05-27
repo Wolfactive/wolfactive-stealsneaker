@@ -184,13 +184,15 @@ input[type=number] {
 
 .quality {
   display: flex;
+  margin: 20px 0px;
 }
 
 .quality .input {
   text-align: center;
   line-height: 18px;
-  width: 32px;
-  height: 32px;
+  font-size: 20px;
+  width: 49px;
+  height: 49px;
 }
 
 .quality .btn {
@@ -200,8 +202,8 @@ input[type=number] {
   color: #fff;
   font-size: 25px;
   line-height: 18px;
-  width: 32px;
-  height: 32px;
+  width: 49px;
+  height: 49px;
   border-radius: 0;
   margin: 0;
   outline-color: transparent;
@@ -1772,8 +1774,20 @@ a:hover {
   padding: 0px 30px;
 }
 
+@media screen and (max-width: 992px) {
+  .Form__modal .row-divide .modal__contain {
+    padding: 0px;
+  }
+}
+
 .Form__modal .row-divide .modal__contain .title--item {
   font-size: 28px;
+}
+
+@media screen and (max-width: 992px) {
+  .Form__modal .row-divide .modal__contain .title--item {
+    font-size: 20px;
+  }
 }
 
 .Form__modal .row-divide .modal__contain .price {
@@ -1788,10 +1802,28 @@ a:hover {
   font-weight: 500;
 }
 
+@media screen and (max-width: 992px) {
+  .Form__modal .row-divide .modal__contain .price.line--through {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .Form__modal .row-divide .modal__contain .price {
+    font-size: 25px;
+  }
+}
+
 .Form__modal .row-divide .modal__contain .price_sale {
   font-size: 30px;
   color: #af0000;
   font-weight: 600;
+}
+
+@media screen and (max-width: 992px) {
+  .Form__modal .row-divide .modal__contain .price_sale {
+    font-size: 25px;
+  }
 }
 
 .Form__modal .row-divide .modal__contain .size .size__list {
@@ -1799,6 +1831,12 @@ a:hover {
   justify-content: flex-start;
   flex-wrap: wrap;
   padding: 20px;
+}
+
+@media screen and (max-width: 992px) {
+  .Form__modal .row-divide .modal__contain .size .size__list {
+    padding: 0px;
+  }
 }
 
 .Form__modal .row-divide .modal__contain .size .size__list .filter__form-item input {

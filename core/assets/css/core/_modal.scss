@@ -4,8 +4,14 @@
     padding-bottom: 30px;
     .modal__contain{
       padding: 0px 30px;
+      @include MediaQuery($md) {
+        padding: 0px;
+      }
       .title--item{
         font-size: 28px;
+        @include MediaQuery($md) {
+          font-size: 20px;
+        }
       }
       .price{
         font-size: 30px;
@@ -15,12 +21,21 @@
           font-size: 22px;
           color: #333;
           font-weight: 500;
+          @include MediaQuery($md) {
+            font-size: 18px;
+          }
+        }
+        @include MediaQuery($md) {
+          font-size: 25px;
         }
       }
       .price_sale{
         font-size: 30px;
         color: #af0000;
         font-weight: 600;
+        @include MediaQuery($md) {
+          font-size: 25px;
+        }
       }
       .size{
         .size__list{
@@ -28,6 +43,9 @@
           justify-content: flex-start;
           flex-wrap: wrap;
           padding: 20px;
+          @include MediaQuery($md) {
+            padding: 0px;
+          }
           .filter__form-item{
             input{
               display: none;
