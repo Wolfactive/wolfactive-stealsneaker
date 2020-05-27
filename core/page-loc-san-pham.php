@@ -81,45 +81,45 @@ get_template_part('sections/breadcums');
         'posts_per_page' => 16,
         'post_status'=>'publish',
         'post_type'   => 'san-pham',
-        'order'=> $_SESSION['productSort'],
+        'order'=> $_COOKIE['productSort'],
         'orderby' => 'meta_value',
         'meta_key' => 'product_price',
-        'meta_value' => $_SESSION['productPrice'],
+        'meta_value' => $_COOKIE['productPrice'],
         'meta_compare' => '<=',
         'tax_query' => array(
         'relation' => 'AND',
           array(
             'taxonomy' => 'hang',
             'field' => 'slug',
-            'terms' => $_SESSION['productBrand'],
+            'terms' => $_COOKIE['productBrand'],
             'include_children' => true,
             'operator' => 'IN'
           ),
           array(
             'taxonomy' => 'loai-san-pham',
             'field' => 'slug',
-            'terms' => $_SESSION['productKind'],
+            'terms' => $_COOKIE['productKind'],
             'include_children' => true,
             'operator' => 'IN'
           ),
           array(
             'taxonomy' => 'gioi-tinh',
             'field' => 'slug',
-            'terms' => $_SESSION['productSex'],
+            'terms' => $_COOKIE['productSex'],
             'include_children' => true,
             'operator' => 'IN'
           ),
           array(
             'taxonomy' => 'size',
             'field' => 'slug',
-            'terms' => $_SESSION['productSize'],
+            'terms' => $_COOKIE['productSize'],
             'include_children' => true,
             'operator' => 'IN'
           ),
           array(
             'taxonomy' => 'khuyen-mai',
             'field' => 'slug',
-            'terms' => $_SESSION['productSafe'],
+            'terms' => $_COOKIE['productSafe'],
             'include_children' => true,
             'operator' => 'IN'
           )
