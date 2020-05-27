@@ -585,12 +585,12 @@ a:hover {
   right: 10px;
   border: 0;
   outline: 0;
-  border-radius: 60px;
+  background: var(--primary-bg-color);
+  border-radius: 50%;
   -webkit-border-radius: 60px;
   -moz-border-radius: 60px;
   -ms-border-radius: 60px;
   -o-border-radius: 60px;
-  background-size: 80%;
   transition: all 0.2s ease-in-out;
 }
 
