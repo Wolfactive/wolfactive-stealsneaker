@@ -69,6 +69,7 @@ closeNavBtn ? closeNavBtn.onclick = function(){
         $(window).scroll(function() {
             if ($(window).scrollTop() > 500) {
                 btn.addClass("show");
+
             } else {
                 btn.removeClass("show");
             }
