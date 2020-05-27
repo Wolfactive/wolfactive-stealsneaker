@@ -14,7 +14,7 @@ viewQuickArray.forEach(function(item, i){
         var priceCheck = '';
         result[0].sale_price ? priceCheck = 'line--through' :{};
         var sizeArray = result[0].size;
-      var sizeShow = "<div class=\"filter__form-item\">\n            <input type=\"radio\" id=\"productSize0\" name=\"productSize\" value=\"all-size\" checked>\n            <label class=\"productSize active\" for=\"productSize0\">Tất cả</label>\n          </div>";
+      var sizeShow = "";
       sizeArray.forEach(function (item, i) {
         sizeShow += "<div class=\"filter__form-item\">\n              <input type=\"radio\" id=\"productSize" + i + "\" name=\"productSize\" value=\"" + item + "\" checked>\n              <label class=\"productSize\" for=\"productSize" + i + "\">" + item + "</label>\n            </div>";
       });
