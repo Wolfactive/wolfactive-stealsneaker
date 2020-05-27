@@ -141,9 +141,9 @@ filterProductBtn ? filterProductBtn.onclick= function(){
     $.cookie('productKind', productKindFilterValue,{ path: '/loc-san-pham' });
     $.cookie('productSex', productSexFilterValue,{ path: '/loc-san-pham' });
     $.cookie('productSize', productSizeFilterValue,{ path: '/loc-san-pham' });
-    $.cookie('productSort', productBrandFilterValue,{ path: '/loc-san-pham' });
-    $.cookie('productBrand', productBrandFilterValue,{ path: '/loc-san-pham' });
-    $.cookie('productBrand', productBrandFilterValue,{ path: '/loc-san-pham' });
+    $.cookie('productSort', sortProductFilterValue,{ path: '/loc-san-pham' });
+    $.cookie('productSafe', productSafeFilterValue,{ path: '/loc-san-pham' });
+    $.cookie('productPrice', priceRangeFilterValue,{ path: '/loc-san-pham' });
     // setCookie('productBrand',productBrandFilterValue, 0.005);
     // setCookie('productKind',productKindFilterValue, 0.005);
     // setCookie('productSex',productSexFilterValue, 0.005);
