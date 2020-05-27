@@ -35,7 +35,7 @@
         <?php if(check_slider_home_page('home_section_1_slider')) : ?>
       <div class="lastest__item d--block">
         <?php else: ?>
-      <div class="lastest__item d--block col-divide-3 col-divide-md-6 col-divide-sm-12">
+      <div class="lastest__item d--block col-divide-3 col-divide-md-6">
       <?php endif; ?>
         <div class="lastest__item-img">
          <img src="<?php echo hk_get_thumb(get_the_id(),395,395) ?>" alt="<?php the_title(); ?>" />
