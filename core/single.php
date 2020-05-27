@@ -13,6 +13,7 @@ get_template_part('sections/breadcums');
                     </div>
                 <?php endwhile; ?>
             </div>
+            <?php if(!wp_is_mobile()): ?>
             <div class="col-divide-4 col-divide-lg-12 dlg--none dp--block">
                 <div class="infor_shop">
                 <div class="title-sidebar_style">
@@ -79,6 +80,7 @@ get_template_part('sections/breadcums');
                     endif;?>
                 </div>
             </div>
+          <?php endif; ?>
         </div>
     </div>
 </section>
