@@ -86,12 +86,12 @@ function actionFilter(arrayFilter,arrayLabel) {
   });
 }
 /* create cookie to filter*/
-function setCookie(cname, cvalue, exdays) {
-  var d = new Date();
-  d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-  var expires = "expires="+d.toUTCString(); 
-  document.cookie = cname + "=" + cvalue + ";" + expires +";path=/loc-san-pham/";
-}
+// function setCookie(cname, cvalue, exdays) {
+//   var d = new Date();
+//   d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+//   var expires = "expires="+d.toUTCString();
+//   document.cookie = cname + "=" + cvalue + ";" + expires +";path=/loc-san-pham/";
+// }
 /* create cookie to filter*/
 productBrandFilter ? actionFilter(productBrandFilter,productBrandFilterLabel):{};
 productKindFilter ? actionFilter(productKindFilter,productKindFilterLabel):{};
@@ -137,13 +137,13 @@ filterProductBtn ? filterProductBtn.onclick= function(){
     });
      !priceRangeFilterValue ? priceRangeFilterValue = 6000000 :{};
     //console.log(productBrandFilterValue);
-    setCookie('productBrand',productBrandFilterValue, 0.005);
-    setCookie('productKind',productKindFilterValue, 0.005);
-    setCookie('productSex',productSexFilterValue, 0.005);
-    setCookie('productSize',productSizeFilterValue, 0.005);
-    setCookie('productSort',sortProductFilterValue, 0.005);
-    setCookie('productSafe',productSafeFilterValue, 0.005);
-    setCookie('productPrice',priceRangeFilterValue, 0.005);
+    sessionStorage.setItem('productBrand',productBrandFilterValue);
+    sessionStorage.setItem('productKind',productKindFilterValue);
+    sessionStorage.setItem('productSex',productSexFilterValue);
+    sessionStorage.setItem('productSize',productSizeFilterValue);
+    sessionStorage.setItem('productSort',sortProductFilterValue);
+    sessionStorage.setItem('productSafe',productSafeFilterValue);
+    sessionStorage.setItem('productPrice',priceRangeFilterValue);
     window.location.href = protocol + "//" + hostname + "/loc-san-pham";
 }:{};
 //Carousel slick
