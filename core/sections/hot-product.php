@@ -76,7 +76,7 @@
       <?php endwhile;wp_reset_postdata();?>
     </div>
     <div class="lastest__btn">
-      <a href="<?php echo site_url('san-pham-ban-chay') ?>" class="btn">
+      <a href="<?php bloginfo('url')?>/khuyen-mai/san-pham-ban-chay" class="btn">
         Xem thêm >>
       </a>
     </div>

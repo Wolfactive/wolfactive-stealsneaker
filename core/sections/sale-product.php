@@ -77,7 +77,7 @@
       ?>
     </div>
     <div class="lastest__btn">
-      <a href="<?php echo site_url('san-pham-moi') ?>" class="btn">
+      <a href="<?php bloginfo('url')?>/khuyen-mai/san-pham-khuyen-mai" class="btn">
         Xem thêm >>
       </a>
     </div>
