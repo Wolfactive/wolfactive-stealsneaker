@@ -113,6 +113,7 @@
 	    <div class="container"><p class="text--center"><?php echo get_theme_mod( 'title_sub_footer'); ?></p></div>
 	  </div>
 	    <!----------=========Sub==========-------->
+      <a id="buttonBackToTop"></a>
  </section>
  <?php wp_footer(); ?>
  </body>

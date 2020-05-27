@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url(./lib/fontawsome/all.css);
 @import url(./lib/slick/slick-theme.css);
 @import url(./lib/slick/slick.css);
@@ -532,7 +533,7 @@ a:hover {
 /*---Back to top---*/
 #buttonBackToTop {
   display: inline-block;
-  background-color: #4c8a399c;
+  background-color: var(--primary-bg-color);
   width: 45px;
   height: 45px;
   text-align: center;
@@ -545,15 +546,12 @@ a:hover {
   visibility: hidden;
   z-index: 1000;
   border-radius: 10px;
-  box-shadow: 1px 1px 20px 4px #4c8a3957;
+  box-shadow: 1px 1px 20px 4px #ffffff5e;
 }
 
 #buttonBackToTop::after {
-  content: "\f077";
-  font-family: FontAwesome;
-  font-weight: normal;
-  font-style: normal;
-  font-size: 25px;
+  content: "▴";
+  font-size: 50px;
   line-height: 45px;
   color: #ffffff80;
 }
