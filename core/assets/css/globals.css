@@ -583,7 +583,7 @@ a:hover {
   display: none;
   position: fixed;
   z-index: 1000;
-  padding-top: 100px;
+  padding: 100px 0px;
   left: 0;
   top: 0;
   width: 100%;
@@ -1134,7 +1134,7 @@ a:hover {
 }
 
 .navbar {
-  position: absolute;
+  position: fixed;
   background: #141414;
   z-index: 100;
   width: 100%;
@@ -1212,6 +1212,12 @@ a:hover {
   margin: 10px;
 }
 
+@media screen and (max-width: 992px) {
+  .lastest .lastest__contain .lastest__list .lastest__item {
+    margin: 5px;
+  }
+}
+
 .lastest .lastest__contain .lastest__list .lastest__item .lastest__item-img {
   position: relative;
   max-height: 390px;
@@ -1255,6 +1261,12 @@ a:hover {
   padding: 20px 20px 5px 20px;
   text-align: center;
   min-height: 85px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-height: 1.5;
 }
 
 .lastest .lastest__contain .lastest__list .lastest__item .lastest__item-price {
@@ -1743,6 +1755,12 @@ a:hover {
   padding: 20px 20px 5px 20px;
   text-align: center;
   min-height: 85px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-height: 1.5;
 }
 
 .product__list .product__item .product__item-price {

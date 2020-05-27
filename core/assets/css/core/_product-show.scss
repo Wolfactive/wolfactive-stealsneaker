@@ -39,6 +39,12 @@
       padding: 20px 20px 5px 20px;
       text-align: center;
       min-height: 85px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      line-height: 1.5;
     }
     .product__item-price{
       text-align: center;
