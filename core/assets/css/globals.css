@@ -997,7 +997,7 @@ a:hover {
 }
 
 .topmenu .topmenu__contain .topmenu__item .topmenu__content {
-  font-size: 14px;
+  font-size: 13px;
   padding: 15px 0px;
 }
 
@@ -1013,12 +1013,12 @@ a:hover {
 }
 
 .topmenu .topmenu__contain .topmenu__item .menu-menu-top-container #menu-menu-top li.menu-item a {
-  padding: 15px;
+  padding: 10px;
   display: block;
   color: #b2b2b2;
   opacity: 0.9;
   transition: all 0.25s linear;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .topmenu .topmenu__contain .topmenu__item .menu-menu-top-container #menu-menu-top li.menu-item a:hover {

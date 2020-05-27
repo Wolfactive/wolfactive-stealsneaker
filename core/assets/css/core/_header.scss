@@ -6,7 +6,7 @@
     align-items: center;
     .topmenu__item{
       .topmenu__content{
-        font-size: 14px;
+        font-size: 13px;
         padding: 15px 0px;
         @include MediaQuery($lg){
           font-size: 12px;
@@ -18,12 +18,12 @@
             display: inline-block;
             border-right: 1px solid #b2b2b2;
             a{
-              padding: 15px;
+              padding: 10px;
               display: block;
               color: #b2b2b2;
               opacity: 0.9;
               transition: all 0.25s linear;
-              font-size: 14px;
+              font-size: 13px;
               &:hover{
                 opacity: 1;
                 color: #fff;
