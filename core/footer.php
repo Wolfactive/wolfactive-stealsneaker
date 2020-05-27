@@ -113,8 +113,9 @@
 	    <div class="container"><p class="text--center"><?php echo get_theme_mod( 'title_sub_footer'); ?></p></div>
 	  </div>
 	    <!----------=========Sub==========-------->
-      <a id="buttonBackToTop"></a>
-      <a href="https://m.me/StealSneakerAuthentic" target="_blank" class="fb-livechat-mb"></a> 
+      <div id="buttonBackToTop"></div>
+      <div id="cart"><i class="fas fa-shopping-cart"></i></div>
+      <a href="https://m.me/StealSneakerAuthentic" target="_blank" class="fb-livechat-mb"></a>
  </section>
  <?php wp_footer(); ?>
  </body>

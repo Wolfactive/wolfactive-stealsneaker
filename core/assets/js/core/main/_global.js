@@ -64,20 +64,6 @@ closeNavBtn ? closeNavBtn.onclick = function(){
     navbar.classList.remove('active');
     htmlWrapper.classList.remove('active');
 }:{};
-// Back to top
-        var btn = $("#buttonBackToTop");
-        $(window).scroll(function() {
-            if ($(window).scrollTop() > 500) {
-                btn.addClass("show");
-
-            } else {
-                btn.removeClass("show");
-            }
-        });
-		btn.on("click", function(e) {
-            e.preventDefault();
-            $("html, body").animate({ scrollTop: 0 }, "300");
-        });
 // Filter action
 filterShowBtn ? filterShowBtn.onclick= function(){
   filterShowBtnIcon.classList.toggle('fa-angle-down');
@@ -239,3 +225,17 @@ $('.slick__slider').slick({
     }
   ]
 }) :{};
+// Back to top
+        var btn = $("#buttonBackToTop");
+        $(window).scroll(function() {
+            if ($(window).scrollTop() > 500) {
+                btn.addClass("show");
+
+            } else {
+                btn.removeClass("show");
+            }
+        });
+		btn.on("click", function(e) {
+            e.preventDefault();
+            $("html, body").animate({ scrollTop: 0 }, "300");
+        });
