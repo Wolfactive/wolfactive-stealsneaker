@@ -7,7 +7,7 @@
       <?php while ($getposts->have_posts()) : $getposts->the_post(); ?>
       <div class="carousel__item">
         <a class="d--block" href="<?php echo_element_field('link_slider','','javascript:void(0)','') ?>">
-          <img class="d--block" src="<?php the_field('image_slider') ?>" alt="carousel-img">
+          <img class="d--block" src="<?php echo hk_get_image(get_field('image_slider'), 1910, 908)  ?>" alt="carousel-img">
         </a>
       </div>
       <?php endwhile; wp_reset_postdata(); ?>
