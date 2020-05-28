@@ -8,38 +8,18 @@ get_template_part('sections/breadcums');
         <div class="row-divide">
             <div class="col-divide-6">
                 <div class="slider_product_big">
-                    <div class="image_product">
-                        <img src="https://stealsneaker.wolfactive.dev/wp-content/uploads/2020/05/adidas-nite-jogger-eh0249-328630_350x232-395x395.jpg" alt="">
-                    </div>
-                    <div class="image_product">
-                        <img src="https://stealsneaker.wolfactive.dev/wp-content/uploads/2020/05/adidas-nite-jogger-eh0249-328630_350x232-395x395.jpg" alt="">
-                    </div>
-                    <div class="image_product">
-                        <img src="https://stealsneaker.wolfactive.dev/wp-content/uploads/2020/05/adidas-nite-jogger-eh0249-328630_350x232-395x395.jpg" alt="">
-                    </div>
-                    <div class="image_product">
-                        <img src="https://stealsneaker.wolfactive.dev/wp-content/uploads/2020/05/adidas-nite-jogger-eh0249-328630_350x232-395x395.jpg" alt="">
-                    </div>
-                    <div class="image_product">
-                        <img src="https://stealsneaker.wolfactive.dev/wp-content/uploads/2020/05/adidas-nite-jogger-eh0249-328630_350x232-395x395.jpg" alt="">
-                    </div>
+                    <?php while ( have_rows('product_gallery') ) : the_row(); ?>
+                      <div class="image_product">
+                          <img src="<?php echo hk_get_image(get_sub_field('product_picture'), 400, 400) ?>" alt="<?php the_sub_field('product_picture_alt') ?>">
+                      </div>
+                    <?php endwhile; ?>
                 </div>
                 <div class="slider_product_small">
-                    <div class="image_product">
-                        <img src="https://stealsneaker.wolfactive.dev/wp-content/uploads/2020/05/adidas-nite-jogger-eh0249-328630_350x232-395x395.jpg" alt="">
-                    </div>
-                    <div class="image_product">
-                        <img src="https://stealsneaker.wolfactive.dev/wp-content/uploads/2020/05/adidas-nite-jogger-eh0249-328630_350x232-395x395.jpg" alt="">
-                    </div>
-                    <div class="image_product">
-                        <img src="https://stealsneaker.wolfactive.dev/wp-content/uploads/2020/05/adidas-nite-jogger-eh0249-328630_350x232-395x395.jpg" alt="">
-                    </div>
-                    <div class="image_product">
-                        <img src="https://stealsneaker.wolfactive.dev/wp-content/uploads/2020/05/adidas-nite-jogger-eh0249-328630_350x232-395x395.jpg" alt="">
-                    </div>
-                    <div class="image_product">
-                        <img src="https://stealsneaker.wolfactive.dev/wp-content/uploads/2020/05/adidas-nite-jogger-eh0249-328630_350x232-395x395.jpg" alt="">
-                    </div>
+                    <?php while ( have_rows('product_gallery') ) : the_row(); ?>
+                  <div class="image_product">
+                      <img src="<?php echo hk_get_image(get_sub_field('product_picture'), 200, 200) ?>" alt="<?php the_sub_field('product_picture_alt') ?>">
+                  </div>
+                  <?php endwhile; ?>
                 </div>
             </div>
             <div class="col-divide-6 mc-pdl-50">
@@ -135,7 +115,7 @@ get_template_part('sections/breadcums');
                 <?php echo get_field('post_chung','option'); ?>
             </div>
             <div class="content_news">
-                    <?php the_content(); ?> 
+                    <?php the_content(); ?>
                 </div>
             <?php } ?>
         </div>
