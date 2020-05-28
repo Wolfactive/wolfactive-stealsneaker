@@ -129,7 +129,7 @@ get_template_part('sections/breadcums');
       $args = array(
         'post_type'   => 'san-pham',
         'post_status' => 'publish',
-        'show_posts'   =>  12,
+        'show_posts'   =>  8,
         'tax_query' => array(
           array(
             'taxonomy' => 'hang',

@@ -463,7 +463,7 @@ a:hover{
 }
 /*---Title---*/
 /*---Back to top---*/
-#buttonBackToTop {
+.buttonBackToTop {
   display: inline-block;
   background-color: var(--primary-bg-color);
   width: 45px;
@@ -480,27 +480,27 @@ a:hover{
   border-radius: 10px;
   box-shadow: 1px 1px 20px 4px #ffffff5e;
 }
-#buttonBackToTop::after {
+.buttonBackToTop::after {
     content: "▴";
     font-size: 50px;
     line-height: 45px;
     color: #ffffff80;
 }
-#buttonBackToTop:hover {
+.buttonBackToTop:hover {
     cursor: pointer;
     background-color: var(--primary-bg-color) ;
 }
-#buttonBackToTop:hover:after{
+.buttonBackToTop:hover:after{
 	color: #fff;
 }
-#buttonBackToTop:active {
+.buttonBackToTop:active {
     background-color: #555;
 }
-#buttonBackToTop.show {
+.buttonBackToTop.show {
     opacity: 1;
     visibility: visible;
 }
-#cart{
+.cart{
   position: fixed;
   z-index: 200;
   color: #333;
@@ -512,7 +512,9 @@ a:hover{
   border: 0;
   outline: 0;
   cursor: pointer;
-  filter: drop-shadow(0 0 0.75rem #fff);
+  i{
+    filter: drop-shadow(0 0 0.75rem #fff);
+  }
 }
 .fb-livechat-mb{
   position: fixed;

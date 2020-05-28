@@ -531,7 +531,7 @@ a:hover {
 
 /*---Title---*/
 /*---Back to top---*/
-#buttonBackToTop {
+.buttonBackToTop {
   display: inline-block;
   background-color: var(--primary-bg-color);
   width: 45px;
@@ -549,32 +549,32 @@ a:hover {
   box-shadow: 1px 1px 20px 4px #ffffff5e;
 }
 
-#buttonBackToTop::after {
+.buttonBackToTop::after {
   content: "▴";
   font-size: 50px;
   line-height: 45px;
   color: #ffffff80;
 }
 
-#buttonBackToTop:hover {
+.buttonBackToTop:hover {
   cursor: pointer;
   background-color: var(--primary-bg-color);
 }
 
-#buttonBackToTop:hover:after {
+.buttonBackToTop:hover:after {
   color: #fff;
 }
 
-#buttonBackToTop:active {
+.buttonBackToTop:active {
   background-color: #555;
 }
 
-#buttonBackToTop.show {
+.buttonBackToTop.show {
   opacity: 1;
   visibility: visible;
 }
 
-#cart {
+.cart {
   position: fixed;
   z-index: 200;
   color: #333;
@@ -585,6 +585,11 @@ a:hover {
   right: 10px;
   border: 0;
   outline: 0;
+  cursor: pointer;
+}
+
+.cart i {
+  filter: drop-shadow(0 0 0.75rem #fff);
 }
 
 .fb-livechat-mb {
@@ -1305,6 +1310,7 @@ a:hover {
   font-weight: 500;
   padding: 5px 20px 20px 20px;
   font-size: 18px;
+  height: 89px;
 }
 
 .lastest .lastest__contain .lastest__list .lastest__item:hover {
@@ -1924,6 +1930,7 @@ a:hover {
   font-weight: 500;
   padding: 5px 20px 20px 20px;
   font-size: 18px;
+  height: 89px;
 }
 
 .product__list .product__item:hover {
@@ -2052,6 +2059,27 @@ a:hover {
   padding: 10px 15px;
   font-size: 18px;
   color: #fff;
+}
+
+.navigation {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  display: block;
+  z-index: 300;
+  background: #fff;
+  box-shadow: 0px 1px 20px 0px #14141442;
+}
+
+.navigation .navigation__contain .navigation__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navigation .navigation__contain .navigation__list .navigation__item {
+  font-size: 32px;
+  padding: 5px 10px;
+  filter: drop-shadow(0 0 0.75rem #14141482);
 }
 
 .taxonomy_page .product__filter {

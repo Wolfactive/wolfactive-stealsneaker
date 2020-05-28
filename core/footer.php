@@ -113,10 +113,13 @@ l    <section class="footer main--background">
 	    <div class="container"><p class="text--center"><?php echo get_theme_mod( 'title_sub_footer'); ?></p></div>
 	  </div>
 	    <!----------=========Sub==========-------->
-      <div id="buttonBackToTop"></div>
-      <div id="cart"><i class="fas fa-shopping-cart"></i></div>
+      <?php if(!wp_is_mobile()): ?>
+      <div class="buttonBackToTop" id="buttonBackToTop"></div>
+      <a href="<?php echo site_url('gio-hang') ?>" class="cart" id="cart"><i class="fas fa-shopping-cart"></i></a>
       <a href="https://m.me/StealSneakerAuthentic" target="_blank" class="fb-livechat-mb"></a>
+      <?php endif; ?>
  </section>
+<?php if(wp_is_mobile()): get_template_part('sections/navigation'); endif; ?>
  <?php wp_footer(); ?>
  </body>
 </html>
