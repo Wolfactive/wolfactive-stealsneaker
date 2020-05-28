@@ -28,7 +28,7 @@
         </a>
       </div>
       <div class="navbar__item-btn">
-        <button class="btn" id="navbarClose">
+        <button class="btn" id="navbarClose" aria-label="btn-navbar-close">
           <i class="fas fa-times text--light icon--text"></i>
         </button>
       </div>
