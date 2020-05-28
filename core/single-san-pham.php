@@ -10,7 +10,7 @@ get_template_part('sections/breadcums');
                 <div class="slider_product_big">
                     <?php while ( have_rows('product_gallery') ) : the_row(); ?>
                       <div class="image_product">
-                          <img src="<?php echo hk_get_image(get_sub_field('product_picture'), 400, 400) ?>" alt="<?php the_sub_field('product_picture_alt') ?>">
+                          <img src="<?php echo hk_get_image(get_sub_field('product_picture'), 550, 550) ?>" alt="<?php the_sub_field('product_picture_alt') ?>">
                       </div>
                     <?php endwhile; ?>
                 </div>
