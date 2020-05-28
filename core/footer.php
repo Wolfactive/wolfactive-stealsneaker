@@ -120,6 +120,8 @@
       <?php endif; ?>
  </section>
 <?php if(wp_is_mobile()): get_template_part('sections/navigation'); endif; ?>
- <?php wp_footer(); ?>
+ <?php
+ get_template_part('sections/alert');
+ wp_footer(); ?>
  </body>
 </html>

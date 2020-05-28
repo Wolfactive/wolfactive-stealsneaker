@@ -259,6 +259,6 @@ function fixHeader() {
 // show Toast
 function toastShow() {
   var toast = document.getElementById("snackbar");
-  toast.classList.add("show");
-  setTimeout(function(){ toast.classList.remove("show"); }, 3000);
+  toast.className = "show";
+  setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 3000);
 }
