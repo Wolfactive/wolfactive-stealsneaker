@@ -1962,6 +1962,12 @@ a:hover {
   display: none;
 }
 
+@media screen and (max-width: 576px) {
+  .product__list .product__item .product__item-img .lastest__config {
+    display: flex;
+  }
+}
+
 .product__list .product__item .product__item-img .lastest__config .btn {
   padding: 10px 15px;
   margin: 10px 5px;
@@ -1971,10 +1977,23 @@ a:hover {
   transition: all 0.25s linear;
 }
 
+@media screen and (max-width: 576px) {
+  .product__list .product__item .product__item-img .lastest__config .btn {
+    background: var(--primary-bg-color);
+    color: #fff;
+  }
+}
+
 .product__list .product__item .product__item-img .lastest__config .btn:hover, .product__list .product__item .product__item-img .lastest__config .btn:focus {
   box-shadow: inset 1px 2px 1px 0px #141414;
   background: var(--primary-bg-color);
   color: #fff;
+}
+
+@media screen and (max-width: 576px) {
+  .product__list .product__item .product__item-img .lastest__config .btn#viewQuick {
+    background: #c40000;
+  }
 }
 
 .product__list .product__item .product__item-img .lastest__config .btn#viewQuick:hover, .product__list .product__item .product__item-img .lastest__config .btn#viewQuick:focus {
