@@ -7,6 +7,11 @@
         </a>
       </div>
       <div class="navigation__item">
+        <a href="callto:0978975556">
+          <i class="fas fa-mobile"></i>
+        </a>
+      </div>
+      <div class="navigation__item">
         <a href="https://m.me/StealSneakerAuthentic" target="_blank">
           <i class="fab fa-facebook-messenger"></i>
         </a>
@@ -18,7 +23,7 @@
         <div id="buttonBackToTop">
           <i class="fas fa-arrow-circle-up"></i>
         </div>
-      </div>
+      </div>    
     </div>
   </div>
 </div>

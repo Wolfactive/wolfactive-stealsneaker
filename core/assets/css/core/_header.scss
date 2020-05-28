@@ -43,6 +43,8 @@
   }
 }
 .header{
+  background: transparent;
+  transition: all 0.25s cubic-bezier(1, -0.6, 1, 1.49);
   .header__contain{
     display: flex;
     justify-content: space-between;
@@ -148,6 +150,22 @@
       }
     }
   }
+  &.sticky{
+    position: fixed;
+    z-index: 300;
+    width: 100%;
+    background: #fff;
+    top: 0;
+    box-shadow: 1px 1px 14px 2px #3333333d;
+     .header__contain{
+       .logo{
+         width: 120px;
+         @include MediaQuery($md){
+           width: 100px;
+         };
+       }
+     }
+  }
 }
 .navbar{
   position: fixed;
@@ -159,7 +177,7 @@
   top: 0;
   left: -100%;
   justify-content: flex-end;
-  transition: all 0.25s linear;
+  transition: all .35s cubic-bezier(1, -0.29, 0, 0.88);
   z-index: 1000;
   .navbar__contain{
     width: 90%;

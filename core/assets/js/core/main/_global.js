@@ -5,6 +5,7 @@ var openNavBtn = document.querySelector("#navBtn");
 var navbar = document.querySelector('.navbar');
 var closeNavBtn = document.querySelector('#navbarClose');
 var htmlWrapper = document.querySelector('.wrapper');
+var headerFix = document.querySelector('.header');
 var carouselList = document.querySelector('.carousel__list');
 var sliderHome = document.querySelector('.slick__slider');
 var carouselAboutUs = document.querySelector('.page__carousel');
@@ -232,6 +233,15 @@ $('.slick__slider').slick({
     }
   ]
 }) :{};
+window.onscroll = function() {fixHeader()};
+var sticky = headerFix.offsetTop;
+function fixHeader() {
+  if (window.pageYOffset > sticky) {
+    headerFix.classList.add("sticky");
+  } else {
+    headerFix.classList.remove("sticky");
+  }
+}
 // Back to top
         var btn = $("#buttonBackToTop");
         $(window).scroll(function() {
