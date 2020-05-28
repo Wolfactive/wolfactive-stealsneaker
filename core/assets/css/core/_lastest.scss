@@ -37,6 +37,9 @@
               left: 50%;
               transform: translateX(-50%);
               display: none;
+              @include MediaQuery($xs){
+                  display: flex;
+              };
               .btn{
                 padding: 10px 15px;
                 margin: 10px 5px;
@@ -44,10 +47,19 @@
                 color: var(--primary-color);
                 background: #fff;
                 transition: all 0.25s linear;
+                @include MediaQuery($xs){                  
+                  background: var(--primary-bg-color);
+                  color: #fff;
+                };
                 &:hover,&:focus{
                   box-shadow: inset 1px 2px 1px 0px #141414;
                   background: var(--primary-bg-color);
                   color: #fff;
+                }
+                &#viewQuick{
+                  @include MediaQuery($xs){
+                    background: #c40000;
+                  };
                 }
                 &#viewQuick:hover,&#viewQuick:focus{
                   background: #c40000;
