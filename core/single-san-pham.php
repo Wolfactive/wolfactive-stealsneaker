@@ -22,7 +22,7 @@ get_template_part('sections/breadcums');
                   <?php endwhile; ?>
                 </div>
             </div>
-            <div class="col-divide-6 col-divide-md-12 mc-pdl-50">
+            <div class="col-divide-6 col-divide-md-12 mc-pdl-50 mc-pdl-res-20">
                 <h3 class="sg_product_title"><?php the_title(); ?></h3>
                 <?php if(get_field('product_price_sale') != ''){ ?>
                     <div class="product_price_sale mc-mgb-10">

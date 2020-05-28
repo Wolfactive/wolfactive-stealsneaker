@@ -9,6 +9,16 @@
         max-width: 800px;
         height: auto;
       }
+      ul{
+        padding: 15px;
+        margin-left: 21px;
+      }
+      a{
+        overflow-wrap: break-word;
+      }
+      p{
+        overflow-wrap: break-word;
+      }
       @include MediaQuery($xs){
         img{
           margin: 10px;
