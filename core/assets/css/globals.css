@@ -1333,12 +1333,12 @@ a:hover {
 }
 
 @media screen and (max-width: 576px) {
-  .lastest .lastest__contain .lastest__list .lastest__item .lastest__item-img .lastest__config .btn#viewQuick {
+  .lastest .lastest__contain .lastest__list .lastest__item .lastest__item-img .lastest__config .btn.viewQuick {
     background: #c40000;
   }
 }
 
-.lastest .lastest__contain .lastest__list .lastest__item .lastest__item-img .lastest__config .btn#viewQuick:hover, .lastest .lastest__contain .lastest__list .lastest__item .lastest__item-img .lastest__config .btn#viewQuick:focus {
+.lastest .lastest__contain .lastest__list .lastest__item .lastest__item-img .lastest__config .btn.viewQuick:hover, .lastest .lastest__contain .lastest__list .lastest__item .lastest__item-img .lastest__config .btn.viewQuick:focus {
   background: #c40000;
 }
 
@@ -2001,12 +2001,12 @@ a:hover {
 }
 
 @media screen and (max-width: 576px) {
-  .product__list .product__item .product__item-img .lastest__config .btn#viewQuick {
+  .product__list .product__item .product__item-img .lastest__config .btn.viewQuick {
     background: #c40000;
   }
 }
 
-.product__list .product__item .product__item-img .lastest__config .btn#viewQuick:hover, .product__list .product__item .product__item-img .lastest__config .btn#viewQuick:focus {
+.product__list .product__item .product__item-img .lastest__config .btn.viewQuick:hover, .product__list .product__item .product__item-img .lastest__config .btn.viewQuick:focus {
   background: #c40000;
 }
 

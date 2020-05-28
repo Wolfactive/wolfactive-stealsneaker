@@ -162,7 +162,7 @@ get_template_part('sections/breadcums');
          <?php endif;?>
          <div class="lastest__config">
            <div class="lastest__config-btn">
-             <button class="btn" type="button" aria-label="view-quick" data-view="<?php the_title(); ?>" name="viewQuick">Xem nhanh</button>
+             <button class="btn viewQuick" type="button" aria-label="view-quick" data-view="<?php the_title(); ?>" name="viewQuick">Xem nhanh</button>
            </div>
            <div class="lastest__config-btn">
              <a href="<?php the_permalink(); ?>" class="btn">Xem chi tiết</a>

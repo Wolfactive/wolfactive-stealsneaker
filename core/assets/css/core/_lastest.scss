@@ -47,7 +47,7 @@
                 color: var(--primary-color);
                 background: #fff;
                 transition: all 0.25s linear;
-                @include MediaQuery($xs){                  
+                @include MediaQuery($xs){
                   background: var(--primary-bg-color);
                   color: #fff;
                 };
@@ -56,12 +56,12 @@
                   background: var(--primary-bg-color);
                   color: #fff;
                 }
-                &#viewQuick{
+                &.viewQuick{
                   @include MediaQuery($xs){
                     background: #c40000;
                   };
                 }
-                &#viewQuick:hover,&#viewQuick:focus{
+                &.viewQuick:hover,&.viewQuick:focus{
                   background: #c40000;
                 }
               }

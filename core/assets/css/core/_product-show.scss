@@ -36,12 +36,12 @@
             background: var(--primary-bg-color);
             color: #fff;
           }
-          &#viewQuick{
+          &.viewQuick{
             @include MediaQuery($xs){
               background: #c40000;
             };
           }
-          &#viewQuick:hover,&#viewQuick:focus{
+          &.viewQuick:hover,&.viewQuick:focus{
             background: #c40000;
           }
         }
