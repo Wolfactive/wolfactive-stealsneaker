@@ -61,7 +61,7 @@
         </p>
         <div class="lastest__item-price position--relative">
           <p <?php if(is_sale_off()):?>  class="line--through" <?php endif;?>>
-            <?php echo convert_price( get_field('product_price') 0?> &nbsp;VNĐ
+            <?php echo convert_price( get_field('product_price'))?> &nbsp;VNĐ
           </p>
           <?php if(is_sale_off()):?>
             <p>
