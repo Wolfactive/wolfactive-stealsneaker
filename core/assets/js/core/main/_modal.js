@@ -59,8 +59,6 @@ viewQuickArray.forEach(function(item, i){
         plus.onclick = function (){
            input.value++;
         };
-      })
-      .then(function(productSizeFilterValueModal){
         function productToCart(){
           console.log('pass');
         }
