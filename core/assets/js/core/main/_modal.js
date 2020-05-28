@@ -29,7 +29,6 @@ viewQuickArray.forEach(function(item, i){
       })
       .then(function(){
         viewQuickModal.style.display="block";
-        productSizeFilter ? actionFilter(productSizeFilter,productSizeFilterLabel):{};
         $('.picture__list').slick({
           infinite: true,
           speed: 300,
@@ -43,6 +42,8 @@ viewQuickArray.forEach(function(item, i){
         var input = document.getElementById('quality');
         var minus = document.getElementById('minus');
         var plus = document.getElementById('plus');
+        var productSizeFilter = document.querySelectorAll('input[name="productSize"]');
+        productSizeFilter ? actionFilter(productSizeFilter,productSizeFilterLabel):{};
         minus.onclick = function (){
          if(input.value > 1){
            input.value--;
