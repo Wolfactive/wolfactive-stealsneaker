@@ -73,11 +73,7 @@ get_template_part('sections/breadcums');
                         <img class="product_sold mc-mgb-10" src="<?php echo get_theme_file_uri('assets/images/icon out stock-01.svg') ?>" style="width: 45px" alt="sale-product-tag">
                     <?php endif; ?>
                     <div class="product__filter-item mc_product_size mc-mgb-10">
-                        <h3 class="title--item"> Size</h3>
-                        <div class="filter__form-item">
-                        <input type="radio" id="productSize0" name="productSize" value="all-size" checked>
-                        <label class="productSize active" for="productSize0">Tất cả</label>
-                        </div>
+                        <h3 class="title--item"> Size</h3>                        
                         <?php get_term_list_check('size','productSize') ?>
                     </div>
                     <div class="quality mc-mgb-10">

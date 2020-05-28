@@ -18,7 +18,9 @@ function productApiSearchResult($data){
     $termsSize = get_the_terms($post->ID,'size');
     $sizes = array();
     foreach ($termsSize as $term) {
-      array_push($sizes,$term->name);
+      if($term->name !== "Tất cả"){
+        array_push($sizes,$term->name);
+      }
     };
     $picturArray = array();
     while ( have_rows('product_gallery') ) : the_row();
