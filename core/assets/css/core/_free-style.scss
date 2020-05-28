@@ -352,8 +352,3 @@
 .mc-pdl-50{
     padding-left: 50px;
 }
-.mc-pdl-res-20{
-  @include MediaQuery($xs){
-      padding-left: 20px;
-  }
-}
