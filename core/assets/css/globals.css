@@ -1931,6 +1931,12 @@ a:hover {
   padding-left: 50px;
 }
 
+@media screen and (max-width: 576px) {
+  .mc-pdl-res-20 {
+    padding-left: 20px;
+  }
+}
+
 .product__list .product__item {
   box-shadow: 0px 1px 1px 1px #1414144a;
   margin: 5px 10px;
@@ -2123,7 +2129,7 @@ a:hover {
   color: #fff;
 }
 
-.navigation {
+.navigationMb {
   position: fixed;
   width: 100%;
   bottom: 0;
@@ -2133,12 +2139,12 @@ a:hover {
   box-shadow: 0px 1px 20px 0px #14141442;
 }
 
-.navigation .navigation__contain .navigation__list {
+.navigationMb .navigation__contain .navigation__list {
   display: flex;
   justify-content: space-between;
 }
 
-.navigation .navigation__contain .navigation__list .navigation__item {
+.navigationMb .navigation__contain .navigation__list .navigation__item {
   font-size: 32px;
   padding: 5px 10px;
   filter: drop-shadow(0 0 0.75rem #14141482);

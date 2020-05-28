@@ -1,4 +1,4 @@
-<div class="navigation">
+<div class="navigationMb">
   <div class="navigation__contain container">
     <div class="navigation__list">
       <div class="navigation__item">
@@ -23,7 +23,7 @@
         <div id="buttonBackToTop">
           <i class="fas fa-arrow-circle-up"></i>
         </div>
-      </div>    
+      </div>
     </div>
   </div>
 </div>
