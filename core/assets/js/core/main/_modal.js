@@ -27,6 +27,7 @@ viewQuickArray.forEach(function(item, i){
       })
       .then(function(){
         viewQuickModal.style.display="block";
+        productSizeFilter ? actionFilter(productSizeFilter,productSizeFilterLabel):{};
         $('.picture__list').slick({
           infinite: true,
           speed: 300,
