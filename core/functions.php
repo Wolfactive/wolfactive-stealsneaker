@@ -650,3 +650,21 @@ function get_term_list_check($taxonamy_slug,$name_tag){
   	$image = huykira_image_resize($url, $w, $h, true, false);
   	return $image['url'];
   }
+  function convert_price($price){
+    $price_convert = strval($price);
+    $price_array = array_reverse(str_split($price_convert));
+    $price_array_return= array();
+    $count =0;
+    foreach ($price_array as $key) {
+      if($count == 2){
+        array_push($price_array_return,$key);
+        array_push($price_array_return,'.');
+        $count=0;
+      }else{
+        array_push($price_array_return,$key);
+        $count ++;
+      }
+    }
+    $price_convert = implode("",array_reverse($price_array_return));
+    return $price_convert;
+  }

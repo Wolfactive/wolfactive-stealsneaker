@@ -101,11 +101,11 @@ get_template_part('sections/breadcums');
         </p>
         <div class="product__item-price position--relative">
           <p <?php if(is_sale_off()):?>  class="line--through" <?php endif;?>>
-            <?php the_field('product_price') ?> &nbsp;VNĐ
+            <?php  echo convert_price(get_field('product_price')) ?> &nbsp;VNĐ
           </p>
           <?php if(is_sale_off()):?>
             <p>
-              <?php the_field('product_price_sale') ?> &nbsp;VNĐ
+              <?php echo convert_price(get_field('product_price_sale')) ?> &nbsp;VNĐ
             </p>
           <?php endif;?>
           <?php if(is_sold_out()): ?>
