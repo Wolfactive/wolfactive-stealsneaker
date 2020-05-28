@@ -43,6 +43,7 @@ viewQuickArray.forEach(function(item, i){
         var minus = document.getElementById('minus');
         var plus = document.getElementById('plus');
         var productSizeFilter = document.querySelectorAll('input[name="productSize"]');
+        var productSizeFilterLabel = document.querySelectorAll('.productSize');
         productSizeFilter ? actionFilter(productSizeFilter,productSizeFilterLabel):{};
         minus.onclick = function (){
          if(input.value > 1){
