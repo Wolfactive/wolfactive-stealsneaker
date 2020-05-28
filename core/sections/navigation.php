@@ -12,7 +12,7 @@
         </a>
       </div>
       <div class="navigation__item">
-        <a href="https://m.me/StealSneakerAuthentic" target="_blank">
+        <a href="https://m.me/StealSneakerAuthentic" target="_blank" rel="noreferrer">
           <i class="fab fa-facebook-messenger"></i>
         </a>
       </div>
