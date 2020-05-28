@@ -2,7 +2,7 @@
 get_header();
 get_template_part('sections/breadcums');
 ?>
-<section class="single_product" id="singleProduct">
+<section class="single_product my-40" id="singleProduct">
     <div class="container">
     <?php while(have_posts()) : the_post(); ?>
         <div class="row-divide">
