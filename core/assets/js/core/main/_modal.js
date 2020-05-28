@@ -16,7 +16,7 @@ viewQuickArray.forEach(function(item, i){
         var sizeArray = result[0].size;
       var sizeShow = "";
       sizeArray.forEach(function (item, i) {
-        sizeShow += "<div class=\"filter__form-item\">\n              <input type=\"radio\" id=\"productSize" + i + "\" name=\"productSize\" value=\"" + item + "\" checked>\n              <label class=\"productSize\" for=\"productSize" + i + "\">" + item + "</label>\n            </div>";
+        sizeShow += "<div class=\"filter__form-item\">\n              <input type=\"radio\" id=\"productSize" + i + "\" name=\"productSize\" value=\"" + item + "\">\n              <label class=\"productSize\" for=\"productSize" + i + "\">" + item + "</label>\n            </div>";
       });
       pictureArray = result[0].pictures;
       var priceSale;
