@@ -20,6 +20,14 @@ function productApiSearchResult($data){
     foreach ($termsSize as $term) {
       array_push($sizes,$term->name);
     };
+    $picturArray = array();
+    while ( have_rows('product_gallery') ) : the_row();
+     array_push($picturArray,array(       
+        'product_picture'       => hk_get_image(get_sub_field('product_picture'), 550, 550),
+        'product_picture_alt'   => get_sub_field('product_picture_alt')
+     )
+    );
+    endwhile;
     array_push($productResult,
     array(
       'title'             => get_the_title(),
@@ -27,7 +35,7 @@ function productApiSearchResult($data){
       'sale_price'        => get_field('product_price_sale'),
       'percent_sale'      => ceil(100 - (get_field('product_price_sale')*100/get_field('product_price'))),
       'size'              => $sizes,
-      'pictures'          => get_field('product_gallery'),
+      'pictures'          => $picturArray
       )
     );
   }

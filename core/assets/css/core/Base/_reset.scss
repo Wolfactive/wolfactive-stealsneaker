@@ -507,10 +507,12 @@ a:hover{
   font-size: 35px;
   padding: 20px;
   bottom: 50%;
-  transform: translateY(-50%); 
+  transform: translateY(-50%);
   right: 10px;
   border: 0;
   outline: 0;
+  cursor: pointer;
+  filter: drop-shadow(0 0 0.75rem #fff);
 }
 .fb-livechat-mb{
   position: fixed;

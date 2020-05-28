@@ -1,4 +1,4 @@
-    <section class="footer main--background">
+l    <section class="footer main--background">
 	    <!----------=========Main==========-------->
 	  <div class="footer__main">
     	<div class="footer__container container">
