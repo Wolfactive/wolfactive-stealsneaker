@@ -256,3 +256,9 @@ function fixHeader() {
             e.preventDefault();
             $("html, body").animate({ scrollTop: 0 }, "300");
         });
+// show Toast
+function toastShow() {
+  var toast = document.getElementById("snackbar");
+  toast.className = "show";
+  setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 3000);
+}

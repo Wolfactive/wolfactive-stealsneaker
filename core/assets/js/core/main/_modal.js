@@ -42,9 +42,15 @@ viewQuickArray.forEach(function(item, i){
         var input = document.getElementById('quality');
         var minus = document.getElementById('minus');
         var plus = document.getElementById('plus');
+        var productSizeFilterValueModal;
         var productSizeFilter = document.querySelectorAll('input[name="productSize"]');
         var productSizeFilterLabel = document.querySelectorAll('.productSize');
         productSizeFilter ? actionFilter(productSizeFilter,productSizeFilterLabel):{};
+        productSizeFilter.forEach(function(item){
+          if(item.checked){
+            productSizeFilterValueModal = item.value;
+          }
+        });
         minus.onclick = function (){
          if(input.value > 1){
            input.value--;
@@ -53,6 +59,12 @@ viewQuickArray.forEach(function(item, i){
         plus.onclick = function (){
            input.value++;
         };
+      })
+      .then(function(){
+        function productToCart(){
+          console.log('pass');
+        }
+        productSizeFilterValueModal ? productToCart() : toastShow();
       })
       .catch(function(err){
         console.log(err);
