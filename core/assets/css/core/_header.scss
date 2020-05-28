@@ -50,6 +50,9 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px 0px;
+    @include MediaQuery($xs){
+      padding: 12px 0px;
+    };
     .header__item{
       .menu-main-menu-container{
         .menu{
