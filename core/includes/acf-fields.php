@@ -394,50 +394,49 @@ acf_add_local_field_group(array(
 ));
 
 endif;
-
 if( function_exists('acf_add_local_field_group') ):
 
-	acf_add_local_field_group(array(
-		'key' => 'group_5ece84700d161',
-		'title' => 'Bài viết Chung',
-		'fields' => array(
+acf_add_local_field_group(array(
+	'key' => 'group_5ecf29d1d5dc1',
+	'title' => 'Cấu hình chung',
+	'fields' => array(
+		array(
+			'key' => 'field_5ecf29d7f8339',
+			'label' => 'Content chung cho sản phẩm',
+			'name' => 'post_chung',
+			'type' => 'wysiwyg',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'tabs' => 'all',
+			'toolbar' => 'full',
+			'media_upload' => 1,
+			'delay' => 0,
+		),
+	),
+	'location' => array(
+		array(
 			array(
-				'key' => 'field_5ece8480bf481',
-				'label' => 'Bài viết chung',
-				'name' => 'post_chung',
-				'type' => 'wysiwyg',
-				'instructions' => '',
-				'required' => 0,
-				'conditional_logic' => 0,
-				'wrapper' => array(
-					'width' => '',
-					'class' => '',
-					'id' => '',
-				),
-				'default_value' => '',
-				'tabs' => 'all',
-				'toolbar' => 'full',
-				'media_upload' => 1,
-				'delay' => 0,
+				'param' => 'options_page',
+				'operator' => '==',
+				'value' => 'theme_options',
 			),
 		),
-		'location' => array(
-			array(
-				array(
-					'param' => 'post_type',
-					'operator' => '==',
-					'value' => 'san-pham',
-				),
-			),
-		),
-		'menu_order' => 0,
-		'position' => 'normal',
-		'style' => 'default',
-		'label_placement' => 'top',
-		'instruction_placement' => 'label',
-		'hide_on_screen' => '',
-		'active' => true,
-		'description' => '',
-	));
-	
-	endif;
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => true,
+	'description' => '',
+));
+
+endif;
