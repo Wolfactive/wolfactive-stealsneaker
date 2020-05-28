@@ -235,6 +235,12 @@
     margin-bottom: 20px;
 }
 .single_product{
+  .container{
+    max-width: 70%;
+    @include MediaQuery(1366px){
+      max-width: 90%;
+    }
+  }
     .slider_product_big .image_product{
         border: 1px solid #cecaca;
     }

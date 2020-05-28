@@ -30,7 +30,7 @@ $('.newspaper_content_slick').slick({
       }
     ]
   });
-  
+
 $('.slider_product_big').slick({
   slidesToShow: 1,
   slidesToScroll: 1,
@@ -39,7 +39,7 @@ $('.slider_product_big').slick({
   asNavFor: '.slider_product_small'
 });
 $('.slider_product_small').slick({
-  slidesToShow: 3,
+  slidesToShow: 5,
   slidesToScroll: 1,
   asNavFor: '.slider_product_big',
   dots: true,
