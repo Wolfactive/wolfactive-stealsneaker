@@ -38,6 +38,23 @@
        wp_nav_menu(array(
       'theme_location' => 'mobile_nav' ));
       ?>
+      <div class="header__soical">
+        <a href="" class="header__soical-item">
+          <img src="<?php echo get_theme_file_uri("assets/images/facebook.svg") ?>" alt="facebook">
+        </a>
+        <a href="" class="header__soical-item">
+          <img src="<?php echo get_theme_file_uri("assets\images\instagram.svg") ?>" alt="instagram">
+        </a>
+        <a href="" class="header__soical-item">
+            <img src="  <?php echo get_theme_file_uri("assets\images\linkedin.svg") ?>" alt="linkedin">
+        </a>
+        <a href="" class="header__soical-item">
+          <img src="<?php echo get_theme_file_uri("assets\images\pinterest.svg") ?>" alt="pinterest">
+        </a>
+        <a href="" class="header__soical-item">
+          <img src="<?php echo get_theme_file_uri("assets\images\youtube.svg") ?>" alt="youtube">
+        </a>
+      </div>
     </div>
   </div>
   </section>

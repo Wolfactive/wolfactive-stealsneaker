@@ -1307,6 +1307,18 @@ a:hover {
   left: 0;
 }
 
+.header__soical {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.header__soical .header__soical-item {
+  margin: 10px 20px;
+}
+
 .lastest .lastest__contain {
   position: relative;
 }
