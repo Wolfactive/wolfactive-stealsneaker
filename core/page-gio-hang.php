@@ -19,48 +19,7 @@ get_template_part('sections/breadcums');
                     <p>#</p>
                 </div>
             </div>
-            <div class="row-divide all_product_cart">
-                <div class="col-divide-6">
-                    <div class="row-divide">
-                        <div class="col-divide-2">
-                            <img src="https://stealsneaker.wolfactive.dev/wp-content/uploads/2020/05/zz-ee3707-01-0142-43010-395x395.jpg" alt="">
-                        </div>
-                        <div class="col-divide-10 name_product">
-                            DISNEY MICKEY MOUSE STAN SMITH SHOES (36)
-                        </div>
-                    </div>
-                </div>
-                <div class="col-divide-2 mc_self_center mc-center">
-                    <input class="number_product" type="number" min="1" max="5">
-                </div>
-                <div class="col-divide-2 mc_self_center mc-center">
-                    <p>6.380.000</p>
-                </div>
-                <div class="col-divide-2 mc_self_center mc-center">
-                   <a href=""><i class="fas fa-trash-alt"></i></a>
-                </div>
-            </div>
-            <div class="row-divide all_product_cart">
-                <div class="col-divide-6">
-                    <div class="row-divide">
-                        <div class="col-divide-2">
-                            <img src="https://stealsneaker.wolfactive.dev/wp-content/uploads/2020/05/zz-ee3707-01-0142-43010-395x395.jpg" alt="">
-                        </div>
-                        <div class="col-divide-10 name_product">
-                            DISNEY MICKEY MOUSE STAN SMITH SHOES (36)
-                        </div>
-                    </div>
-                </div>
-                <div class="col-divide-2 mc_self_center mc-center">
-                    <input class="number_product" type="number" min="1" max="5">
-                </div>
-                <div class="col-divide-2 mc_self_center mc-center">
-                    <p>6.380.000</p>
-                </div>
-                <div class="col-divide-2 mc_self_center mc-center">
-                    <a href=""><i class="fas fa-trash-alt"></i></a>
-                </div>
-            </div>
+            <div class="product__cart-list"></div>
             <div class="result_price">
                 <p><i class="fas fa-dollar-sign"></i>&nbsp;&nbsp;Tổng tiền 9.570.000 VNĐ</p>
             </div>

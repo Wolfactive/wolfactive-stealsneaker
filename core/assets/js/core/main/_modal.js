@@ -48,17 +48,27 @@ viewQuickArray.forEach(function(item, i){
         var productSizeFilter = document.querySelectorAll('input[name="productSize"]');
         var productSizeFilterLabel = document.querySelectorAll('.productSize');
         var modalBtnCart = document.querySelector('#modalBtnToCart');
+        var modalBtnBuy = document.querySelector('#modalBtnCart');
         var toast = document.getElementById("snackbar");
         productSizeFilter ? actionFilter(productSizeFilter,productSizeFilterLabel):{};
         minus.onclick = function (){if(input.value > 1){input.value--;}};
         plus.onclick = function (){input.value++;};
         function productToCart(){
-          get_cart_item(result[0].title,result[0].price,result[0].sale_price,productSizeFilterValueModal,parseInt(input.value));
+          get_cart_item(pictureArray[0].product_picture,result[0].title,result[0].price,result[0].sale_price,productSizeFilterValueModal,parseInt(input.value));
           toastShow(toast,"Đặt hàng thành công","succeed");
+        }
+        function productToBuy(){
+          get_cart_item(pictureArray[0].product_picture,result[0].title,result[0].price,result[0].sale_price,productSizeFilterValueModal,parseInt(input.value));
+          toastShow(toast,"Đặt hàng thành công. <br/>Trang web đang chuyển hướng qua giỏ hàng","succeed");
+          setTimeout(function(){  window.location.href = protocol + "//" + hostname + "/gio-hang";}, 1500);
         }
         modalBtnCart ? modalBtnCart.onclick = function(){
           productSizeFilter.forEach(function(item){item.checked ?  productSizeFilterValueModal = item.value :{};});
-          productSizeFilterValueModal ? productToCart() : toastShow(toast,"Vui lòng chọn size trước khi đặt hàng (*)","warning");;
+          productSizeFilterValueModal ? productToCart() : toastShow(toast,"Vui lòng chọn size trước khi đặt hàng (*)","warning");
+        }:{};
+        modalBtnBuy ? modalBtnBuy.onclick = function(){
+          productSizeFilter.forEach(function(item){item.checked ?  productSizeFilterValueModal = item.value :{};});
+          productSizeFilterValueModal ? productToBuy() : toastShow(toast,"Vui lòng chọn size trước khi đặt hàng (*)","warning");
         }:{};
       })
       .catch(function(err){

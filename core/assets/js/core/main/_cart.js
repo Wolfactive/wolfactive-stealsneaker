@@ -1,4 +1,5 @@
-function sanPham(tenSP,giaSP,giaKMSP,sizeSP,soLuongSP) {
+function sanPham(hinhSP,tenSP,giaSP,giaKMSP,sizeSP,soLuongSP) {
+  this.hinhSanPham = hinhSP;
   this.tenSanPham = tenSP;
   this.giaSanPham = giaSP;
   this.giaKhuyenMaiSanPham = giaKMSP;
@@ -15,7 +16,7 @@ function LayLocalStorage() {
     if (!jsonData) { localStorage = []; return;}
     productBuyArray = JSON.parse(jsonData);
 }
-function get_cart_item(tenSP,giaSP,giaKMSP,sizeSP,soLuongSP){
+function get_cart_item(hinhSP,tenSP,giaSP,giaKMSP,sizeSP,soLuongSP){
   var productBuy = new sanPham(tenSP,giaSP,giaKMSP,sizeSP,soLuongSP);
   function pushToArray(){
     productBuyArrayPush.push(productBuy);
