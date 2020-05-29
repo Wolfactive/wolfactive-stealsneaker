@@ -17,7 +17,7 @@ function LayLocalStorage() {
     productBuyArray = JSON.parse(jsonData);
 }
 function get_cart_item(hinhSP,tenSP,giaSP,giaKMSP,sizeSP,soLuongSP){
-  var productBuy = new sanPham(tenSP,giaSP,giaKMSP,sizeSP,soLuongSP);
+  var productBuy = new sanPham(hinhSP,tenSP,giaSP,giaKMSP,sizeSP,soLuongSP);
   function pushToArray(){
     productBuyArrayPush.push(productBuy);
   }
