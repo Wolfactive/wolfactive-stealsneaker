@@ -7,7 +7,7 @@
         </a>
       </div>
       <div class="navigation__item">
-        <a href="tell:0978975556">
+        <a href="tel:0978975556">
           <i class="fas fa-mobile"></i>
         </a>
       </div>
