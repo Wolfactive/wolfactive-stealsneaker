@@ -14,16 +14,16 @@ function LayLocalStorage() {
     if (!jsonData) { localStorage = []; return;}
     productBuyArray = JSON.parse(jsonData);
 }
-function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 function get_cart_item(tenSP,giaSP,giaKMSP,sizeSP,soLuongSP){
   var productBuy = new sanPham(tenSP,giaSP,giaKMSP,sizeSP,soLuongSP);
-  var productBuyArray = [];
   function pushToArray(){
-    productBuyArray.push(productBuy);
-    productBuyArrayPush = [].concat(_toConsumableArray(productBuyArrayPush), _toConsumableArray(productBuyArray));
+    productBuyArrayPush.push(productBuy);
   }
-  productBuyArrayPush.length !== 0 ? productBuyArrayPush.forEach(function(item, i){
-    productBuy.tenSP === item.tenSanPham ? item.soLuongSanPham + productBuy.soLuongSP : pushToArray();
-  }) :   pushToArray();
+  function checkProduct(){
+    productBuyArrayPush.find(function(item){
+      item.tenSanPham === productBuy.tenSanPham && item.sizeSanPham === productBuy.sizeSanPham ? item.soLuongSanPham + productBuy.soLuongSanPham : pushToArray();
+    })
+  }
+  productBuyArrayPush.length === 0 ? pushToArray() : checkProduct();
   LuuVaoLocalStorage(productBuyArrayPush);
 }
