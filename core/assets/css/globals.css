@@ -2001,6 +2001,101 @@ a:hover {
   }
 }
 
+.page_cart .product_cart {
+  margin-bottom: 40px;
+}
+
+.page_cart .product_cart .option_cart {
+  color: #a2a2a2;
+  font-size: 15px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #dedede;
+  margin-bottom: 15px;
+}
+
+.page_cart .product_cart .all_product_cart {
+  font-size: 15px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #dedede;
+  margin-bottom: 15px;
+}
+
+.page_cart .product_cart .all_product_cart .number_product {
+  width: 45%;
+  padding: 8px 9px;
+}
+
+.page_cart .product_cart .all_product_cart .name_product {
+  align-self: center;
+  padding-left: 10px;
+}
+
+.page_cart .product_cart .all_product_cart .mc_self_center {
+  align-self: center;
+}
+
+.page_cart .product_cart .result_price {
+  font-size: 15px;
+  color: #a2a2a2;
+}
+
+.page_cart .produc_pay .mc-title-infor {
+  font-size: 26px;
+  margin-bottom: 10px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.page_cart .produc_pay .title_infor {
+  font-size: 14px;
+  font-weight: 600;
+  padding-right: 0px;
+}
+
+.page_cart .produc_pay .mc-style-inp {
+  width: 95%;
+  padding: 8px 15px;
+  border: 1px solid #dedddd;
+}
+
+.page_cart .produc_pay .mc-style-gc {
+  width: 93.5%;
+  padding: 8px 15px;
+  border: 1px solid #dedddd;
+}
+
+.page_cart .produc_pay .pp-cost {
+  font-size: 14px;
+  font-weight: 600;
+  padding-right: 0px;
+  color: red;
+}
+
+.page_cart .produc_pay .pp_thanh_toan label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.page_cart .submit_tt_cart {
+  padding: 12px 20px;
+  font-size: 17px;
+  color: #fff;
+  border: 1px solid #000;
+  background: #000;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: 0.5s all;
+}
+
+.page_cart .submit_tt_cart:hover {
+  background: #fff;
+  color: #000;
+}
+
+.mc-center {
+  text-align: center;
+}
+
 .product__list .product__item {
   box-shadow: 0px 1px 1px 1px #1414144a;
   margin: 5px 10px;
