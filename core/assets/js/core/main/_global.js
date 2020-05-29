@@ -27,6 +27,7 @@ var sortProductFilterLabel = document.querySelectorAll('.sortProduct');
 var productSafeFilter = document.querySelectorAll('input[name="productSafe"]');
 var productSafeFilterLabel = document.querySelectorAll('.productSafe');
 var productBuyArrayPush = [];
+var productBuyArray =[];
 var protocol = window.location.protocol;
 var hostname = window.location.hostname;
 var filterProductBtn = document.querySelector('#filterBtn');
