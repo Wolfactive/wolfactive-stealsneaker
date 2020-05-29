@@ -47,11 +47,6 @@ viewQuickArray.forEach(function(item, i){
         var productSizeFilterLabel = document.querySelectorAll('.productSize');
         var modalBtnCart = document.querySelector('#modalBtnCart');
         productSizeFilter ? actionFilter(productSizeFilter,productSizeFilterLabel):{};
-        productSizeFilter.forEach(function(item){
-          if(item.checked){
-            productSizeFilterValueModal = item.value;
-          }
-        });
         minus.onclick = function (){
          if(input.value > 1){
            input.value--;
@@ -61,11 +56,18 @@ viewQuickArray.forEach(function(item, i){
            input.value++;
         };
         function productToCart(){
-          console.log('pass');
+          toast.innerHTML = "Đặt hàng thành công";
+          toast.style.background="#28a745";
+          toastShow();
         }
         modalBtnCart ? modalBtnCart.onclick = function(){
+          productSizeFilter.forEach(function(item){
+            if(item.checked){
+              productSizeFilterValueModal = item.value;
+            }
+          });
           productSizeFilterValueModal ? productToCart() : toastShow();
-        }:{};                
+        }:{};
       })
       .catch(function(err){
         console.log(err);
