@@ -16,8 +16,11 @@ function LayLocalStorage() {
 }
 function get_cart_item(tenSP,giaSP,giaKMSP,sizeSP,soLuongSP){
   var productBuy = new sanPham(tenSP,giaSP,giaKMSP,sizeSP,soLuongSP);
+  var productBuyArray = [];
   productBuyArray.length !== 0 ? productBuyArray.forEach(function(item, i){
     productBuy.tenSP === item.tenSP ? item.soLuongSP + productBuy.soLuongSP : productBuyArray.push(productBuy);
   }) :   productBuyArray.push(productBuy);
-  LuuVaoLocalStorage(productBuyArray);
+  function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+  productBuyArrayPush = [].concat(_toConsumableArray(productBuyArray));
+  LuuVaoLocalStorage(productBuyArrayPush);
 }
