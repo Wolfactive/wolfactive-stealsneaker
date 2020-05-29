@@ -22,10 +22,14 @@ function get_cart_item(tenSP,giaSP,giaKMSP,sizeSP,soLuongSP){
   }
   function checkProduct(){
     productBuyArrayPush.find(function(item){
-      item.tenSanPham == productBuy.tenSanPham && item.sizeSanPham == productBuy.sizeSanPham ? item.soLuongSanPham = item.soLuongSanPham + productBuy.soLuongSanPham : pushToArray();
+      if( item.tenSanPham === productBuy.tenSanPham && item.sizeSanPham === productBuy.sizeSanPham ){
+        item.soLuongSanPham += productBuy.soLuongSanPham;
+      }else{
+        productBuyArrayPush.push(productBuy);
+      }
     })
-    console.log(productBuyArrayPush);
   }
   productBuyArrayPush.length === 0 ? pushToArray() : checkProduct();
+    console.log(productBuyArrayPush);
     LuuVaoLocalStorage(productBuyArrayPush);
 }
