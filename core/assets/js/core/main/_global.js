@@ -26,6 +26,7 @@ var sortProductFilter = document.querySelectorAll('input[name="sortProduct"]');
 var sortProductFilterLabel = document.querySelectorAll('.sortProduct');
 var productSafeFilter = document.querySelectorAll('input[name="productSafe"]');
 var productSafeFilterLabel = document.querySelectorAll('.productSafe');
+var productBuyArrayPush = [];
 var protocol = window.location.protocol;
 var hostname = window.location.hostname;
 var filterProductBtn = document.querySelector('#filterBtn');
@@ -257,8 +258,8 @@ function fixHeader() {
             $("html, body").animate({ scrollTop: 0 }, "300");
         });
 // show Toast
-function toastShow() {
-  var toast = document.getElementById("snackbar");
-  toast.className = "show";
-  setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 5000);
+function toastShow(toast,toastContent,toastClass) {
+  toast.innerHTML = toastContent;
+  toast.classList.add(toastClass);
+  setTimeout(function(){ toast.classList.remove(toastClass);toast.innerHTML=""}, 5000);
 }

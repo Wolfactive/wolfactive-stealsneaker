@@ -618,8 +618,6 @@ a:hover {
   visibility: hidden;
   min-width: 250px;
   height: max-content;
-  margin-left: -125px;
-  background-color: var(--primary-bg-color);
   color: #fff;
   text-align: center;
   border-radius: 2px;
@@ -627,12 +625,21 @@ a:hover {
   position: fixed;
   z-index: 1500;
   left: 50%;
+  transform: translateX(-50%);
   top: 30px;
   font-size: 17px;
 }
 
-#snackbar.show {
+#snackbar.warning {
   visibility: visible;
+  background-color: var(--primary-bg-color);
+  -webkit-animation: fadein 0.5s 2.5s;
+  animation: fadein 0.5s 2.5s;
+}
+
+#snackbar.succeed {
+  visibility: visible;
+  background-color: #28a745;
   -webkit-animation: fadein 0.5s 2.5s;
   animation: fadein 0.5s 2.5s;
 }

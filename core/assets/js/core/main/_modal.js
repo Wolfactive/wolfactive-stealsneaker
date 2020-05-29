@@ -26,8 +26,9 @@ viewQuickArray.forEach(function(item, i){
         pictureShow += "\n            <div class=\"pictures__item\">\n              <img src=\"" + item.product_picture + "\" alt=\"" + item.product_picture_alt + "\" class=\"d--block\" />\n            </div>\n          ";
       });
       viewQuickContent.innerHTML = "\n       <div class=\"row-divide\">\n         <div class=\"col-divide-6 col-divide-md-12\">\n          <div class=\"picture__list\">\n            " + pictureShow + "\n          </div>\n         </div>\n         <div class=\"col-divide-6 col-divide-md-12\">\n           <div class=\"modal__contain\">\n           <h4 class=\"title--item\">\n             " + result[0].title + "\n           </h4>\n           <p class=\"price " + priceCheck + "\">\n            " + result[0].price + " VNĐ\n           </p>\n           <p class=\"price_sale\">\n            " + priceSale + "\n           </p>\n           <div class=\"size\">\n            <p class=\"title--item\">\n              Chọn size giày:\n            </p>\n            <div class=\"size__list\">\n              " + sizeShow + "\n            </div>\n           </div>\n           <div class=\"quality\">\n            <div>\n              <button class=\"btn\" id=\"minus\">-</button>\n            </div>\n            <div>\n              <input class=\"input\" id=\"quality\" type=\"number\" value=\"1\">\n            </div>\n            <div>\n              <button class=\"btn\" id=\"plus\">+</button>\n            </div>\n           </div>\n           <div class=\"submit text--right\">\n              <button class=\"btn text--upcase\" id=\"modalBtnCart\">\n                <i class=\"fas fa-shopping-bag\"></i> mua ngay\n              </button>\n           </div>\n           </div>\n         </div>\n       </div>";
+      return result;
       })
-      .then(function(){
+      .then(function(result){
         viewQuickModal.style.display="block";
         $('.picture__list').slick({
           infinite: true,
@@ -37,8 +38,9 @@ viewQuickArray.forEach(function(item, i){
           autoplay: true,
           autoplaySpeed: 3000,
         });
+        return result;
       })
-      .then(function(){
+      .then(function(result){
         var input = document.getElementById('quality');
         var minus = document.getElementById('minus');
         var plus = document.getElementById('plus');
@@ -46,28 +48,17 @@ viewQuickArray.forEach(function(item, i){
         var productSizeFilter = document.querySelectorAll('input[name="productSize"]');
         var productSizeFilterLabel = document.querySelectorAll('.productSize');
         var modalBtnCart = document.querySelector('#modalBtnCart');
+        var toast = document.getElementById("snackbar");
         productSizeFilter ? actionFilter(productSizeFilter,productSizeFilterLabel):{};
-        minus.onclick = function (){
-         if(input.value > 1){
-           input.value--;
-         }
-        };
-        plus.onclick = function (){
-           input.value++;
-        };
+        minus.onclick = function (){if(input.value > 1){input.value--;}};
+        plus.onclick = function (){input.value++;};
         function productToCart(){
-          var toast = document.getElementById("snackbar");
-          toast.innerHTML = "Đặt hàng thành công";
-          toast.style.background="#28a745";
-          toastShow();
+          get_cart_item(result[0].title,result[0].price,result[0].sale_price,productSizeFilterValueModal,parseInt(input.value));
+          toastShow(toast,"Đặt hàng thành công","succeed");
         }
         modalBtnCart ? modalBtnCart.onclick = function(){
-          productSizeFilter.forEach(function(item){
-            if(item.checked){
-              productSizeFilterValueModal = item.value;
-            }
-          });
-          productSizeFilterValueModal ? productToCart() : toastShow();
+          productSizeFilter.forEach(function(item){item.checked ?  productSizeFilterValueModal = item.value :{};});
+          productSizeFilterValueModal ? productToCart() : toastShow(toast,"Vui lòng chọn size trước khi đặt hàng (*)","warning");;
         }:{};
       })
       .catch(function(err){
