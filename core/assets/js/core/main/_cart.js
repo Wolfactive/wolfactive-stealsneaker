@@ -6,6 +6,7 @@ function sanPham(tenSP,giaSP,giaKMSP,sizeSP,soLuongSP) {
   this.soLuongSanPham = soLuongSP;
 }
 function LuuVaoLocalStorage(productBuyArray) {
+    localStorage.clear();
     var jsonData = JSON.stringify(productBuyArray);
     localStorage.setItem("productBuyArray", jsonData);
 }
@@ -25,5 +26,5 @@ function get_cart_item(tenSP,giaSP,giaKMSP,sizeSP,soLuongSP){
     })
   }
   productBuyArrayPush.length === 0 ? pushToArray() : checkProduct();
-  LuuVaoLocalStorage(productBuyArrayPush);
+    LuuVaoLocalStorage(productBuyArrayPush);
 }
