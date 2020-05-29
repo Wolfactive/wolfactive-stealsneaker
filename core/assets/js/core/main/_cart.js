@@ -14,7 +14,7 @@ function LayLocalStorage() {
     if (!jsonData) { localStorage = []; return;}
     productBuyArray = JSON.parse(jsonData);
 }
-function get_cart_item(tenSP,giaSP,sizeSP,soLuongSP){
+function get_cart_item(tenSP,giaSP,giaKMSP,sizeSP,soLuongSP){
   var productBuy = new sanPham(tenSP,giaSP,giaKMSP,sizeSP,soLuongSP);
   var productBuyArray = [];
   productBuyArray.length !== 0 ? productBuyArray.forEach(function(item, i){
