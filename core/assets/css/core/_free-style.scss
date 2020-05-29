@@ -363,3 +363,89 @@
     padding-left: 20px;
   };
 }
+
+.page_cart{
+    .product_cart{
+        margin-bottom: 40px;
+        .option_cart{
+            color: #a2a2a2;
+            font-size: 15px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #dedede;
+            margin-bottom: 15px;
+        }
+        .all_product_cart{
+            font-size: 15px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #dedede;
+            margin-bottom: 15px;
+            .number_product{
+                width: 45%;
+                padding: 8px 9px;
+            }
+            .name_product{
+                align-self: center;
+                padding-left: 10px;
+            }
+            .mc_self_center{
+                align-self: center;
+            }
+        }
+        .result_price{
+            font-size: 15px;
+            color: #a2a2a2;
+        }
+    }
+    .produc_pay{
+        .mc-title-infor{
+            font-size: 26px;
+            margin-bottom: 10px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        .title_infor{
+            font-size: 14px;
+            font-weight: 600;
+            padding-right: 0px;
+        }
+        .mc-style-inp{
+            width: 95%;
+            padding: 8px 15px;
+            border: 1px solid #dedddd;
+        }
+        .mc-style-gc{
+            width: 93.5%;
+            padding: 8px 15px;
+            border: 1px solid #dedddd;
+        }
+        .pp-cost{
+            font-size: 14px;
+            font-weight: 600;
+            padding-right: 0px;
+            color: red;
+        }
+        .pp_thanh_toan{
+            label{
+                font-size: 14px;
+                font-weight: 600;
+            }
+        }
+    }
+    .submit_tt_cart{
+        padding: 12px 20px;
+        font-size: 17px;
+        color: #fff;
+        border: 1px solid #000;
+        background: #000;
+        cursor: pointer;
+        margin-bottom: 20px;
+        transition: 0.5s all;
+    }
+    .submit_tt_cart:hover{
+        background: #fff;
+        color: #000;
+    }
+}
+.mc-center{
+    text-align: center;
+}
