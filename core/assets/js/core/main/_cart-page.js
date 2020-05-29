@@ -2,6 +2,15 @@ var productCartShowList = document.querySelector("#pageCart .product__cart-list"
 var toast = document.getElementById("snackbar");
 var deteteBtn= document.querySelectorAll('.eraseProduct');
 LayLocalStorage();
+function deleteFunction(){
+  deteteBtn.forEach(function(item){
+    item.onclick = function(){
+      var checkDelete = deteteBtn.getAttribute("data-id");
+      productBuyArray.splice(parseInt(checkDelete),1);
+      doRenderCart()
+    }
+  });
+}
 function doRenderCart(){
   if(productBuyArray){
     productCartShowList.innerHTML = "";
@@ -16,8 +25,4 @@ function doRenderCart(){
   }
 }
 productCartShowList ? doRenderCart() : {};
-deteteBtn ? deteteBtn.onclick = function(){
-  var checkDelete = deteteBtn.getAttribute("data-id");
-  productBuyArray.splice(parseInt(checkDelete),1);
-  doRenderCart()
-}:{};
+deteteBtn ? deleteFunction() :{};
