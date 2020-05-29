@@ -22,7 +22,7 @@ function get_cart_item(tenSP,giaSP,giaKMSP,sizeSP,soLuongSP){
   }
   function checkProduct(){
     productBuyArrayPush.find(function(item){
-      item.tenSanPham === productBuy.tenSanPham && item.sizeSanPham === productBuy.sizeSanPham ? item.soLuongSanPham = item.soLuongSanPham + productBuy.soLuongSanPham : pushToArray();
+      item.tenSanPham == productBuy.tenSanPham && item.sizeSanPham == productBuy.sizeSanPham ? item.soLuongSanPham = item.soLuongSanPham + productBuy.soLuongSanPham : pushToArray();
     })
     console.log(productBuyArrayPush);
   }
