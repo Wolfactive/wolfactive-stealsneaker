@@ -56,6 +56,7 @@ viewQuickArray.forEach(function(item, i){
            input.value++;
         };
         function productToCart(){
+          var toast = document.getElementById("snackbar");
           toast.innerHTML = "Đặt hàng thành công";
           toast.style.background="#28a745";
           toastShow();
