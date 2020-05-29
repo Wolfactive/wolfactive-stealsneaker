@@ -257,8 +257,8 @@ function fixHeader() {
             $("html, body").animate({ scrollTop: 0 }, "300");
         });
 // show Toast
-function toastShow() {
-  var toast = document.getElementById("snackbar");
-  toast.className = "show";
-  setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 5000);
+function toastShow(toast,toastContent,toastClass) {
+  toast.innerHTML = toastContent;
+  toast.classList.add(toastClass);
+  setTimeout(function(){ toast.classList.remove(toastClass);toast.innerHTML=""}, 5000);
 }

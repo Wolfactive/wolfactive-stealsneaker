@@ -46,6 +46,7 @@ viewQuickArray.forEach(function(item, i){
         var productSizeFilter = document.querySelectorAll('input[name="productSize"]');
         var productSizeFilterLabel = document.querySelectorAll('.productSize');
         var modalBtnCart = document.querySelector('#modalBtnCart');
+        var toast = document.getElementById("snackbar");
         productSizeFilter ? actionFilter(productSizeFilter,productSizeFilterLabel):{};
         minus.onclick = function (){
          if(input.value > 1){
@@ -56,10 +57,7 @@ viewQuickArray.forEach(function(item, i){
            input.value++;
         };
         function productToCart(){
-          var toast = document.getElementById("snackbar");
-          toast.innerHTML = "Đặt hàng thành công";
-          toast.style.background="#28a745";
-          toastShow();
+          toastShow(toast,"Đặt hàng thành công","succeed");
         }
         modalBtnCart ? modalBtnCart.onclick = function(){
           productSizeFilter.forEach(function(item){
@@ -67,7 +65,7 @@ viewQuickArray.forEach(function(item, i){
               productSizeFilterValueModal = item.value;
             }
           });
-          productSizeFilterValueModal ? productToCart() : toastShow();
+          productSizeFilterValueModal ? productToCart() : toastShow(toast,"Vui lòng chọn size trước khi đặt hàng (*)","warning");;
         }:{};
       })
       .catch(function(err){
