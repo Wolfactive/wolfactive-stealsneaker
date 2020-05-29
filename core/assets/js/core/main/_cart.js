@@ -21,7 +21,7 @@ function get_cart_item(tenSP,giaSP,giaKMSP,sizeSP,soLuongSP){
   function pushToArray(){
     productBuyArray.push(productBuy);
     productBuyArrayPush = [].concat(_toConsumableArray(productBuyArrayPush), _toConsumableArray(productBuyArray));
-  }
+  } 
   productBuyArrayPush.length !== 0 ? productBuyArrayPush.forEach(function(item, i){
     productBuy.tenSP === item.tenSP ? item.soLuongSP + productBuy.soLuongSP : pushToArray();
   }) :   pushToArray();
