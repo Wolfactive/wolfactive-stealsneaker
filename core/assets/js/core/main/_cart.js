@@ -22,7 +22,7 @@ function get_cart_item(tenSP,giaSP,giaKMSP,sizeSP,soLuongSP){
     productBuyArray.push(productBuy);
     productBuyArrayPush = [].concat(_toConsumableArray(productBuyArrayPush), _toConsumableArray(productBuyArray));
   }
-  productBuyArray.length !== 0 ? productBuyArray.forEach(function(item, i){
+  productBuyArrayPush.length !== 0 ? productBuyArrayPush.forEach(function(item, i){
     productBuy.tenSP === item.tenSP ? item.soLuongSP + productBuy.soLuongSP : pushToArray();
   }) :   pushToArray();
   LuuVaoLocalStorage(productBuyArrayPush);
