@@ -24,6 +24,7 @@ function get_cart_item(tenSP,giaSP,giaKMSP,sizeSP,soLuongSP){
     productBuyArrayPush.find(function(item){
       item.tenSanPham === productBuy.tenSanPham && item.sizeSanPham === productBuy.sizeSanPham ? item.soLuongSanPham + productBuy.soLuongSanPham : pushToArray();
     })
+    console.log(productBuyArrayPush);
   }
   productBuyArrayPush.length === 0 ? pushToArray() : checkProduct();
     LuuVaoLocalStorage(productBuyArrayPush);
