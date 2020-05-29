@@ -20,7 +20,6 @@ function get_cart_item(tenSP,giaSP,giaKMSP,sizeSP,soLuongSP){
   productBuyArray.length !== 0 ? productBuyArray.forEach(function(item, i){
     productBuy.tenSP === item.tenSP ? item.soLuongSP + productBuy.soLuongSP : productBuyArray.push(productBuy);
   }) :   productBuyArray.push(productBuy);
-  function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
-  productBuyArrayPush = [].concat(_toConsumableArray(productBuyArray));
+  productBuyArrayPush.concat(productBuyArray);
   LuuVaoLocalStorage(productBuyArrayPush);
 }
