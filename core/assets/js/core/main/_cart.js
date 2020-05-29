@@ -16,7 +16,6 @@ function LayLocalStorage() {
 }
 function get_cart_item(tenSP,giaSP,giaKMSP,sizeSP,soLuongSP){
   var productBuy = new sanPham(tenSP,giaSP,giaKMSP,sizeSP,soLuongSP);
-  var productBuyArray = [];
   productBuyArray.length !== 0 ? productBuyArray.forEach(function(item, i){
     productBuy.tenSP === item.tenSP ? item.soLuongSP + productBuy.soLuongSP : productBuyArray.push(productBuy);
   }) :   productBuyArray.push(productBuy);
