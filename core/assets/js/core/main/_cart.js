@@ -21,15 +21,16 @@ function get_cart_item(tenSP,giaSP,giaKMSP,sizeSP,soLuongSP){
     productBuyArrayPush.push(productBuy);
   }
   function checkProduct(){
+    var checkPushProduct = true ;
     productBuyArrayPush.find(function(item){
-      if( item.tenSanPham === productBuy.tenSanPham && item.sizeSanPham === productBuy.sizeSanPham ){
+      if( checkPushProduct === true && item.tenSanPham === productBuy.tenSanPham && item.sizeSanPham === productBuy.sizeSanPham ){
         item.soLuongSanPham += productBuy.soLuongSanPham;
         console.log("Mới:",productBuy.soLuongSanPham);
         console.log("Cũ:",item.soLuongSanPham);
-      }else{
-        console.log("Cũ:",productBuyArrayPush);
-        productBuyArrayPush.push(productBuy);
-        console.log("Mới:",productBuyArrayPush);
+        checkPushProduct =false;
+      }else if (checkPushProduct === false) {}else if(checkPushProduct === true){
+        pushToArray();
+        checkPushProduct =false;
       }
     })
   }
