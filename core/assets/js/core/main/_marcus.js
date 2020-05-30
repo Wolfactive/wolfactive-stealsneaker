@@ -50,8 +50,8 @@ $('.slider_product_small').slick({
 var inputCT = document.getElementById('qualityCT');
 var minusCT = document.getElementById('minusCT');
 var plusCT = document.getElementById('plusCT');
-minusCT.onclick = function (){if(inputCT.value > 1){inputCT.value--;}};
-plusCT.onclick = function (){inputCT.value++;};
+minusCT ? minusCT.onclick = function (){if(inputCT.value > 1){inputCT.value--;}} :{};
+plusCT ? plusCT.onclick = function (){inputCT.value++;}: {};
 
 $(document).ready(function(){
   var url = protocol + "//" + hostname + "/steal-sneaker/wp-content/themes/wolfactive-stealsneaker/core/assets/js/json/local.json";
@@ -67,7 +67,7 @@ $(document).ready(function(){
       cityOption += "<option value=\""+ result[i].name +"\">"+ result[i].name +"</option>\n";
     });
     document.getElementById("cityNameChoose").innerHTML = cityOption;
-    
+
   }).catch(function(err) {});
 });
 function cityChange(obj){
@@ -91,4 +91,3 @@ function cityChange(obj){
     document.getElementById("countryNameChoose").innerHTML = countryOption;
   }).catch(function(err) {});
 }
-
