@@ -46,6 +46,13 @@ $('.slider_product_small').slick({
   centerMode: true,
   focusOnSelect: true
 });
+
+var inputCT = document.getElementById('qualityCT');
+var minusCT = document.getElementById('minusCT');
+var plusCT = document.getElementById('plusCT');
+minusCT.onclick = function (){if(inputCT.value > 1){inputCT.value--;}};
+plusCT.onclick = function (){inputCT.value++;};
+
 $(document).ready(function(){
   var url = protocol + "//" + hostname + "/steal-sneaker/wp-content/themes/wolfactive-stealsneaker/core/assets/js/json/local.json";
   fetch(url , {

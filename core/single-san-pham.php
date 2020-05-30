@@ -47,17 +47,25 @@ get_template_part('sections/breadcums');
                             <input type="radio" id="productSize0" name="productSize" value="all-size" checked>
                             <label class="productSize active" for="productSize0">Tất cả</label>
                         </div>
-                        <?php get_term_list_check('size','productSize') ?>
+                        <?php $term_list = wp_get_post_terms( $post->ID, 'size', array( 'fields' => 'names' ) );
+                          $countTerm =1;
+                          foreach ($term_list as $terms) {
+                              echo '<div class="filter__form-item">
+                                  <input type="radio" id="productSize'.$countTerm.'" name="productSize" value="'.$terms.'">
+                                  <label class="productSize" for="productSize'.$countTerm.'">'.$terms.'</label>
+                                </div>';
+                          $countTerm++;
+                        }?>
                     </div>
                     <div class="quality mc-mgb-10">
                         <div>
-                        <button class="btn" id="minus">-</button>
+                        <button class="btn" id="minusCT">-</button>
                         </div>
                         <div>
-                        <input class="input" id="quality" type="number" value="1">
+                        <input class="input" id="qualityCT" type="number" value="1">
                         </div>
                         <div>
-                        <button class="btn" id="plus">+</button>
+                        <button class="btn" id="plusCT">+</button>
                         </div>
                     </div>
                     <div class="buy-btn">
@@ -73,18 +81,26 @@ get_template_part('sections/breadcums');
                         <img class="product_sold mc-mgb-10" src="<?php echo get_theme_file_uri('assets/images/icon out stock-01.svg') ?>" style="width: 45px" alt="sale-product-tag">
                     <?php endif; ?>
                     <div class="product__filter-item mc_product_size mc-mgb-10">
-                        <h3 class="title--item"> Size</h3>
-                        <?php get_term_list_check('size','productSize') ?>
+                        <h3 class="title--item mc-title-size"> Size</h3>
+                        <?php $term_list = wp_get_post_terms( $post->ID, 'size', array( 'fields' => 'names' ) );
+                          $countTerm =1;
+                          foreach ($term_list as $terms) {
+                              echo '<div class="filter__form-item">
+                                  <input type="radio" id="productSize'.$countTerm.'" name="productSize" value="'.$terms.'">
+                                  <label class="productSize" for="productSize'.$countTerm.'">'.$terms.'</label>
+                                </div>';
+                          $countTerm++;
+                    }?>
                     </div>
                     <div class="quality mc-mgb-10">
                         <div>
-                            <button class="btn" id="minus">-</button>
+                            <button class="btn" id="minusCT">-</button>
                         </div>
                         <div>
-                            <input class="input" id="quality" type="number" value="1">
+                            <input class="input" id="qualityCT" type="number" value="1">
                         </div>
                         <div>
-                            <button class="btn" id="plus">+</button>
+                            <button class="btn" id="plusCT">+</button>
                         </div>
                     </div>
                     <div class="buy-btn">
