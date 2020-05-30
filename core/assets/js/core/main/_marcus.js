@@ -54,7 +54,7 @@ minusCT ? minusCT.onclick = function (){if(inputCT.value > 1){inputCT.value--;}}
 plusCT ? plusCT.onclick = function (){inputCT.value++;}: {};
 
 $(document).ready(function(){
-  var url = protocol + "//" + hostname + "/steal-sneaker/wp-content/themes/wolfactive-stealsneaker/core/assets/js/json/local.json";
+  var url = protocol + "//" + hostname + "//wp-content/themes/wolfactive-stealsneaker/core/assets/js/json/local.json";
   fetch(url , {
     method: 'GET'
   }).then(function(result) {
@@ -71,7 +71,7 @@ $(document).ready(function(){
   }).catch(function(err) {});
 });
 function cityChange(obj){
-  var url = protocol + "//" + hostname + "/steal-sneaker/wp-content/themes/wolfactive-stealsneaker/core/assets/js/json/local.json";
+  var url = protocol + "//" + hostname + "/wp-content/themes/wolfactive-stealsneaker/core/assets/js/json/local.json";
   fetch(url , {
     method: 'GET'
   }).then(function(result) {
