@@ -5,7 +5,7 @@ function deleteFunction(){
   var deteteBtn= document.querySelectorAll('.eraseProduct');
   deteteBtn.forEach(function(item){
     item.onclick = function(){
-      var checkDelete = deteteBtn.getAttribute("data-id");
+      var checkDelete = item.getAttribute("data-id");
       productBuyArray.splice(parseInt(checkDelete),1);
       doRenderCart();
     }
