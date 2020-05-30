@@ -50,20 +50,14 @@ get_template_part('sections/breadcums');
                 </div>
                 <div class="col-divide-6 mc-mgb-20">
                     <p class="title_infor">Tỉnh/thành phố</p>
-                    <select name="" id="" class="mc-style-inp">
-                        <option value="">Tỉnh/thành phố</option>
-                        <option value="">Tỉnh/thành phố</option>
-                        <option value="">Tỉnh/thành phố</option>
+                    <select name="" id="cityNameChoose" class="mc-style-inp" onchange="cityChange(this)" >
                         <option value="">Tỉnh/thành phố</option>
                     </select>
                 </div>
                 <div class="col-divide-6 mc-mgb-20">
                     <p class="title_infor">Quận huyện</p>
-                    <select name="" id="" class="mc-style-inp">
-                        <option value="">Quận huyện</option>
-                        <option value="">Quận huyện</option>
-                        <option value="">Quận huyện</option>
-                        <option value="">Quận huyện</option>
+                    <select name="" class="mc-style-inp" id="countryNameChoose">
+                        <option value="Quận huyện">Quận huyện</option>
                     </select>
                 </div>
                 <div class="col-divide-12 mc-mgb-20 pp_thanh_toan">
