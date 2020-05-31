@@ -43,17 +43,15 @@ get_template_part('sections/breadcums');
                     </div>
                     <div class="product__filter-item mc_product_size mc-mgb-10">
                         <h3 class="title--item mc-title-size"> Size</h3>
-                        <div class="filter__form-item">
-                            <input type="radio" id="productSize0" name="productSize" value="all-size" checked>
-                            <label class="productSize active" for="productSize0">Tất cả</label>
-                        </div>
                         <?php $term_list = wp_get_post_terms( $post->ID, 'size', array( 'fields' => 'names' ) );
                           $countTerm =1;
                           foreach ($term_list as $terms) {
+                            if($terms->name != "Tất cả"){
                               echo '<div class="filter__form-item">
                                   <input type="radio" id="productSize'.$countTerm.'" name="productSize" value="'.$terms.'">
                                   <label class="productSize" for="productSize'.$countTerm.'">'.$terms.'</label>
                                 </div>';
+                            }
                           $countTerm++;
                         }?>
                     </div>
@@ -88,10 +86,12 @@ get_template_part('sections/breadcums');
                         <?php $term_list = wp_get_post_terms( $post->ID, 'size', array( 'fields' => 'names' ) );
                           $countTerm =1;
                           foreach ($term_list as $terms) {
-                              echo '<div class="filter__form-item">
-                                  <input type="radio" id="productSize'.$countTerm.'" name="productSize" value="'.$terms.'">
-                                  <label class="productSize" for="productSize'.$countTerm.'">'.$terms.'</label>
-                                </div>';
+                              if($terms->name != "Tất cả"){
+                                echo '<div class="filter__form-item">
+                                    <input type="radio" id="productSize'.$countTerm.'" name="productSize" value="'.$terms.'">
+                                    <label class="productSize" for="productSize'.$countTerm.'">'.$terms.'</label>
+                                  </div>';
+                              }
                           $countTerm++;
                     }?>
                     </div>

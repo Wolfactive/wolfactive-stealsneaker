@@ -7,6 +7,7 @@ function deleteFunction(){
     item.onclick = function(){
       var checkDelete = item.getAttribute("data-id");
       productBuyArray.splice(parseInt(checkDelete),1);
+      LuuVaoLocalStorage(productBuyArray);
       doRenderCart();
     }
   });
