@@ -38,7 +38,7 @@
       <div class="lastest__item d--block col-divide-3 col-divide-md-6 col-divide-sm-12">
       <?php endif; ?>
         <div class="lastest__item-img">
-         <img src="<?php echo hk_get_thumb(get_the_id(),395,395) ?>" alt="<?php the_title(); ?>" />
+         <img src="<?php echo hk_get_thumb(get_the_id(),300,300) ?>" alt="<?php the_title(); ?>" />
          <div class="lastest__item-tag tag">
            <img src="<?php echo get_theme_file_uri('assets/images/new-product-sticker.svg') ?>" alt="lastest-product-tag">
          </div>

@@ -2541,6 +2541,19 @@ a:hover {
   }
 }
 
+@media screen and (max-width: 576px) {
+  #pageCart .product__cart-list .col-divide-10.name_product {
+    font-size: 13px;
+  }
+  #pageCart .product__cart-list .col-divide-2 {
+    flex: 0 0 16%;
+    max-width: 16%;
+  }
+  #pageCart .product__cart-list .col-divide-2 .number_product {
+    width: 72%;
+  }
+}
+
 .footer .footer__main {
   padding: 60px 0px;
 }

@@ -1,0 +1,16 @@
+#pageCart{
+  .product__cart-list{
+    @include MediaQuery($xs){
+      .col-divide-10.name_product{
+        font-size: 13px;
+      }
+      .col-divide-2{
+        flex: 0 0 16%;
+        max-width: 16%;
+        .number_product{
+          width: 72%;
+        }
+      }
+    }
+  }
+}
