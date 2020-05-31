@@ -148,6 +148,8 @@ get_template_part('sections/breadcums');
         'post_type'   => 'san-pham',
         'post_status' => 'publish',
         'show_posts'   =>  8,
+        'order'       => 'DESC',
+        'orderby'     => 'date',
         'tax_query' => array(
           array(
             'taxonomy' => 'hang',

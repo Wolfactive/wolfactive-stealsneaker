@@ -5,7 +5,7 @@ get_template_part('sections/breadcums');
 <section class="category_page" id="categoryPage">
   <div class="container">
     <div class="row-divide">
-      <div class="col-divide-10">
+      <div class="col-divide-10 col-divide-md-12">
         <div class="row-divide">
           <?php while(have_posts()) : the_post(); ?>
           <div class="col-divide-6 mg-bt-20 col-divide-md-12">
@@ -35,7 +35,7 @@ get_template_part('sections/breadcums');
             <?php the_posts_pagination(); ?>
         </div>
       </div>
-      <div class="col-divide-2">
+      <div class="col-divide-2 col-divide-md-12 dp-none">
         <div class="infor_shop">
           <div class="title-sidebar_style">
             <h3 class="mc-title-sidebar text--upcase">thông tin</h3>

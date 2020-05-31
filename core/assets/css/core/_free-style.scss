@@ -334,6 +334,9 @@
                 width: auto;
                 margin: 0 auto;
                 display: block;
+                @include MediaQuery($xs){
+                  width: 100%;
+                }
             }
             ul{
               padding: 15px;

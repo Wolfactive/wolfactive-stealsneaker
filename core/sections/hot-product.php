@@ -13,6 +13,8 @@
         'post_type'   => 'san-pham',
         'post_status' => 'publish',
         'show_posts'   =>  12,
+        'order'       => 'DESC',
+        'orderby'     => 'date',
         'tax_query' => array(
           array(
             'taxonomy' => 'khuyen-mai',

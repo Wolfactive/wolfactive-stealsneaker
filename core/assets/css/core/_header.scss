@@ -23,13 +23,13 @@
               color: #b2b2b2;
               opacity: 0.9;
               transition: all 0.25s linear;
-              font-size: 13px;
+              font-size: 15px;
               &:hover{
                 opacity: 1;
                 color: #fff;
               }
               @include MediaQuery($xs){
-                font-size: 10px;
+                font-size: 15px;
                 padding: 8px 4px;
               };
             }

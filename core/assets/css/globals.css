@@ -1107,7 +1107,7 @@ a:hover {
   color: #b2b2b2;
   opacity: 0.9;
   transition: all 0.25s linear;
-  font-size: 13px;
+  font-size: 15px;
 }
 
 .topmenu .topmenu__contain .topmenu__item .menu-menu-top-container #menu-menu-top li.menu-item a:hover {
@@ -1117,7 +1117,7 @@ a:hover {
 
 @media screen and (max-width: 576px) {
   .topmenu .topmenu__contain .topmenu__item .menu-menu-top-container #menu-menu-top li.menu-item a {
-    font-size: 10px;
+    font-size: 15px;
     padding: 8px 4px;
   }
 }
@@ -1997,6 +1997,12 @@ a:hover {
   width: auto;
   margin: 0 auto;
   display: block;
+}
+
+@media screen and (max-width: 576px) {
+  .single_product .content_single_prodct .content-ch img {
+    width: 100%;
+  }
 }
 
 .single_product .content_single_prodct .content-ch ul {
