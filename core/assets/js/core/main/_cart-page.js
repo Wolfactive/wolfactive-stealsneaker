@@ -5,7 +5,7 @@ if(window.location.pathname === "/gio-hang"){
   if(!productBuyArray || productBuyArray.length === 0 ){
     setTimeout(function(){
         toastShow(toast,"Hiện tại giỏ đang trống <br/> Vui lòng chọn sản phẩm trước khi vào giỏ hàng","warning");
-     },window.location.href = protocol + "//" + hostname, 3000);
+     },5000,window.location.href = protocol + "//" + hostname);
   }
 }
 function deleteFunction(){
@@ -19,7 +19,7 @@ function deleteFunction(){
       if(!productBuyArray || productBuyArray.length === 0 ){
         setTimeout(function(){
             toastShow(toast,"Hiện tại giỏ đang trống <br/> Vui lòng chọn sản phẩm trước khi vào giỏ hàng","warning");
-         },window.location.href = protocol + "//" + hostname, 3000);
+         },5000,window.location.href = protocol + "//" + hostname);
       }
     }
   });
@@ -32,7 +32,6 @@ $(document).ready(function(){
     return result.json();
   })
   .then(function(result) {
-    console.log(result);
     var cityOption = '<option value="">Chọn tỉnh / thành phố </option>';
     result.forEach(function(element,i) {
       cityOption += "<option value=\""+ result[i].name +"\">"+ result[i].name +"</option>\n";
