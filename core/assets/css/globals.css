@@ -592,6 +592,23 @@ a:hover {
   filter: drop-shadow(0 0 0.75rem #fff);
 }
 
+.cart #cartNumber {
+  position: absolute;
+  top: 44%;
+  left: 50%;
+  font-size: 15px;
+  color: #c40000;
+  display: inline-block;
+  font-weight: 800;
+  margin-left: 5px;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  width: 18px;
+  height: 18px;
+  text-align: center;
+  border-radius: 50%;
+}
+
 .fb-livechat-mb {
   position: fixed;
   z-index: 200;
@@ -2338,6 +2355,27 @@ a:hover {
   font-size: 32px;
   padding: 5px 10px;
   filter: drop-shadow(0 0 0.75rem #14141482);
+}
+
+.navigationMb .navigation__contain .navigation__list .navigation__item #cart {
+  position: relative;
+}
+
+.navigationMb .navigation__contain .navigation__list .navigation__item #cart #cartNumber {
+  position: absolute;
+  top: 44%;
+  left: 50%;
+  font-size: 15px;
+  color: #c40000;
+  display: inline-block;
+  font-weight: 800;
+  margin-left: 5px;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  width: 18px;
+  height: 18px;
+  text-align: center;
+  border-radius: 50%;
 }
 
 .taxonomy_page .product__filter {

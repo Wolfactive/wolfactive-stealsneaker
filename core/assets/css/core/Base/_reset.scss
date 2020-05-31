@@ -514,7 +514,23 @@ a:hover{
   cursor: pointer;
   i{
     filter: drop-shadow(0 0 0.75rem #fff);
-  }  
+  }
+  #cartNumber{
+    position: absolute;
+    top: 44%;
+    left: 50%;
+    font-size: 15px;
+    color: #c40000;
+    display: inline-block;
+    font-weight: 800;
+    margin-left: 5px;
+    transform: translate(-50%,-50%);
+    background: #fff;
+    width: 18px;
+    height: 18px;
+    text-align: center;
+    border-radius: 50%;
+  }
 }
 .fb-livechat-mb{
   position: fixed;
