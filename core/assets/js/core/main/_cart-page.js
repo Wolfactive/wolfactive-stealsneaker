@@ -1,10 +1,12 @@
 var productCartShowList = document.querySelector("#pageCart .product__cart-list");
 var toast = document.getElementById("snackbar");
 LayLocalStorage();
-if(!productBuyArray || productBuyArray.length === 0 ){
-  setTimeout(function(){
-      toastShow(toast,"Hiện tại giỏ đang trống <br/> Vui lòng chọn sản phẩm trước khi vào giỏ hàng","warning");
-   },function(){window.location.href = protocol + "//" + hostname;}, 3000);
+if(window.location.pathname === "/gio-hang"){
+  if(!productBuyArray || productBuyArray.length === 0 ){
+    setTimeout(function(){
+        toastShow(toast,"Hiện tại giỏ đang trống <br/> Vui lòng chọn sản phẩm trước khi vào giỏ hàng","warning");
+     },window.location.href = protocol + "//" + hostname, 3000);
+  }
 }
 function deleteFunction(){
   var deteteBtn= document.querySelectorAll('.eraseProduct');
@@ -17,7 +19,7 @@ function deleteFunction(){
       if(!productBuyArray || productBuyArray.length === 0 ){
         setTimeout(function(){
             toastShow(toast,"Hiện tại giỏ đang trống <br/> Vui lòng chọn sản phẩm trước khi vào giỏ hàng","warning");
-         },function(){window.location.href = protocol + "//" + hostname;}, 3000);
+         },window.location.href = protocol + "//" + hostname, 3000);
       }
     }
   });
