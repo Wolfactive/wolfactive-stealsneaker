@@ -3,9 +3,10 @@ var toast = document.getElementById("snackbar");
 LayLocalStorage();
 if(window.location.pathname === "/gio-hang"){
   if(!productBuyArray || productBuyArray.length === 0 ){
+    toastShow(toast,"Hiện tại giỏ đang trống <br/> Vui lòng chọn sản phẩm trước khi vào giỏ hàng","warning");
     setTimeout(function(){
-        toastShow(toast,"Hiện tại giỏ đang trống <br/> Vui lòng chọn sản phẩm trước khi vào giỏ hàng","warning");
-     },window.location.href = protocol + "//" + hostname, 5000);
+        window.location.href = protocol + "//" + hostname;
+     },5000);
   }
 }
 function deleteFunction(){
@@ -17,9 +18,10 @@ function deleteFunction(){
       LuuVaoLocalStorage(productBuyArray);
       doRenderCart();
       if(!productBuyArray || productBuyArray.length === 0 ){
+        toastShow(toast,"Hiện tại giỏ đang trống <br/> Vui lòng chọn sản phẩm trước khi vào giỏ hàng","warning");
         setTimeout(function(){
-            toastShow(toast,"Hiện tại giỏ đang trống <br/> Vui lòng chọn sản phẩm trước khi vào giỏ hàng","warning");
-         },window.location.href = protocol + "//" + hostname, 5000);
+          window.location.href = protocol + "//" + hostname;      
+         },5000);
       }
     }
   });
