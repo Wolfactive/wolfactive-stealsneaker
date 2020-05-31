@@ -46,7 +46,7 @@ get_template_part('sections/breadcums');
                         <?php $term_list = wp_get_post_terms( $post->ID, 'size', array( 'fields' => 'names' ) );
                           $countTerm =1;
                           foreach ($term_list as $terms) {
-                            if($terms->name != "Tất cả"){
+                            if($terms != "Tất cả"){
                               echo '<div class="filter__form-item">
                                   <input type="radio" id="productSize'.$countTerm.'" name="productSize" value="'.$terms.'">
                                   <label class="productSize" for="productSize'.$countTerm.'">'.$terms.'</label>
@@ -86,7 +86,7 @@ get_template_part('sections/breadcums');
                         <?php $term_list = wp_get_post_terms( $post->ID, 'size', array( 'fields' => 'names' ) );
                           $countTerm =1;
                           foreach ($term_list as $terms) {
-                              if($terms != "Tất cả"){
+                              if($terms != "Tất cả")  {
                                 echo '<div class="filter__form-item">
                                     <input type="radio" id="productSize'.$countTerm.'" name="productSize" value="'.$terms.'">
                                     <label class="productSize" for="productSize'.$countTerm.'">'.$terms.'</label>
