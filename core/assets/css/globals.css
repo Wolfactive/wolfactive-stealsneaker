@@ -592,7 +592,7 @@ a:hover {
   filter: drop-shadow(0 0 0.75rem #fff);
 }
 
-.cart #cartNumber {
+.cart #cartNumber.active {
   position: absolute;
   top: 44%;
   left: 50%;
@@ -2361,7 +2361,7 @@ a:hover {
   position: relative;
 }
 
-.navigationMb .navigation__contain .navigation__list .navigation__item #cart #cartNumber {
+.navigationMb .navigation__contain .navigation__list .navigation__item #cart #cartNumber.active {
   position: absolute;
   top: 44%;
   left: 50%;

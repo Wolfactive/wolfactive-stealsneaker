@@ -7,6 +7,7 @@ if(!productBuyArray || productBuyArray.length === 0 ){
   cartNumber.innerHTML = "";
 }else if (productBuyArray || productBuyArray.length !== 0) {
   cartNumber.innerHTML = productBuyArray.length;
+  cartNumber.classList.add('active');
 }
 if(window.location.pathname === "/gio-hang"){
   if(!productBuyArray || productBuyArray.length === 0 ){

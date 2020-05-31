@@ -515,7 +515,7 @@ a:hover{
   i{
     filter: drop-shadow(0 0 0.75rem #fff);
   }
-  #cartNumber{
+  #cartNumber.active{
     position: absolute;
     top: 44%;
     left: 50%;
