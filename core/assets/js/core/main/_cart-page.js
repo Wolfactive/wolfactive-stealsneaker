@@ -29,6 +29,11 @@ function deleteFunction(){
           window.location.href = protocol + "//" + hostname;
         },2000);
       }
+      if(!productBuyArray || productBuyArray.length === 0 ){
+        cartNumber.innerHTML = "";
+      }else if (productBuyArray || productBuyArray.length !== 0) {
+        cartNumber.innerHTML = productBuyArray.length;
+      }
     }
   });
 }

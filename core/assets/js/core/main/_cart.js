@@ -28,9 +28,7 @@ function get_cart_item(hinhSP,tenSP,giaSP,giaKMSP,sizeSP,soLuongSP){
     var checkPushProduct = true ;
     productBuyArrayPush.find(function(item){
       if( checkPushProduct === true && item.tenSanPham === productBuy.tenSanPham && item.sizeSanPham === productBuy.sizeSanPham ){
-        item.soLuongSanPham += productBuy.soLuongSanPham;
-        console.log("Mới:",productBuy.soLuongSanPham);
-        console.log("Cũ:",item.soLuongSanPham);
+        item.soLuongSanPham += productBuy.soLuongSanPham;        
         checkPushProduct =false;
       }else if (checkPushProduct === false) {}else if(checkPushProduct === true){
         pushToArray();
@@ -39,6 +37,10 @@ function get_cart_item(hinhSP,tenSP,giaSP,giaKMSP,sizeSP,soLuongSP){
     })
   }
   productBuyArrayPush.length === 0 ? pushToArray() : checkProduct();
-    console.log(productBuyArrayPush);
+  if(!productBuyArray || productBuyArray.length === 0 ){
+    cartNumber.innerHTML = "";
+  }else if (productBuyArray || productBuyArray.length !== 0) {
+    cartNumber.innerHTML = productBuyArray.length;
+  }
     LuuVaoLocalStorage(productBuyArrayPush);
 }
