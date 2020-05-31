@@ -115,7 +115,7 @@
 	    <!----------=========Sub==========-------->
       <?php if(!wp_is_mobile()): ?>
       <div class="buttonBackToTop" id="buttonBackToTop"></div>
-      <a href="<?php echo site_url('gio-hang') ?>" class="cart" id="cart"><i class="fas fa-shopping-cart"></i></a>
+      <a href="<?php echo site_url('gio-hang') ?>" class="cart" id="cart"><i class="fas fa-shopping-cart"></i><span id="cartNumber"></span></a>
       <a href="https://m.me/StealSneakerAuthentic" target="_blank" class="fb-livechat-mb" rel="noreferrer"></a>
       <?php endif; ?>
  </section>

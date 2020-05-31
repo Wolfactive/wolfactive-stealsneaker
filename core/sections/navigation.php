@@ -17,7 +17,7 @@
         </a>
       </div>
       <div class="navigation__item">
-        <a href="<?php echo site_url('gio-hang') ?>" id="cart"><i class="fas fa-shopping-cart"></i></a>
+        <a href="<?php echo site_url('gio-hang') ?>" id="cart"><i class="fas fa-shopping-cart"></i><span id="cartNumber"></span></a>
       </div>
       <div class="navigation__item">
         <div id="buttonBackToTop">
