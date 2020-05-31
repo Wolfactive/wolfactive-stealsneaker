@@ -114,16 +114,39 @@ function checkValidateCart(){
 }
 
 function doTransaction(){
-  Email.send({
-    SecureToken : "ca5cf449-5250-451d-b670-8f1e3a01e242",
-    To : 'cskh.stealsneaker.com@gmail.com',
-    From : emailCart.value,
-    Subject : "[Đặt Hàng]-" + hoVaTenCart.value + "-" +dienThoaiCart.value ,
-    Body : " Tên: " + hoVaTenCart.value + " <br/>\n    Số điện thoại: " + dienThoaiCart.value + "<br/>\n    Email: " + emailCart.value + "\n    Nội dung đặt hàng: " + productCartShowList.innerHTML + "\n    "
-}).then( function(message){
-  alert(message)
-}
-);
+  toastShow(toast,"Hiện tại hệ thống giỏ hàng đang bảo trì <br/> Vui lòng liên hệ mua hàng qua messenger<br/> Chúng tôi sẽ khác phục tình trạng này sớm nhất có thể(*)","warning");
+  setTimeout(function(){  window.location.href = protocol + "//" + hostname }, 500);  
+  // jQuery.ajax({
+  //   type: "GET",
+  //   url: "https://script.google.com/macros/s/AKfycbzdWaW-yuCvm-DoMLUyYZRPnbmqtahENzoTKquuLnZCpptIKpK9/exec",
+  //   dataType: "json",
+  //   header: "Access-Control-Allow-Origin: *",
+  //   crossDomain: !0,
+  //   data: {
+  //     user: n,
+  //     email: e,
+  //     phone: c,
+  //     message: o,
+  //     service: a,
+  //     platform: t,
+  //     giaodien: s,
+  //     chucnang: i,
+  //     productdesign: h
+  //   },
+  //   success: function success(n) {
+  //     "false" == n ? alert("Thêm không thành công, bạn cũng có thể sử dụng để hiển thị Popup hoặc điều hướng") : alert("Đã thêm dữ liệu vào Form");
+  //   }
+  // });
+//   Email.send({
+//     SecureToken : "ca5cf449-5250-451d-b670-8f1e3a01e242",
+//     To : 'cskh.stealsneaker.com@gmail.com',
+//     From : emailCart.value,
+//     Subject : "[Đặt Hàng]-" + hoVaTenCart.value + "-" +dienThoaiCart.value ,
+//     Body : " Tên: " + hoVaTenCart.value + " <br/>\n    Số điện thoại: " + dienThoaiCart.value + "<br/>\n    Email: " + emailCart.value + "\n    Nội dung đặt hàng: " + productCartShowList.innerHTML + "\n    "
+// }).then( function(message){
+//   alert(message)
+// }
+// );
   productBuyArray = [];
   LuuVaoLocalStorage(productBuyArray);
 }
