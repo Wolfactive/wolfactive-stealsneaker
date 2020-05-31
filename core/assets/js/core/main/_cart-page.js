@@ -14,6 +14,11 @@ function deleteFunction(){
       productBuyArray.splice(parseInt(checkDelete),1);
       LuuVaoLocalStorage(productBuyArray);
       doRenderCart();
+      if(!productBuyArray || productBuyArray.length === 0 ){
+        setTimeout(function(){
+            toastShow(toast,"Hiện tại giỏ đang trống <br/> Vui lòng chọn sản phẩm trước khi vào giỏ hàng","warning");
+         },function(){window.location.href = protocol + "//" + hostname;}, 3000);
+      }
     }
   });
 }
