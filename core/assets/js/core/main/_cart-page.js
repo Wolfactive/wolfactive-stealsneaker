@@ -1,6 +1,11 @@
 var productCartShowList = document.querySelector("#pageCart .product__cart-list");
 var toast = document.getElementById("snackbar");
 LayLocalStorage();
+if(!productBuyArray){
+  setTimeout(function(){
+      toastShow(toast,"Hiện tại giỏ đang trống <br/> Vui lòng chọn sản phẩm trước khi vào giỏ hàng","warning");
+   },function(){window.location.href = protocol + "//" + hostname;}, 3000);
+}
 function deleteFunction(){
   var deteteBtn= document.querySelectorAll('.eraseProduct');
   deteteBtn.forEach(function(item){
