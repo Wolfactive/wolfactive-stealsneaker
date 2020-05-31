@@ -48,8 +48,8 @@ get_template_part('sections/breadcums');
                     <p class="d--none validate" id="diaChiCartVal"> Vui lòng địa chỉ *</p>
                 </div>
                 <div class="col-divide-12 mc-mgb-20">
-                    <label for="ghiChuCart" class="title_infor">Ghi chú</label>
-                    <textarea name="ghiChuCart" id="ghiChuCart" cols="30" rows="8" class="mc-style-gc"></textarea>                    
+                    <label for="ghiChuCart" class="title_infor d--block">Ghi chú</label>
+                    <textarea name="ghiChuCart" id="ghiChuCart" cols="30" rows="8" class="mc-style-gc"></textarea>
                 </div>
                 <div class="col-divide-6 mc-mgb-20">
                     <label for="cityNameChoose" class="title_infor">Tỉnh/thành phố</label>

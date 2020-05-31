@@ -143,5 +143,6 @@ function doTransaction(){
 }
 
 submitTTCart ? submitTTCart.onclick = function(){
+  checkValidateCart();
   isValidateCart === true ? doTransaction() : {};
 }:{};
