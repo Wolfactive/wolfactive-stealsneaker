@@ -11,6 +11,44 @@ function deleteFunction(){
     }
   });
 }
+$(document).ready(function(){
+  var url = protocol + "//" + hostname + "/wp-content/themes/wolfactive-stealsneaker/core/assets/js/json/local.json";
+  fetch(url , {
+    method: 'GET'
+  }).then(function(result) {
+    return result.json();
+  })
+  .then(function(result) {
+    console.log(result);
+    var cityOption = "";
+    result.forEach(function(element,i) {
+      cityOption += "<option value=\""+ result[i].name +"\">"+ result[i].name +"</option>\n";
+    });
+    document.getElementById("cityNameChoose").innerHTML = cityOption;
+
+  }).catch(function(err) {});
+});
+function cityChange(obj){
+  var url = protocol + "//" + hostname + "/wp-content/themes/wolfactive-stealsneaker/core/assets/js/json/local.json";
+  fetch(url , {
+    method: 'GET'
+  }).then(function(result) {
+    return result.json();
+  })
+  .then(function(result) {
+    console.log(obj.value);
+    var countryOption = "";
+    result.forEach(function(element,i) {
+      if(obj.value === result[i].name){
+        var allDistricts = result[i].districts;
+        allDistricts.forEach(function(e, index){
+          countryOption += "<option value=\""+ allDistricts[index].name +"\">"+ allDistricts[index].name +"</option>\n";
+        });
+      }
+    });
+    document.getElementById("countryNameChoose").innerHTML = countryOption;
+  }).catch(function(err) {});
+}
 function doRenderCart(){
   if(productBuyArray){
     productCartShowList.innerHTML = "";

@@ -104,9 +104,12 @@ get_template_part('sections/breadcums');
                         </div>
                     </div>
                     <div class="buy-btn">
-                            <button class="btn text--upcase" id="byBTN">
-                                <i class="fas fa-shopping-bag"></i> mua ngay
-                            </button>
+                          <button class="btn text--upcase mxr-15" id="btnToCart">
+                              <i class="fas fa-cart-plus"></i> <span class=" dp--none">Thêm vào giỏ</span>
+                          </button>
+                          <button class="btn text--upcase" id="btnCart">
+                          <i class="fas fa-shopping-bag"></i><span class=" dp--none"> mua ngay</span>
+                        </button>                            
                         </div>
                 <?php } ?>
             </div>
