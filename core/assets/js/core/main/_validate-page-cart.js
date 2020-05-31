@@ -104,7 +104,7 @@ function checkAddressCartEmpty(){
 
 function checkValidateCart(){
   hoVaTenCart.value ? checkNameCart() : checkNameCartEmpty();
-  dienThoaiCart.value ? checkPhoneCart() : checkPhoneCartEmpty();
+  dienThoaiCart.value ? isPhoneCart = true : checkPhoneCartEmpty();
   emailCart.value ? checkEmailCart() : checkEmailCartEmpty();
   diaChiCart.value ? isAddressCart = true : checkAddressCartEmpty();
   cityNameChoose.value ? isCityCart = true : cityNameChooseVal.classList.remove('d--none');
