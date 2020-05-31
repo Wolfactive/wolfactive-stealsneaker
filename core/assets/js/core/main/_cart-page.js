@@ -21,7 +21,7 @@ $(document).ready(function(){
   })
   .then(function(result) {
     console.log(result);
-    var cityOption = "";
+    var cityOption = '<option value="">Chọn tỉnh / thành phố </option>';
     result.forEach(function(element,i) {
       cityOption += "<option value=\""+ result[i].name +"\">"+ result[i].name +"</option>\n";
     });
@@ -37,8 +37,7 @@ function cityChange(obj){
     return result.json();
   })
   .then(function(result) {
-    console.log(obj.value);
-    var countryOption = "";
+    var countryOption = '<option value="">Chọn quận / huyện </option>';
     result.forEach(function(element,i) {
       if(obj.value === result[i].name){
         var allDistricts = result[i].districts;
