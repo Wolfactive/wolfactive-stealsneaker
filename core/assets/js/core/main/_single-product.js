@@ -7,14 +7,20 @@ var productSizeFilterLabel = document.querySelectorAll('.productSize');
 var btnCart = document.querySelector('#btnToCart');
 var btnBuy = document.querySelector('#btnBuy');
 var toast = document.getElementById("snackbar");
+var nameProductSingle = document.querySelector('#singleProduct .sg_product_title').innerText;
+var pictureProductSingle = document.querySelector(".slider_product_small .slick-track .image_product:nth-child(1) img").getAttribute('src');
+var priceProductSingle = document.querySelector("#singleProduct .price_product").innerText.split(" ")[0];
+var priceProductSingleSale = document.querySelector("#singleProduct .product_price_sale").innerText.split(" ")[0];
+var priceReturn;
+priceProductSingleSale ? priceReturn = priceProductSingleSale : priceReturn = priceProductSingle;
 minusCT ? minusCT.onclick = function (){if(inputCT.value > 1){inputCT.value--;}} :{};
 plusCT ? plusCT.onclick = function (){inputCT.value++;}: {};
 function productToCart(){
-  get_cart_item(pictureArray[0].product_picture,result[0].title,result[0].price,result[0].sale_price,productSizeFilterValueBuy,parseInt(input.value));
+  get_cart_item(pictureProductSingle,nameProductSingle,priceProductSingle,priceReturn,productSizeFilterValueBuy,parseInt(inputCT.value));
   toastShow(toast,"Đặt hàng thành công","succeed");
 }
 function productToBuy(){
-  get_cart_item(pictureArray[0].product_picture,result[0].title,result[0].price,result[0].sale_price,productSizeFilterValueBuy,parseInt(input.value));
+  get_cart_item(pictureProductSingle,nameProductSingle,priceProductSingle,priceReturn,productSizeFilterValueBuy,parseInt(inputCT.value));
   toastShow(toast,"Đặt hàng thành công. <br/>Trang web đang chuyển hướng qua giỏ hàng","succeed");
   setTimeout(function(){  window.location.href = protocol + "//" + hostname + "/gio-hang";}, 1500);
 }

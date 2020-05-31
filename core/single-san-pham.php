@@ -75,7 +75,7 @@ get_template_part('sections/breadcums');
                         </div>
                 <?php }else{ ?>
                     <div class="price_product mc-mgb-10">
-                        <?php echo get_field('product_price'); ?> &nbsp;VNĐ
+                        <?php echo convert_price(get_field('product_price')); ?> &nbsp;VNĐ
                     </div>
                     <?php if(is_sold_out()): ?>
                         <img class="product_sold mc-mgb-10" src="<?php echo get_theme_file_uri('assets/images/icon out stock-01.svg') ?>" style="width: 45px" alt="sale-product-tag">
