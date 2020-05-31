@@ -115,9 +115,7 @@ function checkValidateCart(){
 
 function doTransaction(){
   Email.send({
-    Host : "smtp.gmail.com",
-    Username : "cskh.stealsneaker.com@gmail.com",
-    Password : "bjnhkut3",
+    SecureToken : "ca5cf449-5250-451d-b670-8f1e3a01e242",
     To : 'cskh.stealsneaker.com@gmail.com',
     From : emailCart.value,
     Subject : "[Đặt Hàng]-" + hoVaTenCart.value + "-" +dienThoaiCart.value ,
