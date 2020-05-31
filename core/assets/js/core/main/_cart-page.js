@@ -1,6 +1,7 @@
 var productCartShowList = document.querySelector("#pageCart .product__cart-list");
 var toast = document.getElementById("snackbar");
 var cartNumber = document.querySelector("#cartNumber");
+var sumProductshow = document.querySelector("#sumProductshow");
 LayLocalStorage();
 if(!productBuyArray || productBuyArray.length === 0 ){
   cartNumber.innerHTML = "";
@@ -74,15 +75,29 @@ function cityChange(obj){
   }).catch(function(err) {});
 }
 function doRenderCart(){
-  if(productBuyArray){
+  if(productBuyArray.length !== 0){
     productCartShowList.innerHTML = "";
+    var sumProductPrice =0;
     productBuyArray.forEach(function (item,i) {
     var giaGioSP = "";
     item.giaKhuyenMaiSanPham ? giaGioSP = item.giaKhuyenMaiSanPham : giaGioSP = item.giaSanPham;
+    var giaGioSPNumber = parseInt(giaGioSP.str.split(".").join(''));
     productCartShowList.innerHTML += "\n      <div class=\"row-divide all_product_cart\">\n                <div class=\"col-divide-6\">\n                    <div class=\"row-divide\">\n                        <div class=\"col-divide-2\">\n                            <img src=\"" + item.hinhSanPham + "\" alt=\"" + item.tenSanPham + "\">\n                        </div>\n                        <div class=\"col-divide-10 name_product\">\n                            " + item.tenSanPham + " (" + item.sizeSanPham + ")\n                        </div>\n                    </div>\n                </div>\n                <div class=\"col-divide-2 mc_self_center mc-center\">\n                    <input class=\"number_product\" type=\"number\" min=\"1\" value=\"" + item.soLuongSanPham + "\" >\n                </div>\n                <div class=\"col-divide-2 mc_self_center mc-center\">\n                    <p>" + giaGioSP + "</p>\n                </div>\n                <div class=\"col-divide-2 mc_self_center mc-center\">\n                   <button class=\"btn eraseProduct\" data-id=\"" + i + "\" onclick =\"deleteFunction()\"><i class=\"fas fa-trash-alt\"></i></button>\n                </div>\n            </div>\n      ";
+    sumProductPrice += giaGioSPNumber*parseInt(item.soLuongSanPham);
 });
+    sumProductPriceArray = sumProductPrice.toString().split("");
+    var countPriceSum = 0;
+    sumProductPriceArray.forEach(function(item,i){
+      if(countPriceSum === 2){
+        item = item + ".";
+        countPriceSum = 0;
+      }else{
+        countPriceSum++;
+      }
+    });
+    sumProductPrice = sumProductPriceArray.reverse().join('');
+    sumProductshow.innerHTML = sumProductPrice;
   }else{
-    toastShow(toast,"Giỏ hàng hiện tại đang trống","warning");
     productCartShowList.innerHTML = "Giỏ hàng hiện tại đang trống";
   }
 }

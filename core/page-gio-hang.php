@@ -21,7 +21,7 @@ get_template_part('sections/breadcums');
             </div>
             <div class="product__cart-list"></div>
             <div class="result_price">
-                <p><i class="fas fa-dollar-sign"></i>&nbsp;&nbsp;Tổng tiền 9.570.000 VNĐ</p>
+                <p><i class="fas fa-dollar-sign"></i>&nbsp;&nbsp;Tổng tiền <span id="sumProductshow"></span></span> VNĐ</p>
             </div>
         </div>
 
