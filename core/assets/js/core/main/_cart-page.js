@@ -89,7 +89,7 @@ function doRenderCart(){
     var countPriceSum = 0;
     sumProductPriceArray.forEach(function(item,i){
       if(countPriceSum === 2){
-        item +=".";
+        item +="&nbsp;";
         countPriceSum = 0;
       }else{
         countPriceSum++;
