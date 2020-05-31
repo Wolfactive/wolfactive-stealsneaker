@@ -6,5 +6,6 @@ import 'assets/js/core/main/validate-contact';
 import 'assets/js/core/main/marcus';
 import 'assets/js/core/main/global';
 import 'assets/js/core/main/cart';
+import 'assets/js/core/main/single-product';
 import 'assets/js/core/main/cart-page';
 import 'assets/js/core/main/modal';
