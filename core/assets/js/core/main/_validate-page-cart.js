@@ -115,7 +115,7 @@ function checkValidateCart(){
 
 function doTransaction(){
   toastShow(toast,"Hiện tại hệ thống giỏ hàng đang bảo trì <br/> Vui lòng liên hệ mua hàng qua messenger<br/> Chúng tôi sẽ khác phục tình trạng này sớm nhất có thể(*)","warning");
-  setTimeout(function(){  window.location.href = protocol + "//" + hostname }, 500);  
+  setTimeout(function(){  window.location.href = "https://m.me/StealSneakerAuthentic" }, 500);  
   // jQuery.ajax({
   //   type: "GET",
   //   url: "https://script.google.com/macros/s/AKfycbzdWaW-yuCvm-DoMLUyYZRPnbmqtahENzoTKquuLnZCpptIKpK9/exec",
