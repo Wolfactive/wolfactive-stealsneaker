@@ -116,7 +116,7 @@ function checkValidateCart(){
 function doTransaction(){
   Email.send({
     Host : "smtp.gmail.com",
-    Username : "admin",
+    Username : "cskh.stealsneaker.com@gmail.com",
     Password : "bjnhkut3",
     To : 'cskh.stealsneaker.com@gmail.com',
     From : emailCart.value,
