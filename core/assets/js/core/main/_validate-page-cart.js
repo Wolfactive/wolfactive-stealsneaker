@@ -97,18 +97,6 @@ function checkEmailCartEmpty(){
   isEmailCart = false;
 }
 
-function checkAddressCart(){
-  var patternAddressCart = new RegExp(
-      "(?i)([0-9A-ZẮẰẲẴẶĂẤẦẨẪẬÂÁÀÃẢẠĐẾỀỂỄỆÊÉÈẺẼẸÍÌỈĨỊỐỒỔỖỘÔỚỜỞỠỢƠÓÒÕỎỌỨỪỬỮỰƯÚÙỦŨỤÝỲỶỸỴ']+\\s?\\b){2,}"
-  );
-  if (!patternAddressCart.test(diaChiCart.value)) {
-      diaChiCartVal.classList.remove('d--none');
-      isAddressCart = false;
-  }else{
-    isAddressCart = true;
-  }
-}
-
 function checkAddressCartEmpty(){
   diaChiCartVal.classList.remove('d--none');
   isAddressCart = false;
@@ -118,7 +106,7 @@ function checkValidateCart(){
   hoVaTenCart.value ? checkNameCart() : checkNameCartEmpty();
   dienThoaiCart.value ? checkPhoneCart() : checkPhoneCartEmpty();
   emailCart.value ? checkAddressCart() : checkEmailCartEmpty();
-  diaChiCart.value ? checkEmailCart() : checkAddressCartEmpty();
+  diaChiCart.value ? isAddressCart = true : checkAddressCartEmpty();
   cityNameChoose.value ? isCityCart = true : cityNameChooseVal.classList.remove('d--none');
   countryNameChoose.value ? isDistricCart = true : countryNameChooseVal.classList.remove('d--none');
   isNameCart === true && isPhoneCart === true && isEmailCart === true && isAddressCart === true && isCityCart === true && isDistricCart === true ? isValidateCart = true : isValidateCart =
