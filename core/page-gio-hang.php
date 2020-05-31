@@ -24,51 +24,56 @@ get_template_part('sections/breadcums');
                 <p><i class="fas fa-dollar-sign"></i>&nbsp;&nbsp;Tổng tiền <span id="sumProductshow"></span></span> VNĐ</p>
             </div>
         </div>
-
         <div class="produc_pay">
             <h3 class="mc-title-infor">Thông tin thanh toán</h3>
             <form class="row-divide">
                 <div class="col-divide-6 mc-mgb-20">
-                    <p class="title_infor">Họ và tên</p>
-                    <input type="text" name="" class="mc-style-inp" id="" />
+                    <label for="hoVaTenCart" class="title_infor">Họ và tên</label>
+                    <input type="text" name="hoVaTenCart" class="mc-style-inp" id="hoVaTenCart"/>
+                    <p class="d--none validate" id="hoVaTenCartVal"> Vui lòng điền họ và tên *</p>
                 </div>
                 <div class="col-divide-6 mc-mgb-20">
-                    <p class="title_infor">Điện thoại</p>
-                    <input type="text" name="" class="mc-style-inp" id="" />
+                    <label for="dienThoaiCart" class="title_infor">Điện thoại</label>
+                    <input type="text" name="dienThoaiCart" class="mc-style-inp" id="dienThoaiCart"/>
+                    <p class="d--none validate" id="dienThoaiCartVal"> Vui lòng nhập số điện thoại *</p>
                 </div>
                 <div class="col-divide-6 mc-mgb-20">
-                    <p class="title_infor">Email</p>
-                    <input type="text" name="" class="mc-style-inp" id="" placeholder="you@example.com" />
+                    <label for="emailCart" class="title_infor">Email</label>
+                    <input type="text" name="emailCart" id="emailCart" class="mc-style-inp"placeholder="you@example.com" />
+                    <p class="d--none validate" id="emailCartVal"> Vui lòng nhập email *</p>
                 </div>
                 <div class="col-divide-6 mc-mgb-20">
-                    <p class="title_infor">Địa chỉ</p>
-                    <input type="text" name="" class="mc-style-inp" id="" />
+                    <label for="diaChiCart" class="title_infor">Địa chỉ</label>
+                    <input type="text" name="diaChiCart" id="diaChiCart" class="mc-style-inp"/>
+                    <p class="d--none validate" id="diaChiCartVal"> Vui lòng địa chỉ *</p>
                 </div>
                 <div class="col-divide-12 mc-mgb-20">
-                    <p class="title_infor">Ghi chú</p>
-                    <textarea name="" id="" cols="30" rows="8" class="mc-style-gc"></textarea>
+                    <label for="ghiChuCart" class="title_infor">Ghi chú</label>
+                    <textarea name="ghiChuCart" id="ghiChuCart" cols="30" rows="8" class="mc-style-gc"></textarea>                    
                 </div>
                 <div class="col-divide-6 mc-mgb-20">
-                    <p class="title_infor">Tỉnh/thành phố</p>
-                    <select name="" id="cityNameChoose" class="mc-style-inp" onchange="cityChange(this)" >
+                    <label for="cityNameChoose" class="title_infor">Tỉnh/thành phố</label>
+                    <select name="cityCart" id="cityNameChoose" class="mc-style-inp" onchange="cityChange(this)" >
                         <option value="">Tỉnh/thành phố</option>
                     </select>
+                    <p class="d--none validate" id="cityCartVal"> Vui lòng chọn tỉnh/thành phố *</p>
                 </div>
                 <div class="col-divide-6 mc-mgb-20">
-                    <p class="title_infor">Quận huyện</p>
-                    <select name="" class="mc-style-inp" id="countryNameChoose">
+                    <label for="countryNameChoose" class="title_infor">Quận huyện</label>
+                    <select name="districCart" class="mc-style-inp" id="countryNameChoose">
                         <option value="Quận huyện">Quận huyện</option>
                     </select>
+                    <p class="d--none validate" id="districCartVal"> Vui lòng chọn quận/huyện *</p>
                 </div>
                 <div class="col-divide-12 mc-mgb-20 pp_thanh_toan">
                     <p class="pp-cost">Phương thức thanh toán</p>
-                    <input type="radio" id="chuyenkhoan" name="thanhtoan" value="chuyenkhoan">
+                    <input type="radio" id="chuyenkhoan" name="thanhToanCart" value="chuyenkhoan" checked>
                     <label for="chuyenkhoan">Chuyển Khoản</label><br>
-                    <input type="radio" id="tienmat" name="thanhtoan" value="tienmat">
+                    <input type="radio" id="tienmat" name="thanhToanCart" value="tienmat">
                     <label for="tienmat">Tiền Mặt</label><br>
                 </div>
             </form>
-            <button class="submit_tt_cart" id="submitTTCart"><i class="fas fa-shopping-bag"></i>&nbsp;THANH TOÁN</button>
+            <button class="submit_tt_cart" id="submitTTCart" aria-label="thanh-toan-button"><i class="far fa-credit-card"></i>&nbsp;THANH TOÁN</button>
         </div>
     </div>
 </section>

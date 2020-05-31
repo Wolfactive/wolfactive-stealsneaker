@@ -78,7 +78,7 @@ function checkPhoneEmpty(){
 };
 function checkRealAddress(){
   var patternAddress = new RegExp(
-      "((09|03|07|08|05)+([0-9]{8})\b)"
+      "(?i)([0-9A-ZẮẰẲẴẶĂẤẦẨẪẬÂÁÀÃẢẠĐẾỀỂỄỆÊÉÈẺẼẸÍÌỈĨỊỐỒỔỖỘÔỚỜỞỠỢƠÓÒÕỎỌỨỪỬỮỰƯÚÙỦŨỤÝỲỶỸỴ']+\\s?\\b){2,}"
   );
   if (!patternAddress.test(diaChi.value)) {
       diaChiVal.classList.remove('d--none');
