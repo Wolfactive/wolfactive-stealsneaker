@@ -5,7 +5,7 @@ if(window.location.pathname === "/gio-hang"){
   if(!productBuyArray || productBuyArray.length === 0 ){
     setTimeout(function(){
         toastShow(toast,"Hiện tại giỏ đang trống <br/> Vui lòng chọn sản phẩm trước khi vào giỏ hàng","warning");
-     },5000,window.location.href = protocol + "//" + hostname);
+     },window.location.href = protocol + "//" + hostname, 5000);
   }
 }
 function deleteFunction(){
@@ -19,7 +19,7 @@ function deleteFunction(){
       if(!productBuyArray || productBuyArray.length === 0 ){
         setTimeout(function(){
             toastShow(toast,"Hiện tại giỏ đang trống <br/> Vui lòng chọn sản phẩm trước khi vào giỏ hàng","warning");
-         },5000,window.location.href = protocol + "//" + hostname);
+         },window.location.href = protocol + "//" + hostname, 5000);
       }
     }
   });
