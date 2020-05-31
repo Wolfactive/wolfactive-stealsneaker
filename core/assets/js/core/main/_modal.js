@@ -11,9 +11,7 @@ viewQuickArray.forEach(function(item, i){
         return result.json();
       })
       .then(function(result){
-        console.log(result[0]);
-        result.find(function(item){ item.title === titleCheck ? result[0] = item :{}});
-       console.log(result[0]);
+        result.find(function(item){ item.title === titleCheck ? result[0] = item :{}});       
        var priceCheck = '';
         result[0].sale_price ? priceCheck = 'line--through' :{};
         var sizeArray = result[0].size;
