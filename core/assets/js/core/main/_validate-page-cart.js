@@ -117,7 +117,7 @@ function checkAddressCartEmpty(){
 function checkValidateCart(){
   hoVaTenCart.value ? checkNameCart() : checkNameCartEmpty();
   dienThoaiCart.value ? checkPhoneCart() : checkPhoneCartEmpty();
-  emailCartCart.value ? checkAddressCart() : checkEmailCartEmpty();
+  emailCart.value ? checkAddressCart() : checkEmailCartEmpty();
   diaChiCart.value ? checkEmailCart() : checkAddressCartEmpty();
   cityNameChoose.value ? isCityCart = true : cityNameChooseVal.classList.remove('d--none');
   countryNameChoose.value ? isDistricCart = true : countryNameChooseVal.classList.remove('d--none');
@@ -131,9 +131,9 @@ function doTransaction(){
     Username : "admin",
     Password : "bjnhkut3",
     To : 'cskh.stealsneaker.com@gmail.com',
-    From : emailCartCart.value,
+    From : emailCart.value,
     Subject : "[Đặt Hàng]-" + hoVaTenCart.value + "-" +dienThoaiCart.value ,
-    Body : " Tên: " + hoVaTenCart.value + " <br/>\n    Số điện thoại: " + dienThoaiCart.value + "<br/>\n    Email: " + emailCartCart.value + "\n    Nội dung đặt hàng: " + productCartShowList.innerHTML + "\n    "
+    Body : " Tên: " + hoVaTenCart.value + " <br/>\n    Số điện thoại: " + dienThoaiCart.value + "<br/>\n    Email: " + emailCart.value + "\n    Nội dung đặt hàng: " + productCartShowList.innerHTML + "\n    "
 }).then( function(message){
   alert(message)
 }
