@@ -238,5 +238,5 @@ function fixHeader() {
 function toastShow(toast,toastContent,toastClass) {
   toast.innerHTML = toastContent;
   toast.classList.add(toastClass);
-  setTimeout(function(){ toast.classList.remove(toastClass);toast.innerHTML=""}, 5000);
+  setTimeout(function(){ toast.classList.remove(toastClass);toast.innerHTML=""}, 3000);
 }
