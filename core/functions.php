@@ -467,7 +467,7 @@ add_action( 'init', 'disable_emojis' );
      $phpmailer->Port       = 587;
     $phpmailer->Username   = 'Cskh.mail.stealsneaker@gmail.com';
     $phpmailer->Password   = 'Stealneaker@2020';
-    $phpmailer->SMTPSecure = 'TLS';
+    $phpmailer->SMTPSecure = 'SSL';
     $phpmailer->From       = 'cskh.stealsneaker@gmail.com';
     $phpmailer->FromName   = 'Stealsneaker';
 });
