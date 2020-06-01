@@ -13,7 +13,6 @@ var countryNameChoose = document.querySelector('#countryNameChoose');
 var countryNameChooseVal = document.querySelector('#districCartVal');
 var thanhToanCart = document.querySelector('input[name="thanhToanCart"]');
 var submitTTCart = document.querySelector('#submitTTCart');
-var urlAjax = protocol + "//" + hostname + "/wp-admin/admin-ajax.php";
 var isNameCart = false;
 var isPhoneCart = false;
 var isEmailCart = false;
@@ -113,23 +112,7 @@ function checkValidateCart(){
   isNameCart === true && isPhoneCart === true && isEmailCart === true && isAddressCart === true && isCityCart === true && isDistricCart === true ? isValidateCart = true : isValidateCart =
   false;
 }
-// function sendEmail(e){
-//   e.preventDefault
-//     $.ajax({
-//         type: 'POST',
-//         url: urlAjax,
-//         data: {
-//           'action': 'Action_Sendmail',
-//           'email' : "huyminhnguyenpham@gmail.com",
-//         },
-//         success: function (data) {
-//           console.log(data);
-//           alert('Gửi thành công');
-//         },
-//     });
-// }
-function doTransaction(e){
-  // sendEmail(e);
+function doTransaction(){
   // toastShow(toast,"Hiện tại hệ thống giỏ hàng đang bảo trì <br/> Vui lòng liên hệ mua hàng qua messenger<br/> Chúng tôi sẽ khác phục tình trạng này sớm nhất có thể(*)","warning");
   // setTimeout(function(){  window.location.href = "https://m.me/StealSneakerAuthentic" }, 500);
   // jQuery.ajax({
@@ -157,8 +140,8 @@ function doTransaction(e){
     SecureToken : "00997793-1227-4882-aa34-1f3f200d302d",
     To : 'cskh.stealsneaker.com@gmail.com',
     From : emailCart.value,
-    Subject : "[Đặt Hàng]-" ,
-    Body : hoVaTenCart.value
+    Subject : "[Đặt Hàng]-" + hoVaTenCart.value + "-" +dienThoaiCart.value ,
+    Body : " Tên: " + hoVaTenCart.value + " <br/>\n    Số điện thoại: " + dienThoaiCart.value + "<br/>\n    Email: " + emailCart.value + "\n    Nội dung đặt hàng: " + productCartShowList.innerHTML + "\n    "
 }).then( function(message){
   alert(message)
 }
@@ -167,7 +150,7 @@ function doTransaction(e){
   LuuVaoLocalStorage(productBuyArray);
 }
 
-submitTTCart ? submitTTCart.onclick = function(e){
+submitTTCart ? submitTTCart.onclick = function(){
   checkValidateCart();
-  isValidateCart === true ? doTransaction(e) : {};
+  isValidateCart === true ? doTransaction() : {};
 }:{};
