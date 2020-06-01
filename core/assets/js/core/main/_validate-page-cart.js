@@ -136,32 +136,10 @@ function sendEmailSteal(toEmail,fromEmail,order){
 }
 function doTransaction(){
   sendEmailSteal(emailCart.value,"cskh.stealsneaker.com@gmail.com",1);
-  sendEmailSteal("cskh.stealsneaker.com@gmail.com",emailCart.value,2)
-  // toastShow(toast,"Hiện tại hệ thống giỏ hàng đang bảo trì <br/> Vui lòng liên hệ mua hàng qua messenger<br/> Chúng tôi sẽ khác phục tình trạng này sớm nhất có thể(*)","warning");
-  // setTimeout(function(){  window.location.href = "https://m.me/StealSneakerAuthentic" }, 500);
-  // jQuery.ajax({
-  //   type: "GET",
-  //   url: "https://script.google.com/macros/s/AKfycbzdWaW-yuCvm-DoMLUyYZRPnbmqtahENzoTKquuLnZCpptIKpK9/exec",
-  //   dataType: "json",
-  //   header: "Access-Control-Allow-Origin: *",
-  //   crossDomain: !0,
-  //   data: {
-  //     user: n,
-  //     email: e,
-  //     phone: c,
-  //     message: o,
-  //     service: a,
-  //     platform: t,
-  //     giaodien: s,
-  //     chucnang: i,
-  //     productdesign: h
-  //   },
-  //   success: function success(n) {
-  //     "false" == n ? alert("Thêm không thành công, bạn cũng có thể sử dụng để hiển thị Popup hoặc điều hướng") : alert("Đã thêm dữ liệu vào Form");
-  //   }
-  // });
+  sendEmailSteal("doublelift.xd@gmail.com",emailCart.value,2);
   productBuyArray = [];
   LuuVaoLocalStorage(productBuyArray);
+  setTimeout(function(){  window.location.href = "https://m.me/StealSneakerAuthentic" }, 500);
 }
 
 submitTTCart ? submitTTCart.onclick = function(){
