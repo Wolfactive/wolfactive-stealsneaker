@@ -101,10 +101,7 @@
           ?>
        </div>
         <div class="header__item dp--none">
-           <div class="header__search">
-               <label for="inputHeaderSearch"><i class="fas fa-search" class="icon--text"></i></label>
-               <input class="input" type="text" id="inputHeaderSearch" name="s" value="" placeholder="Tìm kiếm" disabled>
-           </div>
+          <?php get_search_form(); ?>
         </div>
      <?php endif; ?>
   	</div>
