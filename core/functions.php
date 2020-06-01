@@ -465,10 +465,10 @@ add_action( 'init', 'disable_emojis' );
     $phpmailer->Host       = 'smtp.gmail.com';
     $phpmailer->SMTPAuth   = 1;
     $phpmailer->Port       = 587;
-    $phpmailer->Username   = 'cskh.stealsneaker.com@gmail.com';
-    $phpmailer->Password   = 'bjnhkut3';
+    $phpmailer->Username   = 'huyminhnguyenpham@gmail.com';
+    $phpmailer->Password   = 'wbhlaora';
     $phpmailer->SMTPSecure = 'TLS';
-    $phpmailer->From       = 'stealsneaker.com@gmail.com';
+    $phpmailer->From       = 'huyminhnguyenpham@gmail.com';
     $phpmailer->FromName   = 'Stealsneaker';
 });
 
