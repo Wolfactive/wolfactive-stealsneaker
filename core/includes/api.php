@@ -25,7 +25,7 @@ function productApiSearchResult($data){
     $picturArray = array();
     while ( have_rows('product_gallery') ) : the_row();
      array_push($picturArray,array(
-        'product_picture'       => hk_get_image(get_sub_field('product_picture'), 550, 550),
+        'product_picture'       => hk_get_image(get_sub_field('product_picture'), 800, 500),
         'product_picture_alt'   => get_sub_field('product_picture_alt')
      )
     );
