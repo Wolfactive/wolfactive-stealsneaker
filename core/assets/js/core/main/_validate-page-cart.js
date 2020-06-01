@@ -13,7 +13,7 @@ var countryNameChoose = document.querySelector('#countryNameChoose');
 var countryNameChooseVal = document.querySelector('#districCartVal');
 var thanhToanCart = document.querySelector('input[name="thanhToanCart"]');
 var submitTTCart = document.querySelector('#submitTTCart');
-// var urlAjax = protocol + "//" + hostname + "/wp-admin/admin-ajax.php";
+var urlAjax = protocol + "//" + hostname + "/wp-admin/admin-ajax.php";
 var isNameCart = false;
 var isPhoneCart = false;
 var isEmailCart = false;
