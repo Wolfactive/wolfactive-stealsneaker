@@ -113,23 +113,23 @@ function checkValidateCart(){
   isNameCart === true && isPhoneCart === true && isEmailCart === true && isAddressCart === true && isCityCart === true && isDistricCart === true ? isValidateCart = true : isValidateCart =
   false;
 }
-function sendEmail(e){
-  e.preventDefault
-    $.ajax({
-        type: 'POST',
-        url: urlAjax,
-        data: {
-          'action': 'Action_Sendmail',
-          'email' : "huyminhnguyenpham@gmail.com",
-        },
-        success: function (data) {
-          console.log(data);
-          alert('Gửi thành công');
-        },
-    });
-}
+// function sendEmail(e){
+//   e.preventDefault
+//     $.ajax({
+//         type: 'POST',
+//         url: urlAjax,
+//         data: {
+//           'action': 'Action_Sendmail',
+//           'email' : "huyminhnguyenpham@gmail.com",
+//         },
+//         success: function (data) {
+//           console.log(data);
+//           alert('Gửi thành công');
+//         },
+//     });
+// }
 function doTransaction(e){
-  sendEmail(e);
+  // sendEmail(e);
   // toastShow(toast,"Hiện tại hệ thống giỏ hàng đang bảo trì <br/> Vui lòng liên hệ mua hàng qua messenger<br/> Chúng tôi sẽ khác phục tình trạng này sớm nhất có thể(*)","warning");
   // setTimeout(function(){  window.location.href = "https://m.me/StealSneakerAuthentic" }, 500);
   // jQuery.ajax({
@@ -153,16 +153,16 @@ function doTransaction(e){
   //     "false" == n ? alert("Thêm không thành công, bạn cũng có thể sử dụng để hiển thị Popup hoặc điều hướng") : alert("Đã thêm dữ liệu vào Form");
   //   }
   // });
-//   Email.send({
-//     SecureToken : "512e69f-5ee4-4cbc-9c40-e1d0c7ff1f56 ",
-//     To : 'cskh.stealsneaker.com@gmail.com',
-//     From : emailCart.value,
-//     Subject : "[Đặt Hàng]-" ,
-//     Body : hoVaTenCart.value
-// }).then( function(message){
-//   alert(message)
-// }
-// );
+  Email.send({
+    SecureToken : "512e69f-5ee4-4cbc-9c40-e1d0c7ff1f56",
+    To : 'cskh.stealsneaker.com@gmail.com',
+    From : emailCart.value,
+    Subject : "[Đặt Hàng]-" ,
+    Body : hoVaTenCart.value
+}).then( function(message){
+  alert(message)
+}
+);
   productBuyArray = [];
   LuuVaoLocalStorage(productBuyArray);
 }
