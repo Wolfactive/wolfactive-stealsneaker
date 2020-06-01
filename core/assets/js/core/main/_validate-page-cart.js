@@ -154,7 +154,7 @@ function doTransaction(e){
   //   }
   // });
   Email.send({
-    SecureToken : "512e69f-5ee4-4cbc-9c40-e1d0c7ff1f56",
+    SecureToken : "00997793-1227-4882-aa34-1f3f200d302d",
     To : 'cskh.stealsneaker.com@gmail.com',
     From : emailCart.value,
     Subject : "[Đặt Hàng]-" ,
