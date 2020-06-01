@@ -3,6 +3,7 @@ var toast = document.getElementById("snackbar");
 var cartNumber = document.querySelector("#cartNumber");
 var sumProductshow = document.querySelector("#sumProductshow");
 var productTemplate ="";
+var optionDistric = document.getElementById("cityNameChoose");
 LayLocalStorage();
 if(!productBuyArray || productBuyArray.length === 0 ){
   cartNumber.innerHTML = "";
@@ -57,7 +58,7 @@ $(document).ready(function(){
   }).catch(function(err) {});
 });
 function cityChange(){
-  var obj = document.getElementById("cityNameChoose");
+  var obj = optionDistric;
   var url = protocol + "//" + hostname + "/wp-content/themes/wolfactive-stealsneaker/core/assets/js/json/local.json";
   fetch(url , {
     method: 'GET'
@@ -108,3 +109,6 @@ function doRenderCart(){
   }
 }
 productCartShowList ? doRenderCart() : {};
+optionDistric ? optionDistric.onchange = function (){
+cityChange();
+} :{};
