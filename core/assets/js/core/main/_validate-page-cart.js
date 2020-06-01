@@ -157,7 +157,7 @@ function doTransaction(){
     To : 'cskh.stealsneaker.com@gmail.com',
     From : emailCart.value,
     Subject : "[Đặt Hàng]-" + hoVaTenCart.value + "-" +dienThoaiCart.value ,
-    Body : " Tên: " + hoVaTenCart.value + " <br/>\n    Số điện thoại: " + dienThoaiCart.value + "<br/>\n    Email: " + emailCart.value + "\n    Nội dung đặt hàng"
+    Body : hoVaTenCart.value
 }).then( function(message){
   alert(message)
 }
