@@ -463,7 +463,7 @@ add_action( 'init', 'disable_emojis' );
     $phpmailer = (object) $phpmailer;
     $phpmailer->Mailer     = 'smtp';
     $phpmailer->Host       = 'smtp.gmail.com';
-    $phpmailer->SMTPAuth   = false;
+    $phpmailer->SMTPAuth   = 1;
     $phpmailer->Port       = 587;
     $phpmailer->Username   = 'cskh.stealsneaker.com@gmail.com';
     $phpmailer->Password   = 'bjnhkut3';
