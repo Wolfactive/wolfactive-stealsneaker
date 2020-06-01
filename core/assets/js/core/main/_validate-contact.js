@@ -76,17 +76,6 @@ function checkPhoneEmpty(){
   dienThoaiVal.classList.remove('d--none');
   isPhone = false;
 };
-function checkRealAddress(){
-  var patternAddress = new RegExp(
-      "(?i)([0-9A-ZẮẰẲẴẶĂẤẦẨẪẬÂÁÀÃẢẠĐẾỀỂỄỆÊÉÈẺẼẸÍÌỈĨỊỐỒỔỖỘÔỚỜỞỠỢƠÓÒÕỎỌỨỪỬỮỰƯÚÙỦŨỤÝỲỶỸỴ']+\\s?\\b){2,}"
-  );
-  if (!patternAddress.test(diaChi.value)) {
-      diaChiVal.classList.remove('d--none');
-      isAddress = false;
-  }else{
-    isAddress = true;
-  }
-};
 function checkAddressEmpty(){
   diaChiVal.classList.remove('d--none');
   isAddress = false;
@@ -107,7 +96,7 @@ function checkVaidate(){
   hoVaTen.value ? checkRealName() : checkNameEmtpy();
   email.value ? checkRealEmail() : checkEmailEmpty();
   dienThoai.value ? checkRealPhone() : checkPhoneEmpty();
-  diaChi.value ? checkRealAddress() : checkAddressEmpty();
+  diaChi.value ? isAddress = true : checkAddressEmpty();
   noiDung.value ? checkComment() : isComment = true;
   isName === true && isEmail === true && isPhone === true && isAddress === true && isComment === true ? isValidate = true : isValiate = false;
 };

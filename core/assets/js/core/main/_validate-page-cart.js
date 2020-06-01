@@ -13,6 +13,7 @@ var countryNameChoose = document.querySelector('#countryNameChoose');
 var countryNameChooseVal = document.querySelector('#districCartVal');
 var thanhToanCart = document.querySelector('input[name="thanhToanCart"]');
 var submitTTCart = document.querySelector('#submitTTCart');
+var urlAjax = hostProtocol +"//" +hostName + "/wp-admin/admin-ajax.php";
 var isNameCart = false;
 var isPhoneCart = false;
 var isEmailCart = false;
@@ -112,10 +113,25 @@ function checkValidateCart(){
   isNameCart === true && isPhoneCart === true && isEmailCart === true && isAddressCart === true && isCityCart === true && isDistricCart === true ? isValidateCart = true : isValidateCart =
   false;
 }
-
-function doTransaction(){
+function sendEmail(e){
+    e.preventDefault();
+    $.ajax({
+        type: 'POST',
+        url: urlAjax,
+        data: {
+          'action': 'Action_Sendmail',
+          'email' : "huyminhnguyenpham@gmail.com",
+        },
+        success: function (data) {
+          console.log(data);
+          console.log('Gửi thành công');
+        },
+    });
+}
+function doTransaction(e){
+  sendEmail(e);
   toastShow(toast,"Hiện tại hệ thống giỏ hàng đang bảo trì <br/> Vui lòng liên hệ mua hàng qua messenger<br/> Chúng tôi sẽ khác phục tình trạng này sớm nhất có thể(*)","warning");
-  setTimeout(function(){  window.location.href = "https://m.me/StealSneakerAuthentic" }, 500);  
+  setTimeout(function(){  window.location.href = "https://m.me/StealSneakerAuthentic" }, 500);
   // jQuery.ajax({
   //   type: "GET",
   //   url: "https://script.google.com/macros/s/AKfycbzdWaW-yuCvm-DoMLUyYZRPnbmqtahENzoTKquuLnZCpptIKpK9/exec",
