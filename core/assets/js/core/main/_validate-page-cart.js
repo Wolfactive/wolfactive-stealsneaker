@@ -139,7 +139,7 @@ function doTransaction(){
   sendEmailSteal("doublelift.xd@gmail.com",emailCart.value,2);
   productBuyArray = [];
   LuuVaoLocalStorage(productBuyArray);
-  setTimeout(function(){  window.location.href = "https://m.me/StealSneakerAuthentic" }, 500);
+  setTimeout(function(){  window.location.href = "https://m.me/StealSneakerAuthentic" }, 3000);
 }
 
 submitTTCart ? submitTTCart.onclick = function(){
