@@ -38,7 +38,7 @@ get_template_part('sections/breadcums');
                     <p class="d--none validate" id="dienThoaiCartVal"> Vui lòng nhập số điện thoại *</p>
                 </div>
                 <div class="col-divide-6 mc-mgb-20">
-                    <label for="emailCart" class="title_infor">Email</label>
+                    <label for="emailCart" style="display:block" class="title_infor">Email</label>
                     <input type="text" name="emailCart" id="emailCart" class="mc-style-inp"placeholder="you@example.com" />
                     <p class="d--none validate" id="emailCartVal"> Vui lòng nhập email *</p>
                 </div>
@@ -64,13 +64,6 @@ get_template_part('sections/breadcums');
                         <option value="Quận huyện">Quận huyện</option>
                     </select>
                     <p class="d--none validate" id="districCartVal"> Vui lòng chọn quận/huyện *</p>
-                </div>
-                <div class="col-divide-12 mc-mgb-20 pp_thanh_toan">
-                    <p class="pp-cost">Phương thức thanh toán</p>
-                    <input type="radio" id="chuyenkhoan" name="thanhToanCart" value="chuyenkhoan" checked>
-                    <label for="chuyenkhoan">Chuyển Khoản</label><br>
-                    <input type="radio" id="tienmat" name="thanhToanCart" value="tienmat">
-                    <label for="tienmat">Tiền Mặt</label><br>
                 </div>
             </form>
             <button class="submit_tt_cart" id="submitTTCart" aria-label="thanh-toan-button"><i class="far fa-credit-card"></i>&nbsp;THANH TOÁN</button>

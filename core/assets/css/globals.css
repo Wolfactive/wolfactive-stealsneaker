@@ -33,6 +33,7 @@ Design by Canvilled.
 
 html {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
