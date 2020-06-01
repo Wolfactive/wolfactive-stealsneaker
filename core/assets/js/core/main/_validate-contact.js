@@ -16,16 +16,16 @@ var isPhone = false;
 var isAddress = false;
 var isComment = false;
 var isValiate = false;
-hoVaTen ? hoVaTen.onfocus= function(){
+hoVaTen ? hoVaTen.onkeyup= function(){
   hoVaTenVal.classList.add('d---none');
 }:{};
-email ? email.onfocus= function(){
+email ? email.onkeyup= function(){
   emailVal.classList.add('d---none');
 }:{};
-dienThoai ? dienThoai.onfocus= function(){
+dienThoai ? dienThoai.onkeyup= function(){
   dienThoaiVal.classList.add('d---none');
 }:{};
-diaChi ? diaChi.onfocus= function(){
+diaChi ? diaChi.onkeyup= function(){
   diaChiVal.classList.add('d---none');
 }:{};
 function checkNameEmtpy(){
@@ -100,9 +100,21 @@ function checkVaidate(){
   noiDung.value ? checkComment() : isComment = true;
   isName === true && isEmail === true && isPhone === true && isAddress === true && isComment === true ? isValidate = true : isValiate = false;
 };
+function doContact(){
+  Email.send({
+    SecureToken : "00997793-1227-4882-aa34-1f3f200d302d",
+    To : "doublelift.xd@gmail.com",
+    From : email.value,
+    Subject : "[Liên hệ]" + " - " + hoVaTen.value + " - " +dienThoai.value,
+    Body : "<p>Đia chỉ:"+diaChi.value+"</p><p>"+noiDung.value+"</p>"
+}).then(function(){
+  toastShow(toast,"Gửi mail thành công <br/> Chúng tôi sẽ liên hệ sớm nhất có thể","succeed");
+  setTimeout(function(){  window.location.href = protocol + "//" + hostname }, 3000);
+});
+}
 btnFormcontact ? btnFormcontact.onclick= function(){
   checkVaidate();
-  isValiate === true ? console.log(true) : console.log(false)
+  isValiate === true ? doContact() : console.log(false)
 }:{};
 
 btnWriterAgain ? btnWriterAgain.onclick = function(){
