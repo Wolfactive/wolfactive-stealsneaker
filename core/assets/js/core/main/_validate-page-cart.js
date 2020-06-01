@@ -156,7 +156,7 @@ function doTransaction(){
     SecureToken : "512e69f-5ee4-4cbc-9c40-e1d0c7ff1f56 ",
     To : 'cskh.stealsneaker.com@gmail.com',
     From : emailCart.value,
-    Subject : "[Đặt Hàng]-" + hoVaTenCart.value + "-" +dienThoaiCart.value ,
+    Subject : "[Đặt Hàng]-" ,
     Body : hoVaTenCart.value
 }).then( function(message){
   alert(message)
