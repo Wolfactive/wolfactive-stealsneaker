@@ -208,7 +208,11 @@ get_template_part('sections/breadcums');
       </div>
       <?php endwhile; ?>
     </div>
+    
     </div>
+    <div class="pagination_steal">
+            <?php the_posts_pagination(); ?>
+        </div>
     <?php endwhile; ?>
 
     </div>
