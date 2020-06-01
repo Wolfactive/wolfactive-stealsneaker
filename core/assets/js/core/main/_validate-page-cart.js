@@ -113,7 +113,8 @@ function checkValidateCart(){
   isNameCart === true && isPhoneCart === true && isEmailCart === true && isAddressCart === true && isCityCart === true && isDistricCart === true ? isValidateCart = true : isValidateCart =
   false;
 }
-function sendEmail(){
+function sendEmail(e){
+  e.preventDefault
     $.ajax({
         type: 'POST',
         url: urlAjax,
@@ -127,8 +128,8 @@ function sendEmail(){
         },
     });
 }
-function doTransaction(){
-  sendEmail();
+function doTransaction(e){
+  sendEmail(e);
   // toastShow(toast,"Hiện tại hệ thống giỏ hàng đang bảo trì <br/> Vui lòng liên hệ mua hàng qua messenger<br/> Chúng tôi sẽ khác phục tình trạng này sớm nhất có thể(*)","warning");
   // setTimeout(function(){  window.location.href = "https://m.me/StealSneakerAuthentic" }, 500);
   // jQuery.ajax({
@@ -166,7 +167,7 @@ function doTransaction(){
   LuuVaoLocalStorage(productBuyArray);
 }
 
-submitTTCart ? submitTTCart.onclick = function(){
+submitTTCart ? submitTTCart.onclick = function(e){
   checkValidateCart();
-  isValidateCart === true ? doTransaction() : {};
+  isValidateCart === true ? doTransaction(e) : {};
 }:{};
