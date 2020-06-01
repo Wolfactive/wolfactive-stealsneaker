@@ -66,10 +66,10 @@ function cityChange(obj){
   .then(function(result) {
     var countryOption = '<option value="">Chọn quận / huyện </option>';
     result.forEach(function(element,i) {
-      if(obj.value === result[i].name){
-        var allDistricts = result[i].districts;
+      if(obj.value === element.name){
+        var allDistricts = element.districts;
         allDistricts.forEach(function(e, index){
-          countryOption += "<option value=\""+ allDistricts[index].name +"\">"+ allDistricts[index].name +"</option>\n";
+          countryOption += "<option value=\""+ e.name +"\">"+ e.name +"</option>\n";
         });
       }
     });
