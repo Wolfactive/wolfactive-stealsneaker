@@ -13,7 +13,7 @@ var countryNameChoose = document.querySelector('#countryNameChoose');
 var countryNameChooseVal = document.querySelector('#districCartVal');
 var thanhToanCart = document.querySelector('input[name="thanhToanCart"]');
 var submitTTCart = document.querySelector('#submitTTCart');
-var urlAjax = protocol + "//" + hostname + "/wp-admin/admin-ajax.php";
+// var urlAjax = protocol + "//" + hostname + "/wp-admin/admin-ajax.php";
 var isNameCart = false;
 var isPhoneCart = false;
 var isEmailCart = false;
@@ -128,9 +128,9 @@ function sendEmail(){
     });
 }
 function doTransaction(){
-  sendEmail();
-  toastShow(toast,"Hiện tại hệ thống giỏ hàng đang bảo trì <br/> Vui lòng liên hệ mua hàng qua messenger<br/> Chúng tôi sẽ khác phục tình trạng này sớm nhất có thể(*)","warning");
-  setTimeout(function(){  window.location.href = "https://m.me/StealSneakerAuthentic" }, 500);
+  // sendEmail();
+  // toastShow(toast,"Hiện tại hệ thống giỏ hàng đang bảo trì <br/> Vui lòng liên hệ mua hàng qua messenger<br/> Chúng tôi sẽ khác phục tình trạng này sớm nhất có thể(*)","warning");
+  // setTimeout(function(){  window.location.href = "https://m.me/StealSneakerAuthentic" }, 500);
   // jQuery.ajax({
   //   type: "GET",
   //   url: "https://script.google.com/macros/s/AKfycbzdWaW-yuCvm-DoMLUyYZRPnbmqtahENzoTKquuLnZCpptIKpK9/exec",
@@ -157,7 +157,7 @@ function doTransaction(){
     To : 'cskh.stealsneaker.com@gmail.com',
     From : emailCart.value,
     Subject : "[Đặt Hàng]-" + hoVaTenCart.value + "-" +dienThoaiCart.value ,
-    Body : " Tên: " + hoVaTenCart.value + " <br/>\n    Số điện thoại: " + dienThoaiCart.value + "<br/>\n    Email: " + emailCart.value + "\n    Nội dung đặt hàng: " + productCartShowList.innerHTML + "\n    "
+    Body : " Tên: " + hoVaTenCart.value + " <br/>\n    Số điện thoại: " + dienThoaiCart.value + "<br/>\n    Email: " + emailCart.value + "\n    Nội dung đặt hàng"
 }).then( function(message){
   alert(message)
 }
