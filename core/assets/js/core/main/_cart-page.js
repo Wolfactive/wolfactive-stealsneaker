@@ -76,7 +76,9 @@ function cityChange(){
       }
     });
     document.getElementById("countryNameChoose").innerHTML = countryOption;
-  }).catch(function(err) {});
+  }).catch(function(err) {
+    console.log(err);
+  });
 }
 function doRenderCart(){
   if(productBuyArray.length !== 0){
