@@ -465,10 +465,10 @@ add_action( 'init', 'disable_emojis' );
      $phpmailer->Host       = 'smtp.gmail.com';
      $phpmailer->SMTPAuth   = 1;
      $phpmailer->Port       = 587;
-    $phpmailer->Username   = 'huyminhnguyenpham@gmail.com';
-    $phpmailer->Password   = 'wbhlaora';
+    $phpmailer->Username   = 'Cskh.mail.stealsneaker@gmail.com';
+    $phpmailer->Password   = 'Stealneaker@2020';
     $phpmailer->SMTPSecure = 'TLS';
-    $phpmailer->From       = 'huyminhnguyenpham@gmail.com';
+    $phpmailer->From       = 'cskh.stealsneaker@gmail.com';
     $phpmailer->FromName   = 'Stealsneaker';
 });
 
@@ -485,7 +485,7 @@ function Action_Sendmail() {
         $headers[]  = 'From: Stealsneaker';
         $headers[]  = 'Content-Type: text/html; charset=UTF-8';
         $message    =  "Test thôi";
-        wp_mail( 'huyminhnguyenpham@gmail.com', 'Stealsneaker', $message, $headers);
+        wp_mail( 'Cskh.mail.stealsneaker@gmail.com', 'Stealsneaker', $message, $headers);
         echo json_encode(array('status' => 1));
     }
 die(); }
