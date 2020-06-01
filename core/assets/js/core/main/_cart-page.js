@@ -112,7 +112,7 @@ function doRenderCart(){
   }
 }
 productCartShowList ? doRenderCart() : {};
-optionDistric ? optionDistric.onchange = function (){
+optionDistric ? optionDistric.onclick = function (){
   console.log("click nè")
   // var url = protocol + "//" + hostname + "/wp-content/themes/wolfactive-stealsneaker/core/assets/js/json/local.json";
   // fetch(url , {
