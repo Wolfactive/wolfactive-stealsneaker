@@ -59,6 +59,7 @@ $(document).ready(function(){
 });
 function cityChange(){
   var obj = optionDistric;
+    console.log(obj.value);
   var url = protocol + "//" + hostname + "/wp-content/themes/wolfactive-stealsneaker/core/assets/js/json/local.json";
   fetch(url , {
     method: 'GET'
