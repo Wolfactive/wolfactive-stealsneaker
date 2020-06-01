@@ -53,7 +53,7 @@ get_template_part('sections/breadcums');
                 </div>
                 <div class="col-divide-6 mc-mgb-20">
                     <label for="cityNameChoose" class="title_infor">Tỉnh/thành phố</label>
-                    <select name="cityCart" id="cityNameChoose" class="mc-style-inp" onchange="cityChange(this)" >
+                    <select name="cityCart" id="cityNameChoose" class="mc-style-inp" onchange="cityChange()" >
                         <option value="">Tỉnh/thành phố</option>
                     </select>
                     <p class="d--none validate" id="cityCartVal"> Vui lòng chọn tỉnh/thành phố *</p>

@@ -56,7 +56,8 @@ $(document).ready(function(){
 
   }).catch(function(err) {});
 });
-function cityChange(obj){
+function cityChange(){
+  var obj = document.getElementById("cityNameChoose");
   var url = protocol + "//" + hostname + "/wp-content/themes/wolfactive-stealsneaker/core/assets/js/json/local.json";
   fetch(url , {
     method: 'GET'
