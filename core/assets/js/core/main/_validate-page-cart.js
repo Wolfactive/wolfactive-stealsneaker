@@ -113,8 +113,7 @@ function checkValidateCart(){
   isNameCart === true && isPhoneCart === true && isEmailCart === true && isAddressCart === true && isCityCart === true && isDistricCart === true ? isValidateCart = true : isValidateCart =
   false;
 }
-function sendEmail(e){
-    e.preventDefault();
+function sendEmail(){
     $.ajax({
         type: 'POST',
         url: urlAjax,
@@ -128,8 +127,8 @@ function sendEmail(e){
         },
     });
 }
-function doTransaction(e){
-  sendEmail(e);
+function doTransaction(){
+  sendEmail();
   toastShow(toast,"Hiện tại hệ thống giỏ hàng đang bảo trì <br/> Vui lòng liên hệ mua hàng qua messenger<br/> Chúng tôi sẽ khác phục tình trạng này sớm nhất có thể(*)","warning");
   setTimeout(function(){  window.location.href = "https://m.me/StealSneakerAuthentic" }, 500);
   // jQuery.ajax({
