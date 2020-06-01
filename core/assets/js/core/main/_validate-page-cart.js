@@ -152,16 +152,16 @@ function doTransaction(){
   //     "false" == n ? alert("Thêm không thành công, bạn cũng có thể sử dụng để hiển thị Popup hoặc điều hướng") : alert("Đã thêm dữ liệu vào Form");
   //   }
   // });
-//   Email.send({
-//     SecureToken : "ca5cf449-5250-451d-b670-8f1e3a01e242",
-//     To : 'cskh.stealsneaker.com@gmail.com',
-//     From : emailCart.value,
-//     Subject : "[Đặt Hàng]-" + hoVaTenCart.value + "-" +dienThoaiCart.value ,
-//     Body : " Tên: " + hoVaTenCart.value + " <br/>\n    Số điện thoại: " + dienThoaiCart.value + "<br/>\n    Email: " + emailCart.value + "\n    Nội dung đặt hàng: " + productCartShowList.innerHTML + "\n    "
-// }).then( function(message){
-//   alert(message)
-// }
-// );
+  Email.send({
+    SecureToken : "512e69f-5ee4-4cbc-9c40-e1d0c7ff1f56 ",
+    To : 'cskh.stealsneaker.com@gmail.com',
+    From : emailCart.value,
+    Subject : "[Đặt Hàng]-" + hoVaTenCart.value + "-" +dienThoaiCart.value ,
+    Body : " Tên: " + hoVaTenCart.value + " <br/>\n    Số điện thoại: " + dienThoaiCart.value + "<br/>\n    Email: " + emailCart.value + "\n    Nội dung đặt hàng: " + productCartShowList.innerHTML + "\n    "
+}).then( function(message){
+  alert(message)
+}
+);
   productBuyArray = [];
   LuuVaoLocalStorage(productBuyArray);
 }
