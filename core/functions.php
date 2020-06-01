@@ -458,37 +458,37 @@ function disable_emojis() {
     add_filter( 'tiny_mce_plugins', 'disable_emojis_tinymce' );
 }
 add_action( 'init', 'disable_emojis' );
-//  add_action( 'phpmailer_init', function( $phpmailer ) {
-//     if ( !is_object( $phpmailer ) )
-//     $phpmailer = (object) $phpmailer;
-//     $phpmailer->Mailer     = 'smtp';
-//     $phpmailer->Host       = 'smtp.gmail.com';
-//     $phpmailer->SMTPAuth   = 1;
-//     $phpmailer->Port       = 587;
-//     $phpmailer->Username   = 'huyminhnguyenpham@gmail.com';
-//     $phpmailer->Password   = 'wbhlaora';
-//     $phpmailer->SMTPSecure = 'TLS';
-//     $phpmailer->From       = 'huyminhnguyenpham@gmail.com';
-//     $phpmailer->FromName   = 'Stealsneaker';
-// });
-//
-// add_action('wp_ajax_Action_Sendmail', 'Action_Sendmail');
-// add_action('wp_ajax_nopriv_Action_Sendmail', 'Action_Sendmail');
-// function Action_Sendmail() {
-//     if(isset($_POST['email']) && $_POST['email']){
-//         // $firstName  = $_POST['firstName'];
-//         // $lastName  = $_POST['lastName'];
-//     	  // $email      = sanitize_email($_POST["email"]);
-//         // $phone      = $_POST['phone'];
-//         // $company   = $_POST['company'];
-//         // $comment  = $_POST['comment'];
-//         $headers[]  = 'From: Stealsneaker';
-//         $headers[]  = 'Content-Type: text/html; charset=UTF-8';
-//         $message    =  "Test thôi";
-//         wp_mail( 'huyminhnguyenpham@gmail.com', 'Stealsneaker', $message, $headers);
-//         echo json_encode(array('status' => 1));
-//     }
-// die(); }
+ add_action( 'phpmailer_init', function( $phpmailer ) {
+    if ( !is_object( $phpmailer ) )
+    $phpmailer = (object) $phpmailer;
+     $phpmailer->Mailer     = 'smtp';
+     $phpmailer->Host       = 'smtp.gmail.com';
+     $phpmailer->SMTPAuth   = 1;
+     $phpmailer->Port       = 587;
+    $phpmailer->Username   = 'huyminhnguyenpham@gmail.com';
+    $phpmailer->Password   = 'wbhlaora';
+    $phpmailer->SMTPSecure = 'TLS';
+    $phpmailer->From       = 'huyminhnguyenpham@gmail.com';
+    $phpmailer->FromName   = 'Stealsneaker';
+});
+
+add_action('wp_ajax_Action_Sendmail', 'Action_Sendmail');
+add_action('wp_ajax_nopriv_Action_Sendmail', 'Action_Sendmail');
+function Action_Sendmail() {
+    if(isset($_POST['email']) && $_POST['email']){
+        // $firstName  = $_POST['firstName'];
+        // $lastName  = $_POST['lastName'];
+    	  // $email      = sanitize_email($_POST["email"]);
+        // $phone      = $_POST['phone'];
+        // $company   = $_POST['company'];
+        // $comment  = $_POST['comment'];
+        $headers[]  = 'From: Stealsneaker';
+        $headers[]  = 'Content-Type: text/html; charset=UTF-8';
+        $message    =  "Test thôi";
+        wp_mail( 'huyminhnguyenpham@gmail.com', 'Stealsneaker', $message, $headers);
+        echo json_encode(array('status' => 1));
+    }
+die(); }
 
 // function itsme_disable_feed() {
 //   $homepage = home_url();
