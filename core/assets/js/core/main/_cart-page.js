@@ -113,27 +113,25 @@ function doRenderCart(){
 }
 productCartShowList ? doRenderCart() : {};
 optionDistric ? optionDistric.onclick = function (){
-  console.log("click nè")
-  // var url = protocol + "//" + hostname + "/wp-content/themes/wolfactive-stealsneaker/core/assets/js/json/local.json";
-  // fetch(url , {
-  //   method: 'GET'
-  // }).then(function(result) {
-  //   return result.json();
-  // })
-  // .then(function(result) {
-  //   var obj = document.getElementById("cityNameChoose");
-  //   console.log(obj.value);
-  //   var countryOption = '<option value="">Chọn quận / huyện </option>';
-  //   result.forEach(function(element,i) {
-  //     if(obj.value === element.name){
-  //       var allDistricts = element.districts;
-  //       allDistricts.forEach(function(e, index){
-  //         countryOption += "<option value=\""+ e.name +"\">"+ e.name +"</option>\n";
-  //       });
-  //     }
-  //   });
-  //   document.getElementById("countryNameChoose").innerHTML = countryOption;
-  // }).catch(function(err) {
-  //   console.log(err);
-  // });
+  var url = protocol + "//" + hostname + "/wp-content/themes/wolfactive-stealsneaker/core/assets/js/json/local.json";
+  fetch(url , {
+    method: 'GET'
+  }).then(function(result) {
+    return result.json();
+  })
+  .then(function(result) {
+    var obj = document.getElementById("cityNameChoose");  
+    var countryOption = '<option value="">Chọn quận / huyện </option>';
+    result.forEach(function(element,i) {
+      if(obj.value === element.name){
+        var allDistricts = element.districts;
+        allDistricts.forEach(function(e, index){
+          countryOption += "<option value=\""+ e.name +"\">"+ e.name +"</option>\n";
+        });
+      }
+    });
+    document.getElementById("countryNameChoose").innerHTML = countryOption;
+  }).catch(function(err) {
+    console.log(err);
+  });
 } :{};
