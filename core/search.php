@@ -7,9 +7,9 @@ get_header();
 
   if (have_posts()){?>
   <div class="product_ch">
-      <div class="product__list row-divide">
+      <div class="product__list row-divide py-40">
     <?php  while(have_posts()) : the_post(); ?>
-    
+
         <div  class="product__item d--block col-divide-3 col-divide-md-6 col-divide-sm-12">
           <div class="product__item-img">
             <img src="<?php echo hk_get_thumb(get_the_id(),395,395) ?>" alt="<?php the_title(); ?>" />
@@ -47,14 +47,17 @@ get_header();
             <?php endif; ?>
           </div>
 		</div>
-	<?php endwhile; ?>	
-	
+	<?php endwhile; ?>
+
+    </div>
+    <div class="pagination_steal">
+        <?php the_posts_pagination(); ?>
     </div>
     </div>
   <?php }else {
     echo '<h2 class="headline headline--small-plus">No results match that search.</h2>';
     } ?>
-  
+
 
 </section>
 
