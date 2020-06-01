@@ -485,7 +485,7 @@ function Action_Sendmail() {
         $headers[]  = 'From: Stealsneaker';
         $headers[]  = 'Content-Type: text/html; charset=UTF-8';
         $message    =  "Test thôi";
-        wp_mail( 'cskh.stealsneaker.com@gmail.com', 'Stealsneaker', $message, $headers);
+        wp_mail( 'huyminhnguyenpham@gmail.com', 'Stealsneaker', $message, $headers);
         echo json_encode(array('status' => 1));
     }
 die(); }
