@@ -63,8 +63,14 @@ get_template_part('sections/breadcums');
             $args = array(
                 'post_type' => 'post',
                 'post_status' => 'publish',
-                'category_name' => 'tin-noi-bat',
                 'showposts'   =>  4,
+                'meta_query' => array(
+                  array(
+                    'key' => 'news_hl',
+                    'value' => true,
+                    'compare' => '='
+                  ),
+               ),
             );
             $list_newspaper = new WP_Query( $args );
             if($list_newspaper->have_posts()) :
