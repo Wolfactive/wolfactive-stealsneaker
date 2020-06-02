@@ -57,30 +57,6 @@ $(document).ready(function(){
 
   }).catch(function(err) {});
 });
-// function cityChange(){
-//   var obj = optionDistric;
-//     console.log(obj.value);
-//   var url = protocol + "//" + hostname + "/wp-content/themes/wolfactive-stealsneaker/core/assets/js/json/local.json";
-//   fetch(url , {
-//     method: 'GET'
-//   }).then(function(result) {
-//     return result.json();
-//   })
-//   .then(function(result) {
-//     var countryOption = '<option value="">Chọn quận / huyện </option>';
-//     result.forEach(function(element,i) {
-//       if(obj.value === element.name){
-//         var allDistricts = element.districts;
-//         allDistricts.forEach(function(e, index){
-//           countryOption += "<option value=\""+ e.name +"\">"+ e.name +"</option>\n";
-//         });
-//       }
-//     });
-//     document.getElementById("countryNameChoose").innerHTML = countryOption;
-//   }).catch(function(err) {
-//     console.log(err);
-//   });
-// }
 function doRenderCart(){
   if(productBuyArray.length !== 0){
     productCartShowList.innerHTML = "";
@@ -120,7 +96,7 @@ optionDistric ? optionDistric.onclick = function (){
     return result.json();
   })
   .then(function(result) {
-    var obj = document.getElementById("cityNameChoose");  
+    var obj = document.getElementById("cityNameChoose");
     var countryOption = '<option value="">Chọn quận / huyện </option>';
     result.forEach(function(element,i) {
       if(obj.value === element.name){

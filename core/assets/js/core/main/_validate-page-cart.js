@@ -128,12 +128,12 @@ function sendEmailSteal(toEmail,fromEmail,order){
     To : toEmail,
     From : fromEmail,
     Subject : "[Đặt hàng]" + " - " + hoVaTenCart.value + " - " +dienThoaiCart.value,
-    Body : "<table>" +productTemplate +"</table>"
+    Body : "<table>" +productTemplate +"</table><p style=\"margin:30px auto\">Địa chỉ:"+ diaChiCart.value + "," + countryNameChoose.value +","+countryNameChoose.value +"</p>"
 }).then();}
 }
 function doTransaction(){
   sendEmailSteal(emailCart.value,"cskh.stealsneaker.com@gmail.com",1);
-  sendEmailSteal("doublelift.xd@gmail.com",emailCart.value,2);
+  sendEmailSteal("huyminhnguyenpham@gmail.com",emailCart.value,2);
   productBuyArray = [];
   LuuVaoLocalStorage(productBuyArray);
   setTimeout(function(){  window.location.href = protocol + "//" + hostname + "/thanh-toan" }, 3000);
