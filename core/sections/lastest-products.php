@@ -12,7 +12,7 @@
       $args = array(
         'post_type'   => 'san-pham',
         'post_status' => 'publish',
-        'show_posts'  =>  12,
+        'show_posts'  =>  6,
         'order'       => 'DESC',
         'orderby'     => 'date',
         'tax_query' => array(

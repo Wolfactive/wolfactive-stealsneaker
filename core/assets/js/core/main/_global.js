@@ -142,6 +142,7 @@ $('.carousel__list').slick({
   slidesToScroll: 1,
   autoplay: true,
   autoplaySpeed: 5000,
+  adaptiveHeight: true,
 }) :{};
 carouselAboutUs ? $('.page__carousel').slick({
   infinite: true,
@@ -185,6 +186,7 @@ $('.slick__slider').slick({
   slidesToScroll: 4,
   autoplay: true,
   autoplaySpeed: 5000,
+  adaptiveHeight: true,
   responsive: [
     {
       breakpoint: 1024,

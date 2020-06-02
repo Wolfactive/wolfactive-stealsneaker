@@ -11,7 +11,7 @@ viewQuickArray.forEach(function(item, i){
         return result.json();
       })
       .then(function(result){
-        result.find(function(item){ item.title === titleCheck ? result[0] = item :{}});       
+        result.find(function(item){ item.title === titleCheck ? result[0] = item :{}});
        var priceCheck = '';
         result[0].sale_price ? priceCheck = 'line--through' :{};
         var sizeArray = result[0].size;
@@ -38,6 +38,7 @@ viewQuickArray.forEach(function(item, i){
           slidesToScroll: 1,
           autoplay: true,
           autoplaySpeed: 3000,
+          adaptiveHeight: true,
         });
         return result;
       })

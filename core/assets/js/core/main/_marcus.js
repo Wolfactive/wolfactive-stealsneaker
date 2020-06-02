@@ -4,6 +4,7 @@ $('.newspaper_content_slick').slick({
     slidesToScroll: 3,
     autoplay: true,
     autoplaySpeed: 2000,
+    adaptiveHeight: true,
     responsive: [
       {
         breakpoint: 1024,
@@ -36,6 +37,7 @@ $('.slider_product_big').slick({
   slidesToScroll: 1,
   arrows: false,
   fade: true,
+  adaptiveHeight: true,
   asNavFor: '.slider_product_small'
 });
 $('.slider_product_small').slick({
@@ -44,5 +46,6 @@ $('.slider_product_small').slick({
   asNavFor: '.slider_product_big',
   dots: true,
   centerMode: true,
+  adaptiveHeight: true,
   focusOnSelect: true
 });
