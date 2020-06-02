@@ -86,19 +86,19 @@
             Theo dõi chúng tôi
           </h2>
           <div class="social__list myt-20">
-            <a href="" class="footer__socical-item mx-15">
+            <a href="<?php echo get_theme_mod('link_facebook') ?>" class="footer__socical-item mx-15">
               <img src="<?php echo get_theme_file_uri("assets/images/facebook.svg") ?>" alt="facebook">
             </a>
-            <a href="" class="footer__socical-item mx-15">
+            <a href="<?php echo get_theme_mod('link_instagram') ?>" class="footer__socical-item mx-15">
               <img src="<?php echo get_theme_file_uri("assets\images\instagram.svg") ?>" alt="instagram">
             </a>
-            <a href="" class="footer__socical-item mx-15">
+            <a href="<?php echo get_theme_mod('link_pinterest') ?>" class="footer__socical-item mx-15">
             <img src="  <?php echo get_theme_file_uri("assets\images\linkedin.svg") ?>" alt="linkedin">
             </a>
-            <a href="" class="footer__socical-item mx-15">
+            <a href="<?php echo get_theme_mod('link_pinterest') ?>" class="footer__socical-item mx-15">
               <img src="<?php echo get_theme_file_uri("assets\images\pinterest.svg") ?>" alt="pinterest">
             </a>
-            <a href="" class="footer__socical-item mx-15">
+            <a href="<?php echo get_theme_mod('link_youtube') ?>" class="footer__socical-item mx-15">
             <img src="<?php echo get_theme_file_uri("assets\images\youtube.svg") ?>" alt="youtube">
             </a>
           </div>

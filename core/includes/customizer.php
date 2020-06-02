@@ -49,7 +49,18 @@ function theme_slug_customizer( $wp_customize ) {
             'priority' => 150
         )
     );
-    //add select setting to your section
+
+    //social footer
+    $wp_customize->add_section(
+        'social_footer',
+        array(
+            'title' => esc_html__( 'Mạng xã hội footer', 'stealsneaker' ),
+            'panel'   =>  'theme_option',
+            'priority' => 150
+        )
+    );
+    //social footer
+
     /*----------------------------------------------------------------------*/
     // Company Name
       $wp_customize->add_setting(
@@ -215,6 +226,105 @@ function theme_slug_customizer( $wp_customize ) {
             )
         );
 
+        //SOCIAL
+        $wp_customize->add_setting(
+            // $id
+            'link_facebook',
+            // $args
+            array(
+              'sanitize_callback'	=> 'sanitize_text_field',
+              'default'           =>  'https://www.facebook.com/'
+            )
+          );
+    
+    
+        $wp_customize->add_control(
+                'link_facebook',
+                array(
+                    'label' => esc_html__( 'Link Facebook', 'theme_slug' ),
+                    'section' => 'social_footer',
+                    'type' => 'text'
+                )
+       );
+
+       $wp_customize->add_setting(
+        // $id
+        'link_instagram',
+        // $args
+        array(
+          'sanitize_callback'	=> 'sanitize_text_field',
+          'default'           =>  'Instagram STEAL SNEAKER AUTHENTIC'
+        )
+      );
+
+
+        $wp_customize->add_control(
+                'link_instagram',
+                array(
+                    'label' => esc_html__( 'Link Instagram', 'theme_slug' ),
+                    'section' => 'social_footer',
+                    'type' => 'text'
+                )
+        );
+        $wp_customize->add_setting(
+            // $id
+            'link_youtube',
+            // $args
+            array(
+              'sanitize_callback'	=> 'sanitize_text_field',
+              'default'           =>  'Youtube SNEAKER AUTHENTIC'
+            )
+          );
+    
+    
+            $wp_customize->add_control(
+                    'link_youtube',
+                    array(
+                        'label' => esc_html__( 'Link Youtube', 'theme_slug' ),
+                        'section' => 'social_footer',
+                        'type' => 'text'
+                    )
+            );
+            $wp_customize->add_setting(
+                // $id
+                'link_pinterest',
+                // $args
+                array(
+                  'sanitize_callback'	=> 'sanitize_text_field',
+                  'default'           =>  'Pinterest STEAL SNEAKER AUTHENTIC'
+                )
+              );
+        
+        
+                $wp_customize->add_control(
+                        'link_pinterest',
+                        array(
+                            'label' => esc_html__( 'Link Pinterest', 'theme_slug' ),
+                            'section' => 'social_footer',
+                            'type' => 'text'
+                        )
+                );
+
+                $wp_customize->add_setting(
+                    // $id
+                    'link_linkedin',
+                    // $args
+                    array(
+                      'sanitize_callback'	=> 'sanitize_text_field',
+                      'default'           =>  'Linkedin STEAL SNEAKER AUTHENTIC'
+                    )
+                  );
+            
+            
+                    $wp_customize->add_control(
+                            'link_linkedin',
+                            array(
+                                'label' => esc_html__( 'Link Linkedin', 'theme_slug' ),
+                                'section' => 'social_footer',
+                                'type' => 'text'
+                            )
+                    );
+        //SOCIAL
       /*----------------------------------------------------------------------*/
       function theme_slug_sanitize_select( $input, $setting ){
 
