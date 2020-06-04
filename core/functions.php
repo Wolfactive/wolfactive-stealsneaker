@@ -553,19 +553,21 @@ add_action( 'wp_before_admin_bar_render', 'remove_admin_bar_links' );
 add_action( 'admin_menu', 'my_remove_menus', 999 );
 function my_remove_menus() {
    //remove_menu_page( 'upload.php');
-  // remove_menu_page( 'edit-comments.php' );
-  // remove_menu_page( 'wpcf7');
-  // remove_menu_page( 'themes.php');
-  // remove_menu_page( 'plugins.php');
+   remove_menu_page( 'edit-comments.php' );
+   remove_menu_page( 'themes.php');
+   remove_menu_page( 'plugins.php');
   // remove_menu_page( 'users.php');
    remove_menu_page( 'tools.php');
   // remove_menu_page( 'options-general.php');
   // remove_menu_page( 'wpseo_dashboard');
   // remove_menu_page( 'wpcf-cpt');
    remove_submenu_page( 'themes.php', 'theme-editor.php');
-  // remove_submenu_page( 'plugins.php', 'plugin-editor.php');
+   remove_submenu_page( 'plugins.php', 'plugin-editor.php');
 }
 add_action( 'widgets_init', 'my_unregister_widgets' );
+
+
+
 function my_unregister_widgets() {
     unregister_widget('WP_Widget_Pages');
     unregister_widget('WP_Widget_Calendar');
@@ -664,3 +666,14 @@ function get_term_list_check($taxonamy_slug,$name_tag){
     $price_convert = implode("",array_reverse($price_array_return));
     return $price_convert;
   }
+  if( !function_exists('redirect_404_to_homepage') ){
+
+    add_action( 'template_redirect', 'redirect_404_to_homepage' );
+
+    function redirect_404_to_homepage(){
+       if(is_404()):
+            wp_safe_redirect( home_url('/') );
+            exit;
+        endif;
+    }
+}
