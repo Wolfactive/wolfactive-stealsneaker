@@ -14,7 +14,7 @@ get_template_part('sections/breadcums');
       <div class="product__filter-list">
         <div class="row-divide">
           <div class="product__filter-item col-divide-4 border--right-15 border--right-p-0 col-divide-md-6 col-divide-sm-12">
-            <h3 class="title--item col-divide-12 mxl-15"> Hãng</h3>
+            <h1 class="title--item col-divide-12 mxl-15"> Hãng</h1>
             <div class="filter__form-item">
               <input type="radio" id="productBand0" name="productBand" value="all-brand" checked>
               <label class="productBand active" for="productBand0">Tất cả</label>

@@ -7,7 +7,7 @@ get_template_part('sections/breadcums');
         <div class="row-divide">
             <div class="col-divide-8 col-divide-lg-12">
                 <?php while(have_posts()) : the_post() ; ?>
-                    <h3 class="single_title"><?php the_title(); ?></h3>
+                    <h1 class="single_title"><?php the_title(); ?></h1>
                     <div class="single_page_content">
                         <?php the_content(); ?>
                     </div>
