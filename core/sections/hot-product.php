@@ -40,7 +40,7 @@
       <div class="lastest__item d--block col-divide-3 col-divide-md-6 col-divide-sm-12">
       <?php endif; ?>
         <div class="lastest__item-img">
-          <img src="<?php echo hk_get_thumb(get_the_id(),300,300) ?>" alt="<?php the_title(); ?>" />
+          <a href="<?php the_permalink(); ?>" class="d--block"><img src="<?php echo hk_get_thumb(get_the_id(),300,300) ?>" alt="<?php the_title(); ?>" /></a>
          <div class="lastest__item-tag tag">
            <img src="<?php echo get_theme_file_uri('assets/images/new-product-sticker.svg') ?>" alt="lastest-product-tag">
          </div>
@@ -71,7 +71,7 @@
             </p>
           <?php endif;?>
           <?php if(is_sold_out()): ?>
-          <img class="sale__item-tag tag sold" src="<?php echo get_theme_file_uri('assets/images/icon out stock-01.svg') ?>" style="width: 45px" alt="sale-product-tag">
+          <img class="sale__item-tag tag sold" src="<?php echo get_theme_file_uri('assets/images/icon out stock-01.svg') ?>" style="width: 70px" alt="sale-product-tag">
           <?php endif; ?>
         </div>
       </div>

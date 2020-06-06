@@ -14,7 +14,7 @@ $productSex = get_field('product_choose_sex');
       <div class="product__filter-title">
         <button class="btn text--light" aria-label="filter-button">
           <img class="mxr-5" src="<?php echo get_theme_file_uri('assets\images\filter.svg'); ?>" alt="filter-button" style="width:auto">
-          <span class="text--upcase">Filter <i class="fas fa-angle-down"></i></span>
+          <span class="text--upcase"> Lọc Sản Phẩm <i class="fas fa-angle-down"></i></span>
         </button>
       </div>
       <div class="product__filter-list">
@@ -117,7 +117,7 @@ $productSex = get_field('product_choose_sex');
         <?php while ( $query->have_posts() ) : $query->the_post(); ?>
       <div class="product__item d--block col-divide-3 col-divide-md-6 col-divide-sm-12">
         <div class="product__item-img">
-          <img src="<?php echo hk_get_thumb(get_the_id(),300,300) ?>" alt="<?php the_title(); ?>" />
+          <a href="<?php the_permalink(); ?>" class="d--block"><img src="<?php echo hk_get_thumb(get_the_id(),300,300) ?>" alt="<?php the_title(); ?>" /></a>
          <div class="product__item-tag tag">
            <img src="<?php echo get_theme_file_uri('assets/images/new-product-sticker.svg') ?>" alt="product-product-tag">
          </div>
@@ -148,7 +148,7 @@ $productSex = get_field('product_choose_sex');
             </p>
           <?php endif;?>
           <?php if(is_sold_out()): ?>
-          <img class="sale__item-tag tag sold" src="<?php echo get_theme_file_uri('assets/images/icon out stock-01.svg') ?>" style="width: 45px" alt="sale-product-tag">
+          <img class="sale__item-tag tag sold" src="<?php echo get_theme_file_uri('assets/images/icon out stock-01.svg') ?>" style="width: 70px" alt="sale-product-tag">
           <?php endif; ?>
         </div>
       </div>
