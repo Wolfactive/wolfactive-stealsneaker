@@ -598,6 +598,24 @@ function is_sale_off(){
     return false;
   endif;
 }
+function is_order(){
+  $order_check = get_field('product_price');
+  if(!$order_check) :
+    return true;
+  else:
+    return false;
+  endif;
+}
+function is_new_product(){
+  $terms_check = get_the_terms($post->ID,'khuyen-mai');
+  $check;
+  foreach ($terms_check as $term) {
+    if($term->slug == "san-pham-moi"){
+      $check = true;
+    }
+  }
+  return $check;
+}
 function percent_sale(){
   if(is_sale_off()):
     $price_sale = get_field('product_price_sale');
@@ -654,13 +672,20 @@ function get_term_list_check($taxonamy_slug,$name_tag){
     $price_array_return= array();
     $count =0;
     foreach ($price_array as $key) {
-      if($count == 2){
-        array_push($price_array_return,$key);
-        array_push($price_array_return,'.');
-        $count=0;
+      if(strlen($price_convert) == 6){
+        if($count == 2){
+          array_push($price_array_return,$key);
+          array_push($price_array_return,'.');
+        }
       }else{
-        array_push($price_array_return,$key);
-        $count ++;
+        if($count == 2){
+          array_push($price_array_return,$key);
+          array_push($price_array_return,'.');
+          $count=0;
+        }else{
+          array_push($price_array_return,$key);
+          $count ++;
+        }
       }
     }
     $price_convert = implode("",array_reverse($price_array_return));

@@ -80,7 +80,9 @@ get_template_part('sections/breadcums');
         <div class="product__item-img">
           <a href="<?php the_permalink(); ?>" class="d--block"><img src="<?php echo hk_get_thumb(get_the_id(),300,300) ?>" alt="<?php the_title(); ?>" /></a>
          <div class="product__item-tag tag">
-           <img src="<?php echo get_theme_file_uri('assets/images/new-product-sticker.svg') ?>" alt="product-product-tag">
+           <?php if(is_new_product()): ?>
+            <img src="<?php echo get_theme_file_uri('assets/images/new-product-sticker.svg') ?>" alt="product-product-tag">
+           <?php endif; ?>
          </div>
          <?php if(is_sale_off()):?>
            <span class="product__item-tag tag sale text--light">
@@ -89,7 +91,9 @@ get_template_part('sections/breadcums');
          <?php endif;?>
          <div class="lastest__config">
            <div class="lastest__config-btn">
-             <button class="btn viewQuick" type="button" aria-label="view-quick" data-view="<?php the_title(); ?>" name="viewQuick">Xem nhanh</button>
+             <?php if(!is_order()):?>
+               <button class="btn viewQuick" type="button" aria-label="view-quick" data-view="<?php the_title(); ?>" name="viewQuick">Xem nhanh</button>
+            <?php endif; ?>
            </div>
            <div class="lastest__config-btn">
              <a href="<?php the_permalink(); ?>" class="btn">Xem chi tiết</a>

@@ -8,7 +8,7 @@
       </div>
       <div class="navigation__item">
         <a href="tel:0978975556">
-          <i class="fas fa-mobile"></i>
+          <i class="fas fa-phone" style="transform:rotate(90deg)"></i>
         </a>
       </div>
       <div class="navigation__item">
