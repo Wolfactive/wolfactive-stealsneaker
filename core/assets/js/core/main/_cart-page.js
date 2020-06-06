@@ -41,7 +41,7 @@ function deleteFunction(){
     }
   });
 }
-$(document).ready(function(){
+if(window.location.pathname === "/gio-hang"){
   var url = protocol + "//" + hostname + "/wp-content/themes/wolfactive-stealsneaker/core/assets/js/json/local.json";
   fetch(url , {
     method: 'GET'
@@ -54,9 +54,8 @@ $(document).ready(function(){
       cityOption += "<option value=\""+ result[i].name +"\">"+ result[i].name +"</option>\n";
     });
     document.getElementById("cityNameChoose").innerHTML = cityOption;
-
   }).catch(function(err) {});
-});
+}
 function doRenderCart(){
   if(productBuyArray.length !== 0){
     productCartShowList.innerHTML = "";

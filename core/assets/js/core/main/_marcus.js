@@ -49,3 +49,7 @@ $('.slider_product_small').slick({
   adaptiveHeight: true,
   focusOnSelect: true
 });
+
+if(window.location.pathname === "/trang-404"){
+    setTimeout(function(){ window.location.href = protocol + "//" + hostname }, 5000);
+}

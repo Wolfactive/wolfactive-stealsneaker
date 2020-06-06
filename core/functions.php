@@ -672,7 +672,7 @@ function get_term_list_check($taxonamy_slug,$name_tag){
 
     function redirect_404_to_homepage(){
        if(is_404()):
-            wp_safe_redirect( home_url('/') );
+            wp_safe_redirect( site_url('trang-404') );
             exit;
         endif;
     }

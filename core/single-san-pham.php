@@ -10,7 +10,16 @@ get_template_part('sections/breadcums');
                 <div class="slider_product_big">
                     <?php while ( have_rows('product_gallery') ) : the_row(); ?>
                       <div class="image_product">
-                          <img src="<?php echo hk_get_image(get_sub_field('product_picture'), 800, 500) ?>" alt="<?php the_sub_field('product_picture_alt') ?>">
+                        <?php
+                          if(wp_is_mobile()) :
+                        ?>
+                          <a href="<?php echo hk_get_image(get_sub_field('product_picture'), 800, 500) ?>" data-lightbox="roadtrip">
+                          <img src="<?php echo hk_get_image(get_sub_field('product_picture'), 800, 500) ?>" 
+                                alt="<?php the_sub_field('product_picture_alt') ?>"></a>    
+                        <?php else :  ?>
+                          <img src="<?php echo hk_get_image(get_sub_field('product_picture'), 800, 500) ?>" 
+                                alt="<?php the_sub_field('product_picture_alt') ?>">
+                        <?php endif; ?>
                       </div>
                     <?php endwhile; ?>
                 </div>
